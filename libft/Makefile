@@ -1,5 +1,8 @@
 NAME:=libft.a
 
+LIBFT_ARRAY_PATH=ft_array/
+LIBFT_ARRAY_SRC= ft_print_int_arr ft_print_str_arr ft_print_pstr_arr ft_get_number_of_substrings
+
 LIBFT_LST_PATH:=	ft_lst/
 LIBFT_LST_SRC:= ft_lstadd \
 				ft_lstdel \
@@ -70,7 +73,7 @@ LIBFT_STR_SRC:= ft_check_end_spaces \
 				ft_isspace \
 				ft_itoa \
 				ft_str_is_lowercase \
-				ft_str_is_numeric \
+				ft_str_is_numeric_with_spaces \
 				ft_str_is_printable \
 				ft_str_is_uppercase \
 				ft_strcat \
@@ -101,7 +104,11 @@ LIBFT_STR_SRC:= ft_check_end_spaces \
 				ft_strsub \
 				ft_strtrim \
 				ft_tolower \
-				ft_toupper
+				ft_toupper \
+				ft_str_is_numeric_no_spaces
+
+FT_SORTING_PATH:=	ft_sorting/
+FT_SORTING_SRC:=	ft_merge_sort
 
 FILES:= get_next_line
 
@@ -142,6 +149,8 @@ FILES+=$(addprefix $(LIBFT_NUM_PATH),$(LIBFT_NUM_SRC))
 FILES+=$(addprefix $(PRINTF_PATH),$(PRINTF_SRC))
 FILES+=$(addprefix $(LIBFT_PUT_PATH),$(LIBFT_PUT_SRC))
 FILES+=$(addprefix $(LIBFT_STR_PATH),$(LIBFT_STR_SRC))
+FILES+=$(addprefix $(FT_SORTING_PATH),$(FT_SORTING_SRC))
+FILES+=$(addprefix $(LIBFT_ARRAY_PATH),$(LIBFT_ARRAY_SRC))
 
 SRC:=$(addprefix $( SRC_PATH),$(addsuffix .c,$(FILES)))
 OBJ:=$(addprefix $(COMPILE_PATH),$(addsuffix .o,$(FILES)))
@@ -177,6 +186,8 @@ $(CACHE):
 	@mkdir $(COMPILE_PATH)$(PRINTF_PATH)
 	@mkdir $(COMPILE_PATH)$(LIBFT_PUT_PATH)
 	@mkdir $(COMPILE_PATH)$(LIBFT_STR_PATH)
+	@mkdir $(COMPILE_PATH)$(FT_SORTING_PATH)
+	@mkdir $(COMPILE_PATH)$(LIBFT_ARRAY_PATH)
 	@touch $(CACHE)
 
 clean:

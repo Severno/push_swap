@@ -6,7 +6,17 @@
 
 #IncludeRegexTransform: 
 
+/Users/sapril/push_swap/includes/checker.h
+push_swap.h
 /Users/sapril/push_swap/includes/push_swap.h
+../libft/includes/libft.h
+/Users/sapril/push_swap/libft/includes/libft.h
+
+/Users/sapril/push_swap/includes/push_swap.h
+../libft/includes/libft.h
+/Users/sapril/push_swap/libft/includes/libft.h
+checker.h
+/Users/sapril/push_swap/includes/checker.h
 
 /Users/sapril/push_swap/libft/includes/ft_printf.h
 libft.h
@@ -31,14 +41,18 @@ stdio.h
 -
 fcntl.h
 -
+sort_algs.h
+/Users/sapril/push_swap/libft/includes/sort_algs.h
 get_next_line.h
 /Users/sapril/push_swap/libft/includes/get_next_line.h
 ft_printf.h
 /Users/sapril/push_swap/libft/includes/ft_printf.h
 
-/Users/sapril/push_swap/main.c
-libft/includes/libft.h
+/Users/sapril/push_swap/libft/includes/sort_algs.h
+
+/Users/sapril/push_swap/src/checker.c
+../includes/checker.h
+/Users/sapril/push_swap/includes/checker.h
+../libft/includes/libft.h
 /Users/sapril/push_swap/libft/includes/libft.h
-includes/push_swap.h
-/Users/sapril/push_swap/includes/push_swap.h
 
