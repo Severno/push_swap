@@ -21,6 +21,7 @@ file(GLOB SRC_PUSH_SWAP
         )
 file(GLOB LIBFT_SRC
         "libft/includes/*.h"
+        "libft/src/*/*.c"
         )
 
 add_executable(push_swap ${SRC_PUSH_SWAP} ${LIBFT_SRC})

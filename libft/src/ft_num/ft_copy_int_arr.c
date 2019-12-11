@@ -18,7 +18,8 @@ int *ft_copy_int_arr(int *arr, size_t size)
 	int		*arr_cpy;
 
 	i = 0;
-	arr_cpy = (int *)ft_memalloc(sizeof(int) * size);
+	if (!(arr_cpy = (int *)ft_memalloc(sizeof(int) * size)))
+		return (NULL);
 	while (i < size - 1)
 	{
 		arr_cpy[i] = arr[i];

@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 15:00:34 by sapril            #+#    #+#             */
-/*   Updated: 2019/12/11 15:27:08 by sapril           ###   ########.fr       */
+/*   Updated: 2019/12/11 15:50:38 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,18 +73,17 @@ void append_stack_elem_to_end(t_stack **head, int value)
 	t_stack *new_elem;
 	t_stack *tail;
 
-	tail = *head;
-	new_elem = ft_create_new_stack_elem(value);
+	new_elem = NULL;
+	tail = ft_get_last_stack_elem(head);
 	if (*head == NULL)
+		*head = ft_create_new_stack_elem(value);
+	else
 	{
-		*head = new_elem;
-		return;
+		new_elem = ft_create_new_stack_elem(value);
+		new_elem->prev = tail;
+		tail->next = new_elem;
 	}
-	while (tail->next)
-		tail = tail->next;
-	tail->next = new_elem;
-	new_elem->prev = tail;
-	*head = new_elem;
+
 }
 
 static void add_array_elems_to_stack_a(t_stacks *stacks)
@@ -94,7 +93,6 @@ static void add_array_elems_to_stack_a(t_stacks *stacks)
 
 	i = 1;
 	a_stack = ft_create_new_stack_elem(stacks->unsorted_arr[0]);
-	stacks->a_head = a_stack;
 	while (i < stacks->len_a){
 		append_stack_elem_to_end(&a_stack, stacks->unsorted_arr[i++]);
 		ft_printf("%d\n", a_stack->value);

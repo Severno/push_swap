@@ -142,6 +142,510 @@
 			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_array/ft_get_number_of_substrings.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_array/ft_print_int_arr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_array/ft_print_pstr_arr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_array/ft_print_str_arr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_lst/ft_lstadd.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_lst/ft_lstdel.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_lst/ft_lstdelone.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_lst/ft_lstiter.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_lst/ft_lstmap.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_lst/ft_lstnew.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_math/ft_abs.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_math/ft_max_of_three.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_math/ft_max_of_two.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_math/ft_middle_of_three.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_math/ft_min_of_two.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_mem/ft_bzero.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_mem/ft_memalloc.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_mem/ft_memccpy.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_mem/ft_memchr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_mem/ft_memcmp.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_mem/ft_memcpy.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_mem/ft_memdel.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_mem/ft_memmove.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_mem/ft_memset.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_num/ft_atoi.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_num/ft_atol.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_num/ft_atoul.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_num/ft_copy_int_arr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_num/ft_num_of_digits.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_num/ft_num_of_fields.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_num/ft_unnum_of_fields.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/alignment.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/calc_float_width.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/calc_signed_precision.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/calc_signed_width.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/calc_unsigned_precision.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/calc_unsigned_width.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/check_conventions.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/flag_cs.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/flag_di.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/flag_f.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/flag_f_handle.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/flag_o.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/flag_p.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/flag_percent.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/flag_u.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/flag_x.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/ft_ftoa.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/ft_printf.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/get_flags.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/handle_float_conditions.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/handle_float_zeros.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/parse_flags.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/pf_putnbr_base.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/pf_putstr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/pf_putunbr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/pf_strcat.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/pf_strchr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/pf_strchr_flags.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/precision.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/print_d.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/print_f.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/print_o.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/print_p.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/print_percent.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/print_u.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/print_x.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/removes_flags.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_printf/utils.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_put/ft_putchar.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_put/ft_putchar_fd.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_put/ft_putendl.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_put/ft_putendl_fd.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_put/ft_putnbr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_put/ft_putnbr_base.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_put/ft_putnbr_fd.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_put/ft_putstr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_put/ft_putstr_fd.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_put/ft_putunbr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_sorting/ft_merge_sort.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_check_end_spaces.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_check_start_spaces.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_convert_dec_base_to_str.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_convert_undec_base_to_str.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_find_and_remove_char.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_isalnum.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_isalpha.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_isascii.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_isdigit.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_isprint.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_isspace.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_itoa.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_str_is_lowercase.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_str_is_numeric_no_spaces.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_str_is_numeric_with_spaces.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_str_is_printable.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_str_is_uppercase.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strcat.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strchr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strclr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strcmp.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strcpy.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strdel.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strdup.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strequ.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_striter.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_striteri.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strjoin.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strlcat.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strlen.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strmap.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strmapi.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strncat.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strncmp.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strncpy.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strnequ.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strnew.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strnlen.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strnstr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strrchr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strsplit.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strstr.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strsub.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_strtrim.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_tolower.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/push_swap/libft/src/ft_str/ft_toupper.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/sapril/push_swap/src/checker.c">
 			<Option target="checker"/>
 		</Unit>
