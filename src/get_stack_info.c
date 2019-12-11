@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_algs.h                                        :+:      :+:    :+:   */
+/*   get_positions.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/06 18:47:41 by sapril            #+#    #+#             */
-/*   Updated: 2019/12/06 18:47:41 by sapril           ###   ########.fr       */
+/*   Created: 2019/12/11 10:45:02 by sapril            #+#    #+#             */
+/*   Updated: 2019/12/11 10:55:20 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SORT_ALGS_H
-#define SORT_ALGS_H
+#include "../includes/push_swap.h"
 
-typedef struct	s_merge_sort
+int get_middle_pos(int length)
 {
-	int low;
-	int middle;
-	int high;
-	int left_arr_size;
-	int right_arr_size;
-	int *left_arr;
-	int *right_arr;
-}				t_merge_sort;
+	if (length > 0)
+		return ((length - 1) / 2);
+	else
+		return (0);
+}
 
-int			*ft_merge_sort(int arr[], int low, int high);
+int get_stack_size(t_stack *head)
+{
+	int size;
+	t_stack *current;
 
-#endif
+	size = 0;
+	current = head;
+	while (current)
+	{
+		current = current->next;
+		size++;
+	}
+	return (size);
+}

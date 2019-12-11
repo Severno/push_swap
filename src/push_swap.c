@@ -6,99 +6,141 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 15:00:34 by sapril            #+#    #+#             */
-/*   Updated: 2019/12/09 18:10:42 by sapril           ###   ########.fr       */
+/*   Updated: 2019/12/11 15:27:08 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-t_el *create_new_stack_elem(t_ps_params *ps_params, int value)
+static  void printList(t_stack* stack)
 {
-	t_el		*new_elem;
-	(void)ps_params;
+	t_stack *last;
+	printf("\nTraversal in forward direction \n");
+	while (stack != NULL) {
+		printf(" %d ", stack->value);
+		last = stack;
+		stack = stack->next;
+	}
 
-	if (!(new_elem = (t_el*)ft_memalloc(sizeof(t_el))))
+	printf("\nTraversal in reverse direction \n");
+	while (last != NULL) {
+		printf(" %d ", last->value);
+		last = last->prev;
+	}
+}
+
+static void free_stack(t_stack **head)
+{
+	t_stack *tmp_begin_stack;
+
+	while (*head)
+	{
+		tmp_begin_stack = *head;
+		*head = (*head)->next;
+		free(tmp_begin_stack);
+	}
+	*head = NULL;
+	head = NULL;
+}
+
+static void free_stacks(t_stacks *stacks)
+{
+	if (stacks->a_head)
+		free_stack(&stacks->a_head);
+	if (stacks->b_head)
+		free_stack(&stacks->b_head);
+	if (stacks->sorted_arr)
+		free(stacks->sorted_arr);
+	if (stacks->unsorted_arr)
+		free(stacks->unsorted_arr);
+	free(stacks);
+}
+
+t_stack *ft_create_new_stack_elem(int value)
+{
+	t_stack *new_elem;
+
+	if (!(new_elem = (t_stack *)ft_memalloc(sizeof(t_stack))))
 		return (NULL);
-	new_elem->value = value;
 	new_elem->next = NULL;
 	new_elem->prev = NULL;
+	new_elem->value = value;
 	return (new_elem);
 }
 
-void push_array_to_stack(t_stack *stack_a, t_ps_params *ps_params)
+void append_stack_elem_to_end(t_stack **head, int value)
 {
-	t_el		*begin_list;
-	t_el		*start_list_tmp;
-	t_el		*end_list_tmp;
-	size_t		i;
+	t_stack *new_elem;
+	t_stack *tail;
+
+	tail = *head;
+	new_elem = ft_create_new_stack_elem(value);
+	if (*head == NULL)
+	{
+		*head = new_elem;
+		return;
+	}
+	while (tail->next)
+		tail = tail->next;
+	tail->next = new_elem;
+	new_elem->prev = tail;
+	*head = new_elem;
+}
+
+static void add_array_elems_to_stack_a(t_stacks *stacks)
+{
+	t_stack		*a_stack;
+	int			i;
 
 	i = 1;
-	begin_list = create_new_stack_elem(ps_params, ps_params->sorted_arr[0]);
-	start_list_tmp = begin_list;
-	while (i < ps_params->length - 1)
-	{
-		if (i == 1)
-		{
-			start_list_tmp->next = create_new_stack_elem(ps_params, ps_params->sorted_arr[i]);
-			start_list_tmp->prev = create_new_stack_elem(ps_params, ps_params->sorted_arr[ps_params->length - 1]);
-		}
-		else if (i == ps_params->length - 1)
-		{
-			start_list_tmp->next = create_new_stack_elem(ps_params, ps_params->sorted_arr[0]);
-			start_list_tmp->prev = create_new_stack_elem(ps_params, ps_params->sorted_arr[i - 1]);
-		}
-		else
-		{
-			start_list_tmp->next = create_new_stack_elem(ps_params, ps_params->sorted_arr[i]);
-			start_list_tmp->prev = create_new_stack_elem(ps_params, ps_params->sorted_arr[i - 1]);
-		}
-		start_list_tmp = begin_list->next;
-		i++;
+	a_stack = ft_create_new_stack_elem(stacks->unsorted_arr[0]);
+	stacks->a_head = a_stack;
+	while (i < stacks->len_a){
+		append_stack_elem_to_end(&a_stack, stacks->unsorted_arr[i++]);
+		ft_printf("%d\n", a_stack->value);
 	}
-	end_list_tmp = start_list_tmp;
-	stack_a->begin_list = begin_list;
 }
 
-static void print_stack_elems(t_stack *stack_a, t_ps_params *ps_params)
+static void stacks_init_params(t_stacks *stacks, int *unsorted_arr, int array_size)
 {
-	size_t i;
-	t_el *tmp_elem;
-
-	i = 0;
-	tmp_elem = stack_a->begin_list;
-	while(i < ps_params->length - 1)
-	{
-		ft_printf("%d\n", tmp_elem->value);
-		tmp_elem = tmp_elem->next;
-	}
+	stacks->unsorted_arr = ft_copy_int_arr(unsorted_arr, array_size);
+	stacks->sorted_arr = ft_merge_sort(unsorted_arr, 0, array_size);
+	stacks->len_a = array_size;
+	add_array_elems_to_stack_a(stacks);
 }
+
+static void stacks_init(t_stacks *stacks, int *unsorted_arr, int array_size)
+{
+	if (!(stacks = (t_stacks *)ft_memalloc(sizeof(stacks))))
+		exit(1);
+	stacks->a_head = NULL;
+	stacks->a_tail = NULL;
+	stacks->b_head = NULL;
+	stacks->b_tail = NULL;
+	stacks_init_params(stacks, unsorted_arr, array_size);
+}
+
 
 int main(int argc, char *argv[])
 {
-	t_stack		*stack_a;
-//	t_stack		*stack_b;
-	t_ps_params	*ps_param;
-	int		*num_arr;
-	size_t	array_size;
+	t_stacks	*stacks;
+	int			*unsorted_arr;
+	size_t		array_size;
 
-	num_arr = NULL;
 	array_size = 0;
-
-	ps_param = (t_ps_params *)ft_memalloc(sizeof(t_ps_params));
+	stacks = NULL;
+	unsorted_arr = convert_str_to_int_array(argc, argv, &array_size);
 	if (argc > 1)
 	{
-		num_arr = convert_str_to_int_array(argc, argv, &array_size);
-		if (has_duplicates(num_arr, array_size))
-			print_error(num_arr);
+		stacks_init(stacks, unsorted_arr, array_size);
+		if (has_duplicates(stacks->unsorted_arr, stacks->len_a))
+			print_error(stacks->unsorted_arr);
 		else
-			ft_merge_sort(num_arr, 0, array_size - 1);
+			ft_merge_sort(stacks->sorted_arr, 0, stacks->len_a - 1);
 	}
-	ps_param->length = array_size;
-	ps_param->sorted_arr = num_arr;
-	stack_a = (t_stack *)ft_memalloc(sizeof(t_el) * array_size);
-	push_array_to_stack(stack_a, ps_param);
-	ft_print_int_arr(num_arr, 1, array_size);
-	print_stack_elems(stack_a, ps_param);
-	free(num_arr);
+	ft_apply_s(&stacks->a_head);
+	ft_apply_r(&stacks->a_head);
+	printList(stacks->a_head);
+	free_stacks(stacks);
 	return (0);
 }

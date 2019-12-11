@@ -6,17 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/sapril/push_swap/includes/checker.h
-push_swap.h
 /Users/sapril/push_swap/includes/push_swap.h
 ../libft/includes/libft.h
 /Users/sapril/push_swap/libft/includes/libft.h
-
-/Users/sapril/push_swap/includes/push_swap.h
-../libft/includes/libft.h
-/Users/sapril/push_swap/libft/includes/libft.h
-checker.h
-/Users/sapril/push_swap/includes/checker.h
 
 /Users/sapril/push_swap/libft/includes/ft_printf.h
 libft.h
@@ -50,9 +42,7 @@ ft_printf.h
 
 /Users/sapril/push_swap/libft/includes/sort_algs.h
 
-/Users/sapril/push_swap/src/checker.c
-../includes/checker.h
-/Users/sapril/push_swap/includes/checker.h
-../libft/includes/libft.h
-/Users/sapril/push_swap/libft/includes/libft.h
+/Users/sapril/push_swap/src/push_swap.c
+../includes/push_swap.h
+/Users/sapril/push_swap/includes/push_swap.h
 

@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 17:48:40 by sapril            #+#    #+#             */
-/*   Updated: 2019/12/09 13:51:52 by sapril           ###   ########.fr       */
+/*   Updated: 2019/12/11 12:26:05 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,10 +119,11 @@ int					ft_unnum_of_fields(unsigned long long int num);
 void				ft_putunbr(unsigned long long int nb);
 void				ft_print_int_arr(int *num_arr, int in_line, size_t size);
 void				ft_print_str_arr(char *arr, int in_line);
-void				ft_merge_sort(int arr[], int low, int high);
+int					*ft_merge_sort(int arr[], int low, int high);
 void				ft_print_pstr_arr(char **str, int in_line);
 int					ft_get_number_of_substrings(char **str);
 int					ft_str_is_numeric_no_spaces(char *str);
+int					*ft_copy_int_arr(int *arr, size_t size);
 
 
 #endif

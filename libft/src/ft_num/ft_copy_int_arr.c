@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_algs.h                                        :+:      :+:    :+:   */
+/*   ft_copy_int_arr.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/06 18:47:41 by sapril            #+#    #+#             */
-/*   Updated: 2019/12/06 18:47:41 by sapril           ###   ########.fr       */
+/*   Created: 2019/12/11 15:14:46 by sapril            #+#    #+#             */
+/*   Updated: 2019/12/11 15:14:46 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SORT_ALGS_H
-#define SORT_ALGS_H
+#include "../../includes/libft.h"
 
-typedef struct	s_merge_sort
+int *ft_copy_int_arr(int *arr, size_t size)
 {
-	int low;
-	int middle;
-	int high;
-	int left_arr_size;
-	int right_arr_size;
-	int *left_arr;
-	int *right_arr;
-}				t_merge_sort;
+	size_t	i;
+	int		*arr_cpy;
 
-int			*ft_merge_sort(int arr[], int low, int high);
-
-#endif
+	i = 0;
+	arr_cpy = (int *)ft_memalloc(sizeof(int) * size);
+	while (i < size - 1)
+	{
+		arr_cpy[i] = arr[i];
+		i++;
+	}
+	return (arr_cpy);
+}

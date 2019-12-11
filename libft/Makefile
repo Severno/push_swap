@@ -36,6 +36,7 @@ LIBFT_NUM_SRC:= ft_atoi \
 				ft_num_of_digits \
 				ft_num_of_fields \
 				ft_unnum_of_fields \
+				ft_copy_int_arr \
 
 PRINTF_PATH:=	ft_printf/
 PRINTF_SRC:=		alignment calc_signed_precision calc_signed_width \

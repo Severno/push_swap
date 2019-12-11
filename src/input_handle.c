@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 16:16:12 by sapril            #+#    #+#             */
-/*   Updated: 2019/12/09 16:18:17 by sapril           ###   ########.fr       */
+/*   Updated: 2019/12/11 12:16:57 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int		*convert_str_to_int_array(int argc, char *argv[], size_t *array_size)
 	return (NULL);
 }
 
-int has_duplicates(int *num_arr, size_t size)
+int has_duplicates(int num_arr[], size_t size)
 {
 	size_t i;
 	size_t j;

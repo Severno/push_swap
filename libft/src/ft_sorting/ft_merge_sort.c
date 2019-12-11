@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 08:08:28 by sapril            #+#    #+#             */
-/*   Updated: 2019/12/09 08:18:59 by sapril           ###   ########.fr       */
+/*   Updated: 2019/12/11 12:25:30 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static void		merge(int arr[], int low, int middle, int high)
 		arr[arr_i++] = right_arr[right_i++];
 }
 
-void			ft_merge_sort(int arr[], int low, int high)
+int			*ft_merge_sort(int *arr, int low, int high)
 {
 	int middle;
 
@@ -76,4 +76,5 @@ void			ft_merge_sort(int arr[], int low, int high)
 		ft_merge_sort(arr, middle + 1, high);
 		merge(arr, low, middle, high);
 	}
+	return (arr);
 }
