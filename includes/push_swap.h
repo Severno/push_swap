@@ -18,6 +18,13 @@
 # define	MULTIPLE_INPUT_PARAMS 2
 # define 	ONE_INPUT_PARAM 1
 # define	ERROR 0
+#define RED     "\x1b[31m"
+#define GREEN   "\x1b[32m"
+#define YELLOW  "\x1b[33m"
+#define BLUE    "\x1b[34m"
+#define MAGENTA "\x1b[35m"
+#define CYAN    "\x1b[36m"
+#define RESET   "\x1b[0m"
 
 //typedef struct		s_el
 //{
@@ -63,7 +70,6 @@ typedef struct		s_stacks
 
 t_stack			*create_stack(int capacity);
 int				stack_size(t_stack *stack);
-int				*convert_str_to_int_array(int argc, char *argv[], size_t *array_size);
 
 // checker
 int				*argv_to_int_arr(int argc, char *argv[], size_t *array_size);
@@ -83,10 +89,12 @@ int get_stack_size(t_stack *head);
 
 // commands
 int					ft_apply_s(t_stack **stack);
-int					ft_apply_r(t_stack **stack);
-int					ft_apply_rr(t_stack **stack);
+int					ft_apply_ss(t_stack **stack_a, t_stack **stack_b);
 int					ft_apply_p(t_stack **from, t_stack **to);
-void				ft_apply_cnt(char *com, int cnt, t_stacks *sts);
+int					ft_apply_r(t_stack **stack);
+int					ft_apply_r_st(t_stack **stack_a, t_stack **stack_b);
+int					ft_apply_rr(t_stack **stack);
+int					ft_apply_rr_st(t_stack **stack_a, t_stack **stack_b);
 
 // push
 void ft_stack_push_back(t_stack **head, t_stack *target);

@@ -20,7 +20,7 @@ int *ft_copy_int_arr(int *arr, size_t size)
 	i = 0;
 	if (!(arr_cpy = (int *)ft_memalloc(sizeof(int) * size)))
 		return (NULL);
-	while (i < size - 1)
+	while (i < size)
 	{
 		arr_cpy[i] = arr[i];
 		i++;

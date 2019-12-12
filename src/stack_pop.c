@@ -20,7 +20,7 @@ t_stack *ft_stack_pop_front(t_stack **stack)
 		return (NULL);
 	tmp_stack = *stack;
 	if ((*stack)->next == NULL)
-		stack = NULL;
+		*stack = NULL;
 	else
 		*stack = tmp_stack->next;
 	tmp_stack->next = NULL;

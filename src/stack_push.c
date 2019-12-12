@@ -24,18 +24,15 @@ t_stack *ft_get_last_stack_elem(t_stack **head)
 
 void ft_stack_push_back(t_stack **head, t_stack *target)
 {
-	t_stack *new_elem;
 	t_stack *tail;
 
-	new_elem = NULL;
 	tail = ft_get_last_stack_elem(head);
 	if (*head == NULL)
 		*head = target;
 	else
 	{
-		new_elem = target;
-		new_elem->prev = tail;
-		tail->next = new_elem;
+		tail->next = target;
+		target->prev = tail;
 	}
 }
 
@@ -51,6 +48,7 @@ void ft_stack_push_front(t_stack **head, t_stack *target)
 		new_elem = target;
 		new_elem->next = (*head);
 		(*head)->prev = (new_elem);
+		new_elem->prev = NULL;
 		(*head) = new_elem;
 	}
 }

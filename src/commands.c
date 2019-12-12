@@ -47,29 +47,29 @@ int					ft_apply_s(t_stack **stack)
 	}
 	return (0);
 }
-int					ft_apply_r(t_stack **stack)
+
+int					ft_apply_ss(t_stack **stack_a, t_stack **stack_b)
 {
-	if (*stack && (*stack)->next)
+	if (ft_apply_s(stack_a) && ft_apply_s(stack_b))
+		return (1);
+	return (0);
+}
+
+int					ft_apply_p(t_stack **from, t_stack **to)
+{
+	t_stack *transfer_elem;
+	if ((*from))
 	{
-		ft_stack_push_back(stack, ft_stack_pop_back(stack));
+		transfer_elem = ft_stack_pop_front(from);
+		if ((*to) == NULL)
+		{
+			(*to) = transfer_elem;
+			return (1);
+		}
+		transfer_elem->next = (*to);
+		(*to)->prev = transfer_elem;
+		(*to) = transfer_elem;
 		return (1);
 	}
 	return (0);
 }
-int					ft_apply_rr(t_stack **stack)
-{
-	if (*stack && (*stack)->next)
-	{
-		ft_stack_push_front(stack, ft_stack_pop_back(stack));
-		return (1);
-	}
-	return (0);
-}
-//int					ft_apply_p(t_stack **from, t_stack **to)
-//{
-//
-//}
-//void				ft_apply_cnt(char *com, int cnt, t_stacks *sts)
-//{
-//
-//}

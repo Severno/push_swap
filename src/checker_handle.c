@@ -59,5 +59,5 @@ void		free_push_swap(int *arr_num)
 void		print_error()
 {
 	ft_putstr("Error\n");
-	exit(0);
+	exit(1);
 }
