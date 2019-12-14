@@ -96,11 +96,39 @@ CMakeFiles/checker.dir/src/input_handle.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/checker.dir/src/input_handle.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/artembykov/Desktop/push_swap/src/input_handle.c -o CMakeFiles/checker.dir/src/input_handle.c.s
 
+CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.o: CMakeFiles/checker.dir/flags.make
+CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.o: ../libft/src/ft_array/ft_print_ll_arr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.o   -c /Users/artembykov/Desktop/push_swap/libft/src/ft_array/ft_print_ll_arr.c
+
+CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/artembykov/Desktop/push_swap/libft/src/ft_array/ft_print_ll_arr.c > CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.i
+
+CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/artembykov/Desktop/push_swap/libft/src/ft_array/ft_print_ll_arr.c -o CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.s
+
+CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.o: CMakeFiles/checker.dir/flags.make
+CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.o: ../libft/src/ft_array/ft_print_sizet_arr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.o   -c /Users/artembykov/Desktop/push_swap/libft/src/ft_array/ft_print_sizet_arr.c
+
+CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/artembykov/Desktop/push_swap/libft/src/ft_array/ft_print_sizet_arr.c > CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.i
+
+CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/artembykov/Desktop/push_swap/libft/src/ft_array/ft_print_sizet_arr.c -o CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.s
+
 # Object files for target checker
 checker_OBJECTS = \
 "CMakeFiles/checker.dir/src/checker.c.o" \
 "CMakeFiles/checker.dir/src/checker_handle.c.o" \
-"CMakeFiles/checker.dir/src/input_handle.c.o"
+"CMakeFiles/checker.dir/src/input_handle.c.o" \
+"CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.o" \
+"CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.o"
 
 # External object files for target checker
 checker_EXTERNAL_OBJECTS =
@@ -108,10 +136,12 @@ checker_EXTERNAL_OBJECTS =
 checker: CMakeFiles/checker.dir/src/checker.c.o
 checker: CMakeFiles/checker.dir/src/checker_handle.c.o
 checker: CMakeFiles/checker.dir/src/input_handle.c.o
+checker: CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.o
+checker: CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.o
 checker: CMakeFiles/checker.dir/build.make
 checker: ../libft.a
 checker: CMakeFiles/checker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable checker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable checker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/checker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

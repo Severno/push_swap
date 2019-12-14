@@ -12,27 +12,43 @@
 
 #include "../includes/push_swap.h"
 
-//t_stack		*create_stack(int capacity)
-//{
-//	t_stack *new_stack;
-//
-//	new_stack = NULL;
-//	if ((new_stack = (t_stack *)ft_memalloc(sizeof(new_stack))))
-//		exit(0);
-//	new_stack->top = -1;
-//	new_stack->max_size = capacity;
-//	new_stack->items = (int *)ft_memalloc(sizeof(int) * capacity);
-//	if (new_stack->items == NULL)
-//		exit(0);
-//	return (new_stack);
-//}
-//
-//int			stack_size(t_stack *stack)
-//{
-//	return (stack->top + 1);
-//}
-//
-//int			stack_is_empty(t_stack *stack)
-//{
-//	return (stack->top == -1);
-//}
+t_stack *ft_create_new_stack_elem(int value)
+{
+	t_stack *new_elem;
+
+	if (!(new_elem = (t_stack *)ft_memalloc(sizeof(t_stack))))
+		return (NULL);
+	new_elem->next = NULL;
+	new_elem->prev = NULL;
+	new_elem->value = value;
+	return (new_elem);
+}
+
+void free_stack(t_stack **head)
+{
+	t_stack *tmp_begin_stack;
+
+	while (*head)
+	{
+		tmp_begin_stack = *head;
+		*head = (*head)->next;
+		free(tmp_begin_stack);
+	}
+	*head = NULL;
+	head = NULL;
+}
+
+void free_stacks(t_stacks *stacks)
+{
+	if (stacks->a_head)
+		free_stack(&stacks->a_head);
+	if (stacks->b_head)
+		free_stack(&stacks->b_head);
+	if (stacks->sorted_arr)
+		free(stacks->sorted_arr);
+	if (stacks->unsorted_arr)
+		free(stacks->unsorted_arr);
+//	if (stacks->poss_cur_range)
+//		free(stacks->poss_cur_range);
+	free(stacks);
+}

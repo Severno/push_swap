@@ -26,7 +26,10 @@ int			*handle_multiple_input_params(int argc, char *argv[], size_t *array_size)
 		if (ft_str_is_numeric_no_spaces(argv[arg_count]))
 			num_arr[i++] = ft_atoi(argv[arg_count++]);
 		else
-			print_error(num_arr);
+		{
+			free(num_arr);
+			print_error();
+		}
 	}
 	*array_size = i;
 	return (num_arr);
@@ -44,7 +47,13 @@ int			*handle_one_input_params(char *argv[], size_t *array_size)
 	split_str = ft_strsplit(argv[arg_count], ' ');
 	num_arr = (int *)ft_memalloc(sizeof(int) * ft_get_number_of_substrings(split_str));
 	while(split_str[i]){
-		num_arr[i] = ft_atoi(split_str[i]);
+		if (ft_str_is_numeric_no_spaces(split_str[i]))
+			num_arr[i] = ft_atoi(split_str[i]);
+		else
+		{
+			free(num_arr);
+			print_error();
+		}
 		i++;
 	}
 	*array_size = i;

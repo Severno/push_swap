@@ -9,10 +9,13 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/artembykov/Desktop/push_swap/src/commands_rotate.c" "/Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/commands_rotate.c.o"
   "/Users/artembykov/Desktop/push_swap/src/get_stack_info.c" "/Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/get_stack_info.c.o"
   "/Users/artembykov/Desktop/push_swap/src/input_handle.c" "/Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/input_handle.c.o"
+  "/Users/artembykov/Desktop/push_swap/src/ps_algorithm.c" "/Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/ps_algorithm.c.o"
   "/Users/artembykov/Desktop/push_swap/src/push_swap.c" "/Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/push_swap.c.o"
   "/Users/artembykov/Desktop/push_swap/src/stack_pop.c" "/Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/stack_pop.c.o"
   "/Users/artembykov/Desktop/push_swap/src/stack_push.c" "/Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/stack_push.c.o"
   "/Users/artembykov/Desktop/push_swap/src/stack_set.c" "/Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/stack_set.c.o"
+  "/Users/artembykov/Desktop/push_swap/src/stacks_init.c" "/Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/stacks_init.c.o"
+  "/Users/artembykov/Desktop/push_swap/src/visualize_input_process.c" "/Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/visualize_input_process.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

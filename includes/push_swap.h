@@ -26,15 +26,6 @@
 #define CYAN    "\x1b[36m"
 #define RESET   "\x1b[0m"
 
-//typedef struct		s_el
-//{
-//	struct s_stack	*next;
-//	struct s_stack	*prev;
-//	struct s_stack	*top;
-//	struct s_stack	*bottom;
-//	int				value;
-//}					t_el;
-
 typedef struct		s_stack
 {
 	struct s_stack	*next;
@@ -45,13 +36,19 @@ typedef struct		s_stack
 typedef struct		s_stacks
 {
 	t_stack			*a_head;
-	t_stack			*a_tail;
 	t_stack			*b_head;
-	t_stack			*b_tail;
-	int				len_a;
+	int			len_a;
 	int				len_b;
-	int				middle_pos_a;
-	int				middle_pos_b;
+	int				b_max;
+	int				b_min;
+	long long		cur_range_min_val;
+	long long		cur_range_max_val;
+	int			middle_pos_a;
+	int			chanks_amount;
+	int			amount_found_pos;
+	int			chank_search_range;
+	int			chank_range_len;
+	int				*poss_cur_range;
 	int				*sorted_arr;
 	int				*unsorted_arr;
 }					t_stacks;
@@ -84,9 +81,14 @@ int				check_input_condition(int argc, char *argv[]);
 int				*convert_str_to_int_array(int argc, char *argv[], size_t *array_size);
 int				has_duplicates(int *num_arr, size_t size);
 
+// get stack info
 int get_middle_pos(int length);
 int get_stack_size(t_stack *head);
-
+size_t get_chanks_num(size_t arr_length);
+size_t get_chank_range_len(t_stacks *stacks);
+int get_min_b_value(t_stack *stack_b);
+int get_max_b_value(t_stack *stack_b);
+t_stack *get_last_stack_elem(t_stack *stack);
 // commands
 int					ft_apply_s(t_stack **stack);
 int					ft_apply_ss(t_stack **stack_a, t_stack **stack_b);
@@ -107,5 +109,24 @@ t_stack				*ft_create_new_stack_elem(int value);
 // pop
 t_stack *ft_stack_pop_front(t_stack **stack);
 t_stack		*ft_stack_pop_back(t_stack **stack);
+
+// stacks init
+void add_array_elems_to_stack_a(t_stacks *stacks);
+void stacks_init(t_stacks **stacks, int *unsorted_arr, size_t array_size);
+
+// visualize input process
+void print_commands();
+void visualize_input_process(t_stacks *stacks);
+void print_stacks(t_stack* stack_a, t_stack* stack_b);
+
+// stacks set
+void free_stacks(t_stacks *stacks);
+void free_stack(t_stack **head);
+
+// ps_algorithm
+int is_sorted(t_stack *stack_a);
+void ps_small_range(t_stacks *stacks);
+void ps_middle_range(t_stacks *stacks);
+void ps_big_range(t_stacks *stacks);
 
 #endif

@@ -23,7 +23,7 @@ int		main(int argc, char *argv[])
 	{
 		num_arr = convert_str_to_int_array(argc, argv, &array_size);
 		if (has_duplicates(num_arr, array_size))
-			print_error(num_arr);
+			print_error();
 		else
 			ft_merge_sort(num_arr, 0, array_size - 1);
 	}

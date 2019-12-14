@@ -136,6 +136,60 @@ push_swap/fast:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/build
 .PHONY : push_swap/fast
 
+libft/src/ft_array/ft_print_ll_arr.o: libft/src/ft_array/ft_print_ll_arr.c.o
+
+.PHONY : libft/src/ft_array/ft_print_ll_arr.o
+
+# target to build an object file
+libft/src/ft_array/ft_print_ll_arr.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.o
+.PHONY : libft/src/ft_array/ft_print_ll_arr.c.o
+
+libft/src/ft_array/ft_print_ll_arr.i: libft/src/ft_array/ft_print_ll_arr.c.i
+
+.PHONY : libft/src/ft_array/ft_print_ll_arr.i
+
+# target to preprocess a source file
+libft/src/ft_array/ft_print_ll_arr.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.i
+.PHONY : libft/src/ft_array/ft_print_ll_arr.c.i
+
+libft/src/ft_array/ft_print_ll_arr.s: libft/src/ft_array/ft_print_ll_arr.c.s
+
+.PHONY : libft/src/ft_array/ft_print_ll_arr.s
+
+# target to generate assembly for a file
+libft/src/ft_array/ft_print_ll_arr.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.s
+.PHONY : libft/src/ft_array/ft_print_ll_arr.c.s
+
+libft/src/ft_array/ft_print_sizet_arr.o: libft/src/ft_array/ft_print_sizet_arr.c.o
+
+.PHONY : libft/src/ft_array/ft_print_sizet_arr.o
+
+# target to build an object file
+libft/src/ft_array/ft_print_sizet_arr.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.o
+.PHONY : libft/src/ft_array/ft_print_sizet_arr.c.o
+
+libft/src/ft_array/ft_print_sizet_arr.i: libft/src/ft_array/ft_print_sizet_arr.c.i
+
+.PHONY : libft/src/ft_array/ft_print_sizet_arr.i
+
+# target to preprocess a source file
+libft/src/ft_array/ft_print_sizet_arr.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.i
+.PHONY : libft/src/ft_array/ft_print_sizet_arr.c.i
+
+libft/src/ft_array/ft_print_sizet_arr.s: libft/src/ft_array/ft_print_sizet_arr.c.s
+
+.PHONY : libft/src/ft_array/ft_print_sizet_arr.s
+
+# target to generate assembly for a file
+libft/src/ft_array/ft_print_sizet_arr.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.s
+.PHONY : libft/src/ft_array/ft_print_sizet_arr.c.s
+
 src/checker.o: src/checker.c.o
 
 .PHONY : src/checker.o
@@ -304,6 +358,33 @@ src/input_handle.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/input_handle.c.s
 .PHONY : src/input_handle.c.s
 
+src/ps_algorithm.o: src/ps_algorithm.c.o
+
+.PHONY : src/ps_algorithm.o
+
+# target to build an object file
+src/ps_algorithm.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/ps_algorithm.c.o
+.PHONY : src/ps_algorithm.c.o
+
+src/ps_algorithm.i: src/ps_algorithm.c.i
+
+.PHONY : src/ps_algorithm.i
+
+# target to preprocess a source file
+src/ps_algorithm.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/ps_algorithm.c.i
+.PHONY : src/ps_algorithm.c.i
+
+src/ps_algorithm.s: src/ps_algorithm.c.s
+
+.PHONY : src/ps_algorithm.s
+
+# target to generate assembly for a file
+src/ps_algorithm.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/ps_algorithm.c.s
+.PHONY : src/ps_algorithm.c.s
+
 src/push_swap.o: src/push_swap.c.o
 
 .PHONY : src/push_swap.o
@@ -412,6 +493,60 @@ src/stack_set.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/stack_set.c.s
 .PHONY : src/stack_set.c.s
 
+src/stacks_init.o: src/stacks_init.c.o
+
+.PHONY : src/stacks_init.o
+
+# target to build an object file
+src/stacks_init.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/stacks_init.c.o
+.PHONY : src/stacks_init.c.o
+
+src/stacks_init.i: src/stacks_init.c.i
+
+.PHONY : src/stacks_init.i
+
+# target to preprocess a source file
+src/stacks_init.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/stacks_init.c.i
+.PHONY : src/stacks_init.c.i
+
+src/stacks_init.s: src/stacks_init.c.s
+
+.PHONY : src/stacks_init.s
+
+# target to generate assembly for a file
+src/stacks_init.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/stacks_init.c.s
+.PHONY : src/stacks_init.c.s
+
+src/visualize_input_process.o: src/visualize_input_process.c.o
+
+.PHONY : src/visualize_input_process.o
+
+# target to build an object file
+src/visualize_input_process.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/visualize_input_process.c.o
+.PHONY : src/visualize_input_process.c.o
+
+src/visualize_input_process.i: src/visualize_input_process.c.i
+
+.PHONY : src/visualize_input_process.i
+
+# target to preprocess a source file
+src/visualize_input_process.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/visualize_input_process.c.i
+.PHONY : src/visualize_input_process.c.i
+
+src/visualize_input_process.s: src/visualize_input_process.c.s
+
+.PHONY : src/visualize_input_process.s
+
+# target to generate assembly for a file
+src/visualize_input_process.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/visualize_input_process.c.s
+.PHONY : src/visualize_input_process.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -422,6 +557,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... checker"
 	@echo "... push_swap"
+	@echo "... libft/src/ft_array/ft_print_ll_arr.o"
+	@echo "... libft/src/ft_array/ft_print_ll_arr.i"
+	@echo "... libft/src/ft_array/ft_print_ll_arr.s"
+	@echo "... libft/src/ft_array/ft_print_sizet_arr.o"
+	@echo "... libft/src/ft_array/ft_print_sizet_arr.i"
+	@echo "... libft/src/ft_array/ft_print_sizet_arr.s"
 	@echo "... src/checker.o"
 	@echo "... src/checker.i"
 	@echo "... src/checker.s"
@@ -440,6 +581,9 @@ help:
 	@echo "... src/input_handle.o"
 	@echo "... src/input_handle.i"
 	@echo "... src/input_handle.s"
+	@echo "... src/ps_algorithm.o"
+	@echo "... src/ps_algorithm.i"
+	@echo "... src/ps_algorithm.s"
 	@echo "... src/push_swap.o"
 	@echo "... src/push_swap.i"
 	@echo "... src/push_swap.s"
@@ -452,6 +596,12 @@ help:
 	@echo "... src/stack_set.o"
 	@echo "... src/stack_set.i"
 	@echo "... src/stack_set.s"
+	@echo "... src/stacks_init.o"
+	@echo "... src/stacks_init.i"
+	@echo "... src/stacks_init.s"
+	@echo "... src/visualize_input_process.o"
+	@echo "... src/visualize_input_process.i"
+	@echo "... src/visualize_input_process.s"
 .PHONY : help
 
 

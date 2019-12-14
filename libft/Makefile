@@ -1,7 +1,9 @@
 NAME:=libft.a
 
 LIBFT_ARRAY_PATH=ft_array/
-LIBFT_ARRAY_SRC= ft_print_int_arr ft_print_str_arr ft_print_pstr_arr ft_get_number_of_substrings
+LIBFT_ARRAY_SRC= ft_print_int_arr ft_print_str_arr ft_print_pstr_arr \
+				ft_get_number_of_substrings ft_print_ll_arr \
+				ft_print_sizet_arr
 
 LIBFT_LST_PATH:=	ft_lst/
 LIBFT_LST_SRC:= ft_lstadd \
@@ -109,7 +111,7 @@ LIBFT_STR_SRC:= ft_check_end_spaces \
 				ft_str_is_numeric_no_spaces
 
 FT_SORTING_PATH:=	ft_sorting/
-FT_SORTING_SRC:=	ft_merge_sort
+FT_SORTING_SRC:=	ft_merge_sort ft_merge_sort_sizet
 
 FILES:= get_next_line
 

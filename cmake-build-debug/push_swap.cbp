@@ -122,6 +122,12 @@
 			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
+		<Unit filename="/Users/artembykov/Desktop/push_swap/libft/src/ft_array/ft_print_ll_arr.c">
+			<Option target="checker"/>
+		</Unit>
+		<Unit filename="/Users/artembykov/Desktop/push_swap/libft/src/ft_array/ft_print_sizet_arr.c">
+			<Option target="checker"/>
+		</Unit>
 		<Unit filename="/Users/artembykov/Desktop/push_swap/src/checker.c">
 			<Option target="checker"/>
 		</Unit>
@@ -142,6 +148,9 @@
 			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
+		<Unit filename="/Users/artembykov/Desktop/push_swap/src/ps_algorithm.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/artembykov/Desktop/push_swap/src/push_swap.c">
 			<Option target="push_swap"/>
 		</Unit>
@@ -152,6 +161,12 @@
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/artembykov/Desktop/push_swap/src/stack_set.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/artembykov/Desktop/push_swap/src/stacks_init.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/artembykov/Desktop/push_swap/src/visualize_input_process.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/artembykov/Desktop/push_swap/CMakeLists.txt">

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.o"
+  "CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.o"
   "CMakeFiles/checker.dir/src/checker.c.o"
   "CMakeFiles/checker.dir/src/checker_handle.c.o"
   "CMakeFiles/checker.dir/src/input_handle.c.o"

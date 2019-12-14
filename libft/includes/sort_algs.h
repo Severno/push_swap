@@ -13,6 +13,8 @@
 #ifndef SORT_ALGS_H
 #define SORT_ALGS_H
 
+#include "libft.h"
+
 typedef struct	s_merge_sort
 {
 	int low;
@@ -25,5 +27,6 @@ typedef struct	s_merge_sort
 }				t_merge_sort;
 
 int			*ft_merge_sort(int arr[], int low, int high);
+size_t		*ft_merge_sort_sizet(size_t arr[], size_t low, size_t high);
 
 #endif

@@ -4,10 +4,13 @@ file(REMOVE_RECURSE
   "CMakeFiles/push_swap.dir/src/commands_rotate.c.o"
   "CMakeFiles/push_swap.dir/src/get_stack_info.c.o"
   "CMakeFiles/push_swap.dir/src/input_handle.c.o"
+  "CMakeFiles/push_swap.dir/src/ps_algorithm.c.o"
   "CMakeFiles/push_swap.dir/src/push_swap.c.o"
   "CMakeFiles/push_swap.dir/src/stack_pop.c.o"
   "CMakeFiles/push_swap.dir/src/stack_push.c.o"
   "CMakeFiles/push_swap.dir/src/stack_set.c.o"
+  "CMakeFiles/push_swap.dir/src/stacks_init.c.o"
+  "CMakeFiles/push_swap.dir/src/visualize_input_process.c.o"
   "push_swap"
   "push_swap.pdb"
 )

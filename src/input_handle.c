@@ -27,9 +27,9 @@ int	check_input_condition(int arg_c, char *arg_v[])
 
 int		*convert_str_to_int_array(int arg_c, char *arg_v[], size_t *array_size)
 {
-	char input_condition;
+	int input_condition;
 
-	input_condition = (char)check_input_condition(arg_c, arg_v);
+	input_condition = check_input_condition(arg_c, arg_v);
 	if (input_condition == MULTIPLE_INPUT_PARAMS)
 		return (handle_multiple_input_params(arg_c, arg_v, array_size));
 	else if (input_condition == ONE_INPUT_PARAM)
@@ -51,7 +51,7 @@ int has_duplicates(int *num_arr, size_t size)
 		while (j < size)
 		{
 			if (num_arr[i] == num_arr[j])
-				return (0);
+				return (1);
 			j++;
 		}
 		i++;
