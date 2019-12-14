@@ -237,6 +237,7 @@ void ps_small_range(t_stacks *stacks)
 		stacks->b_min = get_min_b_value(stacks->b_head);
 		sort_stack_b(stacks);
 		i++;
+
 	}
 //	ft_printf("\n");
 //	ft_print_int_arr(stacks->poss_cur_range, 1, stacks->chank_range_len);
