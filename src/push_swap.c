@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 	check_and_init_stacks(&stacks, argc, argv);
 	if (stacks->a_head == NULL || is_sorted(stacks->a_head) == 1)
 		return (0);
-	if (argc >= 5 && argc <= 50)
+	if (argc >= 5 && argc <= 10000)
 		ps_small_range(stacks);
 //	else if (argc >= 8 && argc <= 800)
 //		ps_middle_range(stacks);
@@ -51,6 +51,7 @@ int main(int argc, char *argv[])
 //		;
 //	visualize_input_process(stacks);
 	print_stacks(stacks->a_head, stacks->b_head);
+	ft_printf(RED"Sum of operations: %d\n"RESET, stacks->sum_of_commands);
 	free_stacks(stacks);
 	return (0);
 }

@@ -51,6 +51,7 @@ typedef struct		s_stacks
 	int				*poss_cur_range;
 	int				*sorted_arr;
 	int				*unsorted_arr;
+	int				sum_of_commands;
 }					t_stacks;
 
 

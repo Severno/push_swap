@@ -83,9 +83,9 @@ int get_stack_size(t_stack *head)
 size_t get_chanks_num(size_t arr_size)
 {
 	if (arr_size >= 5 && arr_size <= 15)
+		return (1);
+	else if (arr_size >= 16 && arr_size <= 10000)
 		return (2);
-	else if (arr_size >= 16 && arr_size <= 30)
-		return (4);
 	else if (arr_size >= 31 && arr_size <= 50)
 		return (8);
 	else if (arr_size >= 51 && arr_size <= 100)
