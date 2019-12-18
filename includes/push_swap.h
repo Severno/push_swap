@@ -90,6 +90,7 @@ size_t get_chank_range_len(t_stacks *stacks);
 int get_min_b_value(t_stack *stack_b);
 int get_max_b_value(t_stack *stack_b);
 t_stack *get_last_stack_elem(t_stack *stack);
+int get_number_of_elements(t_stack *stack);
 // commands
 int					ft_apply_s(t_stack **stack);
 int					ft_apply_ss(t_stack **stack_a, t_stack **stack_b);

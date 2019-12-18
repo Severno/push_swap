@@ -12,6 +12,21 @@
 
 #include "../includes/push_swap.h"
 
+int get_number_of_elements(t_stack *stack)
+{
+	t_stack *stack_tmp;
+	int i;
+
+	i = 0;
+	stack_tmp = stack;
+	while (stack_tmp)
+	{
+		i++;
+		stack_tmp = stack_tmp->next;
+	}
+	return (i);
+}
+
 int get_middle_pos(int arr_size) // TODO переписать на size_t
 {
 	if (arr_size > 0)

@@ -223,11 +223,36 @@ static void handle_one_chank(t_stacks *stacks)
 void ps_small_range(t_stacks *stacks)
 {
 	int i;
+	int j;
+	t_stack *a_tmp;
+	t_stack *b_tmp;
 
 	i = 0;
-	stacks->chanks_amount = stacks->len_a / 50;
+	j = 0;
+	a_tmp = stacks->a_head;
+	b_tmp = stacks->b_head;
+	stacks->chanks_amount = 1;
 	stacks->chank_range_len = get_chank_range_len(stacks);
 //	ft_print_int_arr(stacks->poss_cur_range, 1, stacks->chank_range_len);
+
+// ----------BRUTFORCE-----------
+//	while (j < stacks->len_a)
+//	{
+//		while (1)
+//		{
+//			if (stacks->a_head->value == stacks->sorted_arr[j])
+//			{
+//				ft_apply_p(&stacks->a_head, &stacks->b_head);
+//				stacks->sum_of_commands++;
+//				break;
+//			}
+//			ft_apply_r(&stacks->a_head);
+//			stacks->sum_of_commands++;
+//		}
+//		j++;
+//	}
+//	push_all_b_to_a(&stacks->a_head, &stacks->b_head, stacks);
+// ----------BRUTFORCE END-----------
 	while (i < stacks->chanks_amount)
 	{
 		stacks->poss_cur_range = get_poss_of_val_cur_range(stacks);
@@ -237,8 +262,8 @@ void ps_small_range(t_stacks *stacks)
 		stacks->b_min = get_min_b_value(stacks->b_head);
 		sort_stack_b(stacks);
 		i++;
-
 	}
+	push_all_b_to_a(&stacks->a_head, &stacks->b_head, stacks);
 //	ft_printf("\n");
 //	ft_print_int_arr(stacks->poss_cur_range, 1, stacks->chank_range_len);
 //	ft_printf("\n");
@@ -251,9 +276,9 @@ void ps_small_range(t_stacks *stacks)
 
 //	ft_printf(RED"Да, это примерно так выглядит\n"RESET);
 
-	push_all_b_to_a(&stacks->a_head, &stacks->b_head, stacks);
 	free(stacks->poss_cur_range);
 }
+
 void ps_middle_range(t_stacks *stacks)
 {
 	(void)stacks;
@@ -263,3 +288,47 @@ void ps_big_range(t_stacks *stacks)
 	(void)stacks;
 }
 
+
+static int		range_pos_funct(t_stack *a, int local_max)
+{
+	int pos_num;
+	int i;
+
+	pos_num = 0;
+	i = -1;
+	while (a)
+	{
+		i++;
+		if (a->value <= local_max)
+		{
+			return (i);
+		}
+		a = a->next;
+	}
+	return (i);
+}
+
+// COMPARE IMPLEMENTATION
+int		bulky_med(t_stack **a, t_stack **b, int i, t_stacks *stacks)
+{
+	int local_max;
+	int	elems;
+	int j;
+	int tot_div_chunk;
+	int range_pos;
+
+	j = 0;
+	elems = get_number_of_elements(stacks->a_head);
+	while (*a)
+	{
+		j++;
+		local_max = elems / 5;
+		tot_div_chunk = local_max * j;
+		range_pos = range_pos_funct(*a, local_max);
+		if (range(*a, tot_div_chunk) == 1)
+			i += a_handle_while_range(a, b, range_pos, tot_div_chunk);
+	}
+	if (!*a)
+		i += rb_or_rrb_one_hundered(a, b, elems);
+	return (i);
+}
