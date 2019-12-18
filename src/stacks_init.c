@@ -2,23 +2,23 @@
 
 void add_array_elems_to_stack_a(t_stacks *stacks)
 {
-	t_stack		*a_stack;
+	t_stack		*stack_a;
 	int		i;
 
 	i = 1;
-	a_stack = ft_create_new_stack_elem(stacks->unsorted_arr[0]);
+	stack_a = ft_create_new_stack_elem(stacks->unsorted_arr[0]);
 	while (i < stacks->len_a){
-		ft_stack_push_back(&a_stack, ft_create_new_stack_elem(stacks->unsorted_arr[i++]));
-//		ft_printf("%d\n", a_stack->next->value);
+		ft_stack_push_back(&stack_a, ft_create_new_stack_elem(stacks->unsorted_arr[i++]));
+//		ft_printf("%d\n", stack_a->next->value);
 	}
-	stacks->a_head = a_stack;
+	stacks->stack_a = stack_a;
 }
 
 void stacks_init(t_stacks **stacks, int *unsorted_arr, size_t array_size)
 {
 	*stacks = (t_stacks *)ft_memalloc(sizeof(t_stacks));
-	(*stacks)->a_head = NULL;
-	(*stacks)->b_head = NULL;
+	(*stacks)->stack_a = NULL;
+	(*stacks)->stack_b = NULL;
 	(*stacks)->poss_cur_range = NULL;
 	(*stacks)->amount_found_pos = 0;
 	(*stacks)->chank_search_range = 0;

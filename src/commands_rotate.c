@@ -26,7 +26,7 @@ int					ft_apply_rr(t_stack **stack)
 	return (0);
 }
 
-int					ft_apply_rr_st(t_stack **stack_a, t_stack **stack_b)
+int			ft_apply_rr_st(t_stack **stack_a, t_stack **stack_b)
 {
 	if (ft_apply_rr(stack_a) && ft_apply_rr(stack_b))
 		return (1);

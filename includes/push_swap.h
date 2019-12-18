@@ -35,8 +35,8 @@ typedef struct		s_stack
 
 typedef struct		s_stacks
 {
-	t_stack			*a_head;
-	t_stack			*b_head;
+	t_stack			*stack_a;
+	t_stack			*stack_b;
 	int			len_a;
 	int				len_b;
 	int				b_max;
@@ -70,17 +70,17 @@ t_stack			*create_stack(int capacity);
 int				stack_size(t_stack *stack);
 
 // checker
-int				*argv_to_int_arr(int argc, char *argv[], size_t *array_size);
+int				*argv_to_int_arr(int argc, char *argv[], int *array_size);
 int				checker(int argc, char *argv[]);
-void			print_error();
+int			print_error();
 void			free_push_swap(int *arr_num);
-int				*handle_multiple_input_params(int argc, char *argv[], size_t *array_size);
-int				*handle_one_input_params(char *argv[], size_t *array_size);
+int				*handle_multiple_input_params(int argc, char *argv[], int *array_size);
+int				*handle_one_input_params(char *argv[], int *array_size);
 
 // input handle
 int				check_input_condition(int argc, char *argv[]);
-int				*convert_str_to_int_array(int argc, char *argv[], size_t *array_size);
-int				has_duplicates(int *num_arr, size_t size);
+int				*convert_str_to_int_array(int argc, char *argv[], int *array_size);
+int				has_duplicates(int *num_arr, int size);
 
 // get stack info
 int get_middle_pos(int length);
@@ -122,8 +122,10 @@ void visualize_input_process(t_stacks *stacks);
 void print_stacks(t_stack* stack_a, t_stack* stack_b);
 
 // stacks set
-void free_stacks(t_stacks *stacks);
+int free_data(t_stacks *stacks);
 void free_stack(t_stack **head);
+t_stack *create_stack_a(t_stacks *stacks);
+t_stacks *create_stacks(int argc, char *argv[]);
 
 // ps_algorithm
 int is_sorted(t_stack *stack_a);
@@ -131,4 +133,17 @@ void ps_small_range(t_stacks *stacks);
 void ps_middle_range(t_stacks *stacks);
 void ps_big_range(t_stacks *stacks);
 
+
+// algos handle
+int		*get_poss_of_val_cur_range(t_stacks *stacks);
+void reduce_by_one(t_stacks *stacks, int cur_range_pos);
+int stack_b_is_sorted(t_stacks *stacks);
+void sort_stack_b(t_stacks *stacks);
+void find_correct_position(t_stacks *stacks);
+
+// algo handle addition
+void compare_push_value_and_top_stack_b(t_stacks *stacks);
+void push_a_to_sorted_b(t_stacks *stacks);
+void push_all_b_to_a(t_stack **stack_a, t_stack **stack_b, t_stacks *stacks);
+void handle_one_chank(t_stacks *stacks);
 #endif

@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-int			*handle_multiple_input_params(int argc, char *argv[], size_t *array_size)
+int			*handle_multiple_input_params(int argc, char *argv[], int *array_size)
 {
 	size_t	arg_count;
 	size_t	i;
@@ -35,7 +35,7 @@ int			*handle_multiple_input_params(int argc, char *argv[], size_t *array_size)
 	return (num_arr);
 }
 
-int			*handle_one_input_params(char *argv[], size_t *array_size)
+int			*handle_one_input_params(char *argv[], int *array_size)
 {
 	char	**split_str;
 	size_t	arg_count;
@@ -65,8 +65,8 @@ void		free_push_swap(int *arr_num)
 	free(arr_num);
 }
 
-void		print_error()
+int		print_error()
 {
 	ft_putstr("Error\n");
-	exit(1);
+	return (1);
 }

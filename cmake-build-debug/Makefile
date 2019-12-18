@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/artembykov/Desktop/push_swap
+CMAKE_SOURCE_DIR = /Users/sapril/Desktop/push_swap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/artembykov/Desktop/push_swap/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/sapril/Desktop/push_swap/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles /Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles /Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/artembykov/Desktop/push_swap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -189,6 +189,60 @@ libft/src/ft_array/ft_print_sizet_arr.s: libft/src/ft_array/ft_print_sizet_arr.c
 libft/src/ft_array/ft_print_sizet_arr.c.s:
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.s
 .PHONY : libft/src/ft_array/ft_print_sizet_arr.c.s
+
+src/algo_handle.o: src/algo_handle.c.o
+
+.PHONY : src/algo_handle.o
+
+# target to build an object file
+src/algo_handle.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/algo_handle.c.o
+.PHONY : src/algo_handle.c.o
+
+src/algo_handle.i: src/algo_handle.c.i
+
+.PHONY : src/algo_handle.i
+
+# target to preprocess a source file
+src/algo_handle.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/algo_handle.c.i
+.PHONY : src/algo_handle.c.i
+
+src/algo_handle.s: src/algo_handle.c.s
+
+.PHONY : src/algo_handle.s
+
+# target to generate assembly for a file
+src/algo_handle.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/algo_handle.c.s
+.PHONY : src/algo_handle.c.s
+
+src/algo_handle_addition.o: src/algo_handle_addition.c.o
+
+.PHONY : src/algo_handle_addition.o
+
+# target to build an object file
+src/algo_handle_addition.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/algo_handle_addition.c.o
+.PHONY : src/algo_handle_addition.c.o
+
+src/algo_handle_addition.i: src/algo_handle_addition.c.i
+
+.PHONY : src/algo_handle_addition.i
+
+# target to preprocess a source file
+src/algo_handle_addition.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/algo_handle_addition.c.i
+.PHONY : src/algo_handle_addition.c.i
+
+src/algo_handle_addition.s: src/algo_handle_addition.c.s
+
+.PHONY : src/algo_handle_addition.s
+
+# target to generate assembly for a file
+src/algo_handle_addition.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/algo_handle_addition.c.s
+.PHONY : src/algo_handle_addition.c.s
 
 src/checker.o: src/checker.c.o
 
@@ -358,6 +412,33 @@ src/input_handle.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/input_handle.c.s
 .PHONY : src/input_handle.c.s
 
+src/median.o: src/median.c.o
+
+.PHONY : src/median.o
+
+# target to build an object file
+src/median.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/median.c.o
+.PHONY : src/median.c.o
+
+src/median.i: src/median.c.i
+
+.PHONY : src/median.i
+
+# target to preprocess a source file
+src/median.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/median.c.i
+.PHONY : src/median.c.i
+
+src/median.s: src/median.c.s
+
+.PHONY : src/median.s
+
+# target to generate assembly for a file
+src/median.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/median.c.s
+.PHONY : src/median.c.s
+
 src/ps_algorithm.o: src/ps_algorithm.c.o
 
 .PHONY : src/ps_algorithm.o
@@ -411,6 +492,33 @@ src/push_swap.s: src/push_swap.c.s
 src/push_swap.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/push_swap.c.s
 .PHONY : src/push_swap.c.s
+
+src/quick_sort.o: src/quick_sort.c.o
+
+.PHONY : src/quick_sort.o
+
+# target to build an object file
+src/quick_sort.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/quick_sort.c.o
+.PHONY : src/quick_sort.c.o
+
+src/quick_sort.i: src/quick_sort.c.i
+
+.PHONY : src/quick_sort.i
+
+# target to preprocess a source file
+src/quick_sort.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/quick_sort.c.i
+.PHONY : src/quick_sort.c.i
+
+src/quick_sort.s: src/quick_sort.c.s
+
+.PHONY : src/quick_sort.s
+
+# target to generate assembly for a file
+src/quick_sort.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/quick_sort.c.s
+.PHONY : src/quick_sort.c.s
 
 src/stack_pop.o: src/stack_pop.c.o
 
@@ -563,6 +671,12 @@ help:
 	@echo "... libft/src/ft_array/ft_print_sizet_arr.o"
 	@echo "... libft/src/ft_array/ft_print_sizet_arr.i"
 	@echo "... libft/src/ft_array/ft_print_sizet_arr.s"
+	@echo "... src/algo_handle.o"
+	@echo "... src/algo_handle.i"
+	@echo "... src/algo_handle.s"
+	@echo "... src/algo_handle_addition.o"
+	@echo "... src/algo_handle_addition.i"
+	@echo "... src/algo_handle_addition.s"
 	@echo "... src/checker.o"
 	@echo "... src/checker.i"
 	@echo "... src/checker.s"
@@ -581,12 +695,18 @@ help:
 	@echo "... src/input_handle.o"
 	@echo "... src/input_handle.i"
 	@echo "... src/input_handle.s"
+	@echo "... src/median.o"
+	@echo "... src/median.i"
+	@echo "... src/median.s"
 	@echo "... src/ps_algorithm.o"
 	@echo "... src/ps_algorithm.i"
 	@echo "... src/ps_algorithm.s"
 	@echo "... src/push_swap.o"
 	@echo "... src/push_swap.i"
 	@echo "... src/push_swap.s"
+	@echo "... src/quick_sort.o"
+	@echo "... src/quick_sort.i"
+	@echo "... src/quick_sort.s"
 	@echo "... src/stack_pop.o"
 	@echo "... src/stack_pop.i"
 	@echo "... src/stack_pop.s"

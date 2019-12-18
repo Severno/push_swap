@@ -6,23 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/Users/artembykov/Desktop/push_swap/includes/push_swap.h
+/Users/sapril/Desktop/push_swap/includes/push_swap.h
 ../libft/includes/libft.h
-/Users/artembykov/Desktop/push_swap/libft/includes/libft.h
+/Users/sapril/Desktop/push_swap/libft/includes/libft.h
 
-/Users/artembykov/Desktop/push_swap/libft/includes/ft_printf.h
+/Users/sapril/Desktop/push_swap/libft/includes/ft_printf.h
 libft.h
-/Users/artembykov/Desktop/push_swap/libft/includes/libft.h
+/Users/sapril/Desktop/push_swap/libft/includes/libft.h
 float.h
 -
 stdarg.h
 -
 
-/Users/artembykov/Desktop/push_swap/libft/includes/get_next_line.h
+/Users/sapril/Desktop/push_swap/libft/includes/get_next_line.h
 libft.h
-/Users/artembykov/Desktop/push_swap/libft/includes/libft.h
+/Users/sapril/Desktop/push_swap/libft/includes/libft.h
 
-/Users/artembykov/Desktop/push_swap/libft/includes/libft.h
+/Users/sapril/Desktop/push_swap/libft/includes/libft.h
 unistd.h
 -
 string.h
@@ -34,27 +34,33 @@ stdio.h
 fcntl.h
 -
 sort_algs.h
-/Users/artembykov/Desktop/push_swap/libft/includes/sort_algs.h
+/Users/sapril/Desktop/push_swap/libft/includes/sort_algs.h
 get_next_line.h
-/Users/artembykov/Desktop/push_swap/libft/includes/get_next_line.h
+/Users/sapril/Desktop/push_swap/libft/includes/get_next_line.h
 ft_printf.h
-/Users/artembykov/Desktop/push_swap/libft/includes/ft_printf.h
+/Users/sapril/Desktop/push_swap/libft/includes/ft_printf.h
 
-/Users/artembykov/Desktop/push_swap/libft/includes/sort_algs.h
+/Users/sapril/Desktop/push_swap/libft/includes/sort_algs.h
+libft.h
+/Users/sapril/Desktop/push_swap/libft/includes/libft.h
 
-/Users/artembykov/Desktop/push_swap/libft/src/ft_num/ft_copy_int_arr.c
+/Users/sapril/Desktop/push_swap/libft/src/ft_array/ft_print_ll_arr.c
 ../../includes/libft.h
-/Users/artembykov/Desktop/push_swap/libft/includes/libft.h
+/Users/sapril/Desktop/push_swap/libft/includes/libft.h
 
-/Users/artembykov/Desktop/push_swap/src/checker.c
-../includes/push_swap.h
-/Users/artembykov/Desktop/push_swap/includes/push_swap.h
+/Users/sapril/Desktop/push_swap/libft/src/ft_array/ft_print_sizet_arr.c
+../../includes/libft.h
+/Users/sapril/Desktop/push_swap/libft/includes/libft.h
 
-/Users/artembykov/Desktop/push_swap/src/checker_handle.c
+/Users/sapril/Desktop/push_swap/src/checker.c
 ../includes/push_swap.h
-/Users/artembykov/Desktop/push_swap/includes/push_swap.h
+/Users/sapril/Desktop/push_swap/includes/push_swap.h
 
-/Users/artembykov/Desktop/push_swap/src/input_handle.c
+/Users/sapril/Desktop/push_swap/src/checker_handle.c
 ../includes/push_swap.h
-/Users/artembykov/Desktop/push_swap/includes/push_swap.h
+/Users/sapril/Desktop/push_swap/includes/push_swap.h
+
+/Users/sapril/Desktop/push_swap/src/input_handle.c
+../includes/push_swap.h
+/Users/sapril/Desktop/push_swap/includes/push_swap.h
 

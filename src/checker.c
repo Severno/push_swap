@@ -12,10 +12,10 @@
 
 #include "../includes/push_swap.h"
 
-int		main(int argc, char *argv[])
+int     main(int argc, char *argv[])
 {
 	int		*num_arr;
-	size_t	array_size;
+	int	array_size;
 
 	num_arr = NULL;
 	array_size = 0;

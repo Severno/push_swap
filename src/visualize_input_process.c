@@ -39,7 +39,8 @@ void visualize_input_process(t_stacks *stacks)
 {
 	ft_printf("------------STARTING POSITION------------\n");
 	print_commands();
-	print_stacks(stacks->a_head, stacks->b_head);
+	ft_print_int_arr(stacks->sorted_arr, 1, stacks->len_a - 1);
+	print_stacks(stacks->stack_a, stacks->stack_b);
 	ft_printf(RED"---------------------------------------------\nInput command:"RESET);
 	while (1)
 	{
@@ -49,48 +50,53 @@ void visualize_input_process(t_stacks *stacks)
 			break;
 		if (ft_strequ(buf, "sa"))
 		{
-			ft_apply_s(&stacks->a_head);
-			print_stacks(stacks->a_head, stacks->b_head);
+			ft_apply_s(&stacks->stack_a);
+			print_stacks(stacks->stack_a, stacks->stack_b);
+		}
+		else if (ft_strequ(buf, "sb"))
+		{
+			ft_apply_s(&stacks->stack_b);
+			print_stacks(stacks->stack_a, stacks->stack_b);
 		}
 		else if (ft_strequ(buf, "pa"))
 		{
-			ft_apply_p(&stacks->a_head, &stacks->b_head);
-			print_stacks(stacks->a_head, stacks->b_head);
+			ft_apply_p(&stacks->stack_b, &stacks->stack_a);
+			print_stacks(stacks->stack_a, stacks->stack_b);
 		}
 		else if (ft_strequ(buf, "pb"))
 		{
-			ft_apply_p(&stacks->b_head, &stacks->a_head);
-			print_stacks(stacks->a_head, stacks->b_head);
+			ft_apply_p(&stacks->stack_a, &stacks->stack_b);
+			print_stacks(stacks->stack_a, stacks->stack_b);
 		}
 		else if (ft_strequ(buf, "ra"))
 		{
-			ft_apply_r(&stacks->a_head);
-			print_stacks(stacks->a_head, stacks->b_head);
+			ft_apply_r(&stacks->stack_a);
+			print_stacks(stacks->stack_a, stacks->stack_b);
 		}
 		else if (ft_strequ(buf, "rb"))
 		{
-			ft_apply_r(&stacks->a_head);
-			print_stacks(stacks->a_head, stacks->b_head);
+			ft_apply_r(&stacks->stack_b);
+			print_stacks(stacks->stack_a, stacks->stack_b);
 		}
 		else if (ft_strequ(buf, "rr"))
 		{
-			ft_apply_r_st(&stacks->a_head, &stacks->b_head);
-			print_stacks(stacks->a_head, stacks->b_head);
+			ft_apply_r_st(&stacks->stack_a, &stacks->stack_b);
+			print_stacks(stacks->stack_a, stacks->stack_b);
 		}
 		else if (ft_strequ(buf, "rra"))
 		{
-			ft_apply_rr(&stacks->a_head);
-			print_stacks(stacks->a_head, stacks->b_head);
+			ft_apply_rr(&stacks->stack_a);
+			print_stacks(stacks->stack_a, stacks->stack_b);
 		}
 		else if (ft_strequ(buf, "rrb"))
 		{
-			ft_apply_rr(&stacks->b_head);
-			print_stacks(stacks->a_head, stacks->b_head);
+			ft_apply_rr(&stacks->stack_b);
+			print_stacks(stacks->stack_a, stacks->stack_b);
 		}
 		else if (ft_strequ(buf, "rrr"))
 		{
-			ft_apply_rr_st(&stacks->a_head, &stacks->b_head);
-			print_stacks(stacks->a_head, stacks->b_head);
+			ft_apply_rr_st(&stacks->stack_a, &stacks->stack_b);
+			print_stacks(stacks->stack_a, stacks->stack_b);
 		}
 		else if (ft_strequ(buf, "help"))
 		{

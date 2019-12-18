@@ -23,7 +23,9 @@ WHITE_IN:=\033[1;37m
 
 FILES = checker input_handle stack_set checker_handle \
 		commands push_swap get_stack_info stack_pop stack_push commands_rotate \
-		stacks_init visualize_input_process ps_algorithm
+		stacks_init visualize_input_process ps_algorithm algo_handle algo_handle_addition \
+		quick_sort median
+
 
 FILES_PUSH_SWAP= $(filter-out checker, $(FILES))
 OBJ_PUSH_SWAP=$(addprefix $(OBJ_PATH), $(addsuffix .o, $(FILES_PUSH_SWAP)))

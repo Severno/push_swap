@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-t_stack *ft_stack_pop_front(t_stack **stack)
+t_stack     *ft_stack_pop_front(t_stack **stack)
 {
 	t_stack *tmp_stack;
 
@@ -27,16 +27,16 @@ t_stack *ft_stack_pop_front(t_stack **stack)
 	return (tmp_stack);
 }
 
-t_stack		*ft_stack_pop_back(t_stack **stack)
+t_stack     *ft_stack_pop_back(t_stack **stack)
 {
-	t_stack *before_last;
-	t_stack *tmp;
+    t_stack *before_last;
+    t_stack *tmp;
 
-	if (*stack == NULL)
-		return (NULL);
-	before_last = *stack;
-	tmp = *stack;
-	if ((*stack)->next == NULL)
+    if (*stack == NULL)
+        return (NULL);
+    before_last = *stack;
+    tmp = *stack;
+    if ((*stack)->next == NULL)
 		*stack = NULL;
 	else
 	{
