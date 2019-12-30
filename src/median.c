@@ -2,8 +2,9 @@
 
 int get_elems_num(t_stack *stack)
 {
-	t_stack *tmp;
+	(void)stack;
+//	t_stack *tmp;
 
-	tmp = stack;
-
+//	tmp = stack;
+	return (0);
 }

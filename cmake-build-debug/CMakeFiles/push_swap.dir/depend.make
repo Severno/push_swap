@@ -50,6 +50,13 @@ CMakeFiles/push_swap.dir/src/input_handle.c.o: ../libft/includes/libft.h
 CMakeFiles/push_swap.dir/src/input_handle.c.o: ../libft/includes/sort_algs.h
 CMakeFiles/push_swap.dir/src/input_handle.c.o: ../src/input_handle.c
 
+CMakeFiles/push_swap.dir/src/median.c.o: ../includes/push_swap.h
+CMakeFiles/push_swap.dir/src/median.c.o: ../libft/includes/ft_printf.h
+CMakeFiles/push_swap.dir/src/median.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/push_swap.dir/src/median.c.o: ../libft/includes/libft.h
+CMakeFiles/push_swap.dir/src/median.c.o: ../libft/includes/sort_algs.h
+CMakeFiles/push_swap.dir/src/median.c.o: ../src/median.c
+
 CMakeFiles/push_swap.dir/src/ps_algorithm.c.o: ../includes/push_swap.h
 CMakeFiles/push_swap.dir/src/ps_algorithm.c.o: ../libft/includes/ft_printf.h
 CMakeFiles/push_swap.dir/src/ps_algorithm.c.o: ../libft/includes/get_next_line.h
@@ -63,6 +70,8 @@ CMakeFiles/push_swap.dir/src/push_swap.c.o: ../libft/includes/get_next_line.h
 CMakeFiles/push_swap.dir/src/push_swap.c.o: ../libft/includes/libft.h
 CMakeFiles/push_swap.dir/src/push_swap.c.o: ../libft/includes/sort_algs.h
 CMakeFiles/push_swap.dir/src/push_swap.c.o: ../src/push_swap.c
+
+CMakeFiles/push_swap.dir/src/quick_sort.c.o: ../src/quick_sort.c
 
 CMakeFiles/push_swap.dir/src/stack_pop.c.o: ../includes/push_swap.h
 CMakeFiles/push_swap.dir/src/stack_pop.c.o: ../libft/includes/ft_printf.h
