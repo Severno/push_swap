@@ -1,0 +1,31 @@
+Update README.md
+Update README.md
+Merge branch 'master' of https://github.com/SamLynnEvans/Push_swap
+
+merge
+subject pdf added
+Update README.md
+Update README.md
+Delete author
+Delete .push_swap.h.swp
+Update README.md
+removed swp files
+handin ready
+deleted unnecessary sort variable in main
+cleaned further
+all normed
+looking good
+fixed three case to make correct size
+cleaning and working yet more
+cleaning and working
+mid clean-up and functioning
+changed linked list
+much improved version
+working but not as efficient as calv
+working for bigger chains
+getting closer
+almost there
+working split of a stack
+work in progress
+Initial commit
+

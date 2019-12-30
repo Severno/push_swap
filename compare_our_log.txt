@@ -1,0 +1,14 @@
+Update README.md
+Update README.md
+Add some changes
+Add some changes
+YEAP YEAP YEAP it is working, but should be optimized
+YEAP YEAP YEAP it is working
+Add sorting in b, almost done
+Add all commands
+Make some changes
+add a lot of stuff
+Add some push_swap
+Add merge sort, but want to rewrite it on struct
+first commit
+
