@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/push_swap.dir/src/a_stack_handle.c.o"
   "CMakeFiles/push_swap.dir/src/algo_handle.c.o"
   "CMakeFiles/push_swap.dir/src/algo_handle_addition.c.o"
+  "CMakeFiles/push_swap.dir/src/b_stack_handle.c.o"
   "CMakeFiles/push_swap.dir/src/checker_handle.c.o"
   "CMakeFiles/push_swap.dir/src/commands.c.o"
   "CMakeFiles/push_swap.dir/src/commands_rotate.c.o"

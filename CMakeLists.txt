@@ -24,13 +24,15 @@ file(GLOB SRC_PUSH_SWAP
         "src/algo_handle_addition.c"
         "src/quick_sort.c"
         "src/median.c"
+        "src/b_stack_handle.c"
+        "src/a_stack_handle.c"
         )
 file(GLOB LIBFT_SRC
         "libft/includes/*.h"
         "libft/src/*/*.c"
         )
 
-add_executable(push_swap ${SRC_PUSH_SWAP} src/stacks_init.c src/visualize_input_process.c src/ps_algorithm.c src/algo_handle.c src/algo_handle_addition.c src/quick_sort.c src/median.c)
+add_executable(push_swap ${SRC_PUSH_SWAP} src/stacks_init.c src/visualize_input_process.c src/ps_algorithm.c src/algo_handle.c src/algo_handle_addition.c src/quick_sort.c src/median.c src/a_stack_handle.c src/b_stack_handle.c)
 add_executable(checker ${SRC_CHECKER} libft/src/ft_array/ft_print_ll_arr.c libft/src/ft_array/ft_print_sizet_arr.c)
 target_link_libraries(push_swap ${CMAKE_SOURCE_DIR}/libft.a)
 target_link_libraries(checker ${CMAKE_SOURCE_DIR}/libft.a)

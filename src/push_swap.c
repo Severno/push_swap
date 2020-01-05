@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 15:00:34 by sapril            #+#    #+#             */
-/*   Updated: 2019/12/18 09:49:16 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/05 15:28:21 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@
 //
 //}
 
-int				main(int argc, char *argv[])
+int			main(int argc, char *argv[])
 {
 	t_stacks	*stacks;
 
@@ -49,7 +49,10 @@ int				main(int argc, char *argv[])
 	if (stacks->stack_a == NULL || is_sorted(stacks->stack_a) == 1
 	|| has_duplicates(stacks->unsorted_arr, stacks->len_a))
 		exit(free_data(stacks));
-	visualize_input_process(stacks);
+	print_stacks(stacks->stack_a, stacks->stack_b);
+	sort_a(&stacks->stack_a, 3);
+	print_stacks(stacks->stack_a, stacks->stack_b);
+//	visualize_input_process(stacks);
 //	set_stack_info(stacks);
 //	ft_print_int_arr(stacks->unsorted_arr, 1, stacks->len_a);
 //	ft_printf("\n");

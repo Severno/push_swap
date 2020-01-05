@@ -35,6 +35,7 @@ t_stacks *create_stacks(int argc, char *argv[])
 	new_stacks->sorted_arr = ft_copy_int_arr(new_stacks->unsorted_arr, new_stacks->len_a);
 	new_stacks->stack_a = create_stack_a(new_stacks);
 	new_stacks->stack_b = NULL;
+	new_stacks->ac = argc;
 	ft_merge_sort(new_stacks->sorted_arr, 0, new_stacks->len_a - 1);
 	return (new_stacks);
 }

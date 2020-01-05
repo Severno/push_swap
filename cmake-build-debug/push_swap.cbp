@@ -132,10 +132,16 @@
 		<Unit filename="/Users/sapril/Desktop/push_swap/libft/src/ft_array/ft_print_sizet_arr.c">
 			<Option target="checker"/>
 		</Unit>
+		<Unit filename="/Users/sapril/Desktop/push_swap/src/a_stack_handle.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/algo_handle.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/algo_handle_addition.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/sapril/Desktop/push_swap/src/b_stack_handle.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/checker.c">

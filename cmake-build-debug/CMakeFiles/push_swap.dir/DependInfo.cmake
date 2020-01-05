@@ -4,8 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/Users/sapril/Desktop/push_swap/src/a_stack_handle.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/a_stack_handle.c.o"
   "/Users/sapril/Desktop/push_swap/src/algo_handle.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/algo_handle.c.o"
   "/Users/sapril/Desktop/push_swap/src/algo_handle_addition.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/algo_handle_addition.c.o"
+  "/Users/sapril/Desktop/push_swap/src/b_stack_handle.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/b_stack_handle.c.o"
   "/Users/sapril/Desktop/push_swap/src/checker_handle.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/checker_handle.c.o"
   "/Users/sapril/Desktop/push_swap/src/commands.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/commands.c.o"
   "/Users/sapril/Desktop/push_swap/src/commands_rotate.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/commands_rotate.c.o"

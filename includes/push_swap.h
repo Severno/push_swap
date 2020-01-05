@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 16:42:56 by sapril            #+#    #+#             */
-/*   Updated: 2019/12/11 13:56:19 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/05 15:46:45 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,17 @@ typedef struct		s_stacks
 	int				b_min;
 	long long		cur_range_min_val;
 	long long		cur_range_max_val;
-	int			middle_pos_a;
-	int			chanks_amount;
-	int			amount_found_pos;
-	int			chank_search_range;
-	int			chank_range_len;
+	int				els_sorted;
+	int				middle_pos_a;
+	int				chanks_amount;
+	int				amount_found_pos;
+	int				chank_search_range;
+	int				chank_range_len;
 	int				*poss_cur_range;
 	int				*sorted_arr;
 	int				*unsorted_arr;
 	int				sum_of_commands;
+	int				ac;
 }					t_stacks;
 
 
@@ -146,4 +148,9 @@ void compare_push_value_and_top_stack_b(t_stacks *stacks);
 void push_a_to_sorted_b(t_stacks *stacks);
 void push_all_b_to_a(t_stack **stack_a, t_stack **stack_b, t_stacks *stacks);
 void handle_one_chank(t_stacks *stacks);
+
+// a_stack_handle
+void sort_tree_elems(t_stack **a);
+void sort_a(t_stack **a, int capacity);
+
 #endif

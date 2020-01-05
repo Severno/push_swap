@@ -190,6 +190,33 @@ libft/src/ft_array/ft_print_sizet_arr.c.s:
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.s
 .PHONY : libft/src/ft_array/ft_print_sizet_arr.c.s
 
+src/a_stack_handle.o: src/a_stack_handle.c.o
+
+.PHONY : src/a_stack_handle.o
+
+# target to build an object file
+src/a_stack_handle.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/a_stack_handle.c.o
+.PHONY : src/a_stack_handle.c.o
+
+src/a_stack_handle.i: src/a_stack_handle.c.i
+
+.PHONY : src/a_stack_handle.i
+
+# target to preprocess a source file
+src/a_stack_handle.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/a_stack_handle.c.i
+.PHONY : src/a_stack_handle.c.i
+
+src/a_stack_handle.s: src/a_stack_handle.c.s
+
+.PHONY : src/a_stack_handle.s
+
+# target to generate assembly for a file
+src/a_stack_handle.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/a_stack_handle.c.s
+.PHONY : src/a_stack_handle.c.s
+
 src/algo_handle.o: src/algo_handle.c.o
 
 .PHONY : src/algo_handle.o
@@ -243,6 +270,33 @@ src/algo_handle_addition.s: src/algo_handle_addition.c.s
 src/algo_handle_addition.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/algo_handle_addition.c.s
 .PHONY : src/algo_handle_addition.c.s
+
+src/b_stack_handle.o: src/b_stack_handle.c.o
+
+.PHONY : src/b_stack_handle.o
+
+# target to build an object file
+src/b_stack_handle.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/b_stack_handle.c.o
+.PHONY : src/b_stack_handle.c.o
+
+src/b_stack_handle.i: src/b_stack_handle.c.i
+
+.PHONY : src/b_stack_handle.i
+
+# target to preprocess a source file
+src/b_stack_handle.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/b_stack_handle.c.i
+.PHONY : src/b_stack_handle.c.i
+
+src/b_stack_handle.s: src/b_stack_handle.c.s
+
+.PHONY : src/b_stack_handle.s
+
+# target to generate assembly for a file
+src/b_stack_handle.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/b_stack_handle.c.s
+.PHONY : src/b_stack_handle.c.s
 
 src/checker.o: src/checker.c.o
 
@@ -671,12 +725,18 @@ help:
 	@echo "... libft/src/ft_array/ft_print_sizet_arr.o"
 	@echo "... libft/src/ft_array/ft_print_sizet_arr.i"
 	@echo "... libft/src/ft_array/ft_print_sizet_arr.s"
+	@echo "... src/a_stack_handle.o"
+	@echo "... src/a_stack_handle.i"
+	@echo "... src/a_stack_handle.s"
 	@echo "... src/algo_handle.o"
 	@echo "... src/algo_handle.i"
 	@echo "... src/algo_handle.s"
 	@echo "... src/algo_handle_addition.o"
 	@echo "... src/algo_handle_addition.i"
 	@echo "... src/algo_handle_addition.s"
+	@echo "... src/b_stack_handle.o"
+	@echo "... src/b_stack_handle.i"
+	@echo "... src/b_stack_handle.s"
 	@echo "... src/checker.o"
 	@echo "... src/checker.i"
 	@echo "... src/checker.s"
