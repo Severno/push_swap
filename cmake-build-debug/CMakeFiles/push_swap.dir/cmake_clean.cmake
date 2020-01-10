@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/push_swap.dir/libft/src/ft_searching/ft_quick_select.c.o"
   "CMakeFiles/push_swap.dir/src/a_stack_handle.c.o"
   "CMakeFiles/push_swap.dir/src/algo_handle.c.o"
   "CMakeFiles/push_swap.dir/src/algo_handle_addition.c.o"

@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 16:42:56 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/05 15:46:45 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/10 20:29:56 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,13 @@ typedef struct		s_stacks
 {
 	t_stack			*stack_a;
 	t_stack			*stack_b;
-	int			len_a;
+	t_stack			*stack_a_top;
+	t_stack			**stack_b_top;
+	int				partition_cap;
+	int				len_a;
 	int				len_b;
-	int				b_max;
-	int				b_min;
-	long long		cur_range_min_val;
-	long long		cur_range_max_val;
-	int				els_sorted;
-	int				middle_pos_a;
 	int				chanks_amount;
 	int				amount_found_pos;
-	int				chank_search_range;
 	int				chank_range_len;
 	int				*poss_cur_range;
 	int				*sorted_arr;
@@ -150,7 +146,21 @@ void push_all_b_to_a(t_stack **stack_a, t_stack **stack_b, t_stacks *stacks);
 void handle_one_chank(t_stacks *stacks);
 
 // a_stack_handle
-void sort_tree_elems(t_stack **a);
-void sort_a(t_stack **a, int capacity);
+void sort_tree_elems(t_stack **a, t_stacks *stacks);
+void sort_a(t_stack **a, t_stacks *stacks,  int capacity);
+void push_less_than_median_to_b(t_stack *stack_a, t_stacks *stacks, int median);
+int get_elems_count_a(t_stack *stack, t_stacks *stacks);
+int a_to_b(t_stacks *stacks);
+
+// b_stack_handle
+void sort_tree_elems_b(t_stack **b, t_stacks *stacks);
+void sort_b(t_stack **b, t_stacks *stacks,  int capacity);
+void push_sorted_b_to_a(t_stack **stack_b, t_stacks *stacks);
+void push_less_than_median_to_a(t_stack *stack_b, t_stacks *stacks, int median);
+int get_elems_count_b(t_stack *stack, t_stacks *stacks);
+int b_to_a(t_stacks *stacks);
+
+// true median
+int true_median(t_stacks *stacks, t_stack *stack);
 
 #endif

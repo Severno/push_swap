@@ -76,12 +76,12 @@ preinstall:
 CMakeFiles/checker.dir/all:
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/depend
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target checker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target checker"
 .PHONY : CMakeFiles/checker.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/checker.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/checker.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/checker.dir/rule
@@ -103,12 +103,12 @@ CMakeFiles/checker.dir/clean:
 CMakeFiles/push_swap.dir/all:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/depend
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25 "Built target push_swap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles --progress-num=8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27 "Built target push_swap"
 .PHONY : CMakeFiles/push_swap.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/push_swap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/push_swap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/push_swap.dir/rule

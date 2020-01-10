@@ -190,6 +190,36 @@ libft/src/ft_array/ft_print_sizet_arr.c.s:
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.s
 .PHONY : libft/src/ft_array/ft_print_sizet_arr.c.s
 
+libft/src/ft_searching/ft_quick_select.o: libft/src/ft_searching/ft_quick_select.c.o
+
+.PHONY : libft/src/ft_searching/ft_quick_select.o
+
+# target to build an object file
+libft/src/ft_searching/ft_quick_select.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_searching/ft_quick_select.c.o
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/src/ft_searching/ft_quick_select.c.o
+.PHONY : libft/src/ft_searching/ft_quick_select.c.o
+
+libft/src/ft_searching/ft_quick_select.i: libft/src/ft_searching/ft_quick_select.c.i
+
+.PHONY : libft/src/ft_searching/ft_quick_select.i
+
+# target to preprocess a source file
+libft/src/ft_searching/ft_quick_select.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_searching/ft_quick_select.c.i
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/src/ft_searching/ft_quick_select.c.i
+.PHONY : libft/src/ft_searching/ft_quick_select.c.i
+
+libft/src/ft_searching/ft_quick_select.s: libft/src/ft_searching/ft_quick_select.c.s
+
+.PHONY : libft/src/ft_searching/ft_quick_select.s
+
+# target to generate assembly for a file
+libft/src/ft_searching/ft_quick_select.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_searching/ft_quick_select.c.s
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/src/ft_searching/ft_quick_select.c.s
+.PHONY : libft/src/ft_searching/ft_quick_select.c.s
+
 src/a_stack_handle.o: src/a_stack_handle.c.o
 
 .PHONY : src/a_stack_handle.o
@@ -725,6 +755,9 @@ help:
 	@echo "... libft/src/ft_array/ft_print_sizet_arr.o"
 	@echo "... libft/src/ft_array/ft_print_sizet_arr.i"
 	@echo "... libft/src/ft_array/ft_print_sizet_arr.s"
+	@echo "... libft/src/ft_searching/ft_quick_select.o"
+	@echo "... libft/src/ft_searching/ft_quick_select.i"
+	@echo "... libft/src/ft_searching/ft_quick_select.s"
 	@echo "... src/a_stack_handle.o"
 	@echo "... src/a_stack_handle.i"
 	@echo "... src/a_stack_handle.s"

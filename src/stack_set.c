@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 08:45:57 by sapril            #+#    #+#             */
-/*   Updated: 2019/12/11 12:14:26 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/10 20:45:48 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,17 @@ t_stack *create_stack_a(t_stacks *stacks)
 t_stacks *create_stacks(int argc, char *argv[])
 {
 	t_stacks	*new_stacks;
+	int i;
 
+	i = -1;
 	if (!(new_stacks = ft_memalloc(sizeof(t_stacks))))
 		return (NULL);
 	new_stacks->len_a = 0;
+	new_stacks->partition_cap = 0;
+	new_stacks->stack_b_top = ft_memalloc(sizeof(t_stack) * argc);
+	while (++i < argc)
+		new_stacks->stack_b_top[i] = ft_memalloc(sizeof(t_stack));
+	new_stacks->stack_b_top = ft_memalloc(sizeof(t_stack) * argc);
 	new_stacks->unsorted_arr = convert_str_to_int_array(argc, argv, &new_stacks->len_a);
 	new_stacks->sorted_arr = ft_copy_int_arr(new_stacks->unsorted_arr, new_stacks->len_a);
 	new_stacks->stack_a = create_stack_a(new_stacks);

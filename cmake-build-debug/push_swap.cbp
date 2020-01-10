@@ -132,6 +132,10 @@
 		<Unit filename="/Users/sapril/Desktop/push_swap/libft/src/ft_array/ft_print_sizet_arr.c">
 			<Option target="checker"/>
 		</Unit>
+		<Unit filename="/Users/sapril/Desktop/push_swap/libft/src/ft_searching/ft_quick_select.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/a_stack_handle.c">
 			<Option target="push_swap"/>
 		</Unit>

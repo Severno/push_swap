@@ -22,7 +22,8 @@
 # include "get_next_line.h"
 # include "ft_printf.h"
 
-# define MAX_LONG	9223372036854775807
+# define MAX_LONG		9223372036854775807
+# define MAX_INTEGER	2147483647
 # define MAX_PRECISION	(2000)
 
 typedef struct		s_list
@@ -125,6 +126,7 @@ int					ft_str_is_numeric_no_spaces(char *str);
 int					*ft_copy_int_arr(int *arr, size_t size);
 void				ft_print_ll_arr(long long *num_arr, int in_line, size_t size);
 void				ft_print_sizet_arr(size_t *num_arr, int in_line, size_t size);
+int					quick_select(int *arr, int left, int right, int k);
 
 
 

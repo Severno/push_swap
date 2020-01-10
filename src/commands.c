@@ -36,13 +36,16 @@
 
 int					ft_apply_s(t_stack **stack)
 {
-	int tmp_val;
+	t_stack *tmp;
 
 	if (*stack && (*stack)->next)
 	{
-		tmp_val = (*stack)->value;
-		(*stack)->value = (*stack)->next->value;
-		(*stack)->next->value = tmp_val;
+		tmp = (*stack);
+		(*stack) = (*stack)->next;
+		tmp->next = (*stack)->next;
+		tmp->prev = (*stack);
+		(*stack)->next = tmp;
+		(*stack)->prev = NULL;
 		return (1);
 	}
 	return (0);

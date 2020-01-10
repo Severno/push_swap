@@ -5,16 +5,20 @@
 
 void print_stacks(t_stack* stack_a, t_stack* stack_b)
 {
+	t_stack *tmp_a;
+	t_stack *tmp_b;
 	ft_printf(GREEN"\nStack A\n"RESET);
-	while (stack_a != NULL) {
-		ft_printf("%6d\n", stack_a->value);
-		stack_a = stack_a->next;
+	tmp_a = stack_a;
+	tmp_b = stack_b;
+	while (tmp_a != NULL) {
+		ft_printf("%6d\n", tmp_a->value);
+		tmp_a = tmp_a->next;
 	}
 
 	ft_printf(BLUE"\nStack B\n"RESET);
-	while (stack_b != NULL) {
-		ft_printf("%6d\n", stack_b->value);
-		stack_b = stack_b->next;
+	while (tmp_b != NULL) {
+		ft_printf("%6d\n", tmp_b->value);
+		tmp_b = tmp_b->next;
 	}
 }
 
