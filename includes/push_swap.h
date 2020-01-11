@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 16:42:56 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/10 20:29:56 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/11 19:18:10 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 #define CYAN    "\x1b[36m"
 #define RESET   "\x1b[0m"
 
+
+
 typedef struct		s_stack
 {
 	struct s_stack	*next;
@@ -33,12 +35,19 @@ typedef struct		s_stack
 	int				value;
 }					t_stack;
 
+typedef struct s_part
+{
+	t_stack			*start;
+	t_stack			*end;
+}			t_part;
+
 typedef struct		s_stacks
 {
 	t_stack			*stack_a;
 	t_stack			*stack_b;
 	t_stack			*stack_a_top;
 	t_stack			**stack_b_top;
+	t_part			**partitions;
 	int				partition_cap;
 	int				len_a;
 	int				len_b;
@@ -159,8 +168,13 @@ void push_sorted_b_to_a(t_stack **stack_b, t_stacks *stacks);
 void push_less_than_median_to_a(t_stack *stack_b, t_stacks *stacks, int median);
 int get_elems_count_b(t_stack *stack, t_stacks *stacks);
 int b_to_a(t_stacks *stacks);
+void push_more_than_median_to_a(t_stack *stack_b, t_stacks *stacks, int median);
+int get_max_of_partition(t_stack *start, t_stack *end);
+int get_min_of_partition(t_stack *start, t_stack *end);
 
 // true median
 int true_median(t_stacks *stacks, t_stack *stack);
+
+
 
 #endif
