@@ -139,12 +139,6 @@
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/a_stack_handle.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/sapril/Desktop/push_swap/src/algo_handle.c">
-			<Option target="push_swap"/>
-		</Unit>
-		<Unit filename="/Users/sapril/Desktop/push_swap/src/algo_handle_addition.c">
-			<Option target="push_swap"/>
-		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/b_stack_handle.c">
 			<Option target="push_swap"/>
 		</Unit>
@@ -175,9 +169,6 @@
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/push_swap.c">
-			<Option target="push_swap"/>
-		</Unit>
-		<Unit filename="/Users/sapril/Desktop/push_swap/src/quick_sort.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/stack_pop.c">

@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 16:42:56 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/11 19:18:10 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/13 19:37:44 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,26 +155,29 @@ void push_all_b_to_a(t_stack **stack_a, t_stack **stack_b, t_stacks *stacks);
 void handle_one_chank(t_stacks *stacks);
 
 // a_stack_handle
-void sort_tree_elems(t_stack **a, t_stacks *stacks);
+void sort_three_elems(t_stack **a, t_stacks *stacks);
 void sort_a(t_stack **a, t_stacks *stacks,  int capacity);
-void push_less_than_median_to_b(t_stack *stack_a, t_stacks *stacks, int median);
+void push_less_than_median_to_b(t_stacks *stacks, int median, int elems_count);
 int get_elems_count_a(t_stack *stack, t_stacks *stacks);
 int a_to_b(t_stacks *stacks);
 
 // b_stack_handle
-void sort_tree_elems_b(t_stack **b, t_stacks *stacks);
-void sort_b(t_stack **b, t_stacks *stacks,  int capacity);
+void sort_tree_elems_b(t_stacks *stacks);
+void sort_b(t_stacks *stacks,  int capacity);
 void push_sorted_b_to_a(t_stack **stack_b, t_stacks *stacks);
-void push_less_than_median_to_a(t_stack *stack_b, t_stacks *stacks, int median);
-int get_elems_count_b(t_stack *stack, t_stacks *stacks);
+void push_less_than_median_to_a(t_stacks *stacks, int median);
+int get_elems_count_b(t_stacks *stacks);
 int b_to_a(t_stacks *stacks);
-void push_more_than_median_to_a(t_stack *stack_b, t_stacks *stacks, int median);
+void push_more_than_median_to_a(t_stacks *stacks, int median);
 int get_max_of_partition(t_stack *start, t_stack *end);
 int get_min_of_partition(t_stack *start, t_stack *end);
+void update_partition(t_stacks *stacks);
+void free_partition(t_stacks *stacks, int partition_cap);
 
 // true median
 int true_median(t_stacks *stacks, t_stack *stack);
-
+int special_median_a(t_stacks *stacks);
+int special_median_b(t_stacks *stacks);
 
 
 #endif

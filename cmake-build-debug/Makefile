@@ -247,60 +247,6 @@ src/a_stack_handle.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/a_stack_handle.c.s
 .PHONY : src/a_stack_handle.c.s
 
-src/algo_handle.o: src/algo_handle.c.o
-
-.PHONY : src/algo_handle.o
-
-# target to build an object file
-src/algo_handle.c.o:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/algo_handle.c.o
-.PHONY : src/algo_handle.c.o
-
-src/algo_handle.i: src/algo_handle.c.i
-
-.PHONY : src/algo_handle.i
-
-# target to preprocess a source file
-src/algo_handle.c.i:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/algo_handle.c.i
-.PHONY : src/algo_handle.c.i
-
-src/algo_handle.s: src/algo_handle.c.s
-
-.PHONY : src/algo_handle.s
-
-# target to generate assembly for a file
-src/algo_handle.c.s:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/algo_handle.c.s
-.PHONY : src/algo_handle.c.s
-
-src/algo_handle_addition.o: src/algo_handle_addition.c.o
-
-.PHONY : src/algo_handle_addition.o
-
-# target to build an object file
-src/algo_handle_addition.c.o:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/algo_handle_addition.c.o
-.PHONY : src/algo_handle_addition.c.o
-
-src/algo_handle_addition.i: src/algo_handle_addition.c.i
-
-.PHONY : src/algo_handle_addition.i
-
-# target to preprocess a source file
-src/algo_handle_addition.c.i:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/algo_handle_addition.c.i
-.PHONY : src/algo_handle_addition.c.i
-
-src/algo_handle_addition.s: src/algo_handle_addition.c.s
-
-.PHONY : src/algo_handle_addition.s
-
-# target to generate assembly for a file
-src/algo_handle_addition.c.s:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/algo_handle_addition.c.s
-.PHONY : src/algo_handle_addition.c.s
-
 src/b_stack_handle.o: src/b_stack_handle.c.o
 
 .PHONY : src/b_stack_handle.o
@@ -577,33 +523,6 @@ src/push_swap.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/push_swap.c.s
 .PHONY : src/push_swap.c.s
 
-src/quick_sort.o: src/quick_sort.c.o
-
-.PHONY : src/quick_sort.o
-
-# target to build an object file
-src/quick_sort.c.o:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/quick_sort.c.o
-.PHONY : src/quick_sort.c.o
-
-src/quick_sort.i: src/quick_sort.c.i
-
-.PHONY : src/quick_sort.i
-
-# target to preprocess a source file
-src/quick_sort.c.i:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/quick_sort.c.i
-.PHONY : src/quick_sort.c.i
-
-src/quick_sort.s: src/quick_sort.c.s
-
-.PHONY : src/quick_sort.s
-
-# target to generate assembly for a file
-src/quick_sort.c.s:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/quick_sort.c.s
-.PHONY : src/quick_sort.c.s
-
 src/stack_pop.o: src/stack_pop.c.o
 
 .PHONY : src/stack_pop.o
@@ -761,12 +680,6 @@ help:
 	@echo "... src/a_stack_handle.o"
 	@echo "... src/a_stack_handle.i"
 	@echo "... src/a_stack_handle.s"
-	@echo "... src/algo_handle.o"
-	@echo "... src/algo_handle.i"
-	@echo "... src/algo_handle.s"
-	@echo "... src/algo_handle_addition.o"
-	@echo "... src/algo_handle_addition.i"
-	@echo "... src/algo_handle_addition.s"
 	@echo "... src/b_stack_handle.o"
 	@echo "... src/b_stack_handle.i"
 	@echo "... src/b_stack_handle.s"
@@ -797,9 +710,6 @@ help:
 	@echo "... src/push_swap.o"
 	@echo "... src/push_swap.i"
 	@echo "... src/push_swap.s"
-	@echo "... src/quick_sort.o"
-	@echo "... src/quick_sort.i"
-	@echo "... src/quick_sort.s"
 	@echo "... src/stack_pop.o"
 	@echo "... src/stack_pop.i"
 	@echo "... src/stack_pop.s"

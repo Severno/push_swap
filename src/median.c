@@ -14,29 +14,68 @@ int true_median(t_stacks *stacks, t_stack *stack) {
 	int		arr[stacks->ac + 1];
 	int		i;
 
-	tmp_stack = stack;
 	i = 0;
-	while (tmp_stack)
+	if (stack != NULL)
 	{
-		arr[i] = tmp_stack->value;
-		tmp_stack = tmp_stack->next;
-		i++;
+		tmp_stack = stack;
+		while (tmp_stack)
+		{
+			arr[i] = tmp_stack->value;
+			tmp_stack = tmp_stack->next;
+			i++;
+		}
+		if (i % 2 == 0)
+			return quick_select(arr, 0, i - 1, (i / 2)+1);
+		else
+			return quick_select(arr, 0, i - 1, i / 2+1);
 	}
-	return quick_select(arr, 0, i - 1, i / 2);
+	return (0);
 }
 
-int special_median(t_stacks *stacks, t_stack *stack) {
+int special_median_a(t_stacks *stacks)
+{
 	t_stack	*tmp_stack;
 	int		arr[stacks->ac + 1];
 	int		i;
 
-	tmp_stack = stack;
-	i = 0;
-	while (tmp_stack)
+	i = 1;
+	if (stacks->stack_a != NULL)
 	{
-		arr[i] = tmp_stack->value;
-		tmp_stack = tmp_stack->next;
-		i++;
+		tmp_stack = stacks->stack_a;
+		while (tmp_stack != stacks->stack_a_top && tmp_stack)
+		{
+			arr[i] = tmp_stack->value;
+			tmp_stack = tmp_stack->next;
+			i++;
+		}
+		if (i % 2 == 0)
+			return quick_select(arr, 0, i - 1, (i / 2) + 1);
+		else
+			return quick_select(arr, 0, i - 1, i / 2 + 1);
 	}
-	return quick_select(arr, 0, i - 1, i / 2);
+	return (0);
+}
+
+int special_median_b(t_stacks *stacks)
+{
+	t_stack	*tmp_stack;
+	int		arr[stacks->ac + 1];
+	int		i;
+
+	i = 1;
+	if (stacks->stack_b != NULL)
+	{
+		tmp_stack = stacks->stack_b;
+		while (tmp_stack != stacks->partitions[stacks->partition_cap]->end && tmp_stack)
+		{
+			arr[i] = tmp_stack->value;
+			tmp_stack = tmp_stack->next;
+			i++;
+		}
+		if (i % 2 == 0)
+			return quick_select(arr, 0, i - 1, (i / 2)+ 1);
+		else
+			return quick_select(arr, 0, i - 1, i / 2 + 1);
+	}
+	return (0);
 }

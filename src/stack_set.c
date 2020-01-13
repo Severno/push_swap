@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 08:45:57 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/11 18:13:32 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/13 20:19:11 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ t_stacks *create_stacks(int argc, char *argv[])
 		return (NULL);
 	new_stacks->len_a = 0;
 	new_stacks->partition_cap = -1;
-	new_stacks->partitions = ft_memalloc(sizeof(t_part *) * log2n(argc) + 1);
-	while (++i < logn)
+	new_stacks->partitions = ft_memalloc(sizeof(t_part *) * (log2n(argc) + 1000));
+	while (++i < (logn + 1000))
 		new_stacks->partitions[i] = ft_memalloc(sizeof(t_part));
 	i = -1;
-	new_stacks->stack_b_top = ft_memalloc(sizeof(t_stack) * argc);
+	new_stacks->stack_b_top = ft_memalloc(sizeof(t_stack) * (argc + 1000));
 	while (++i < argc)
 		new_stacks->stack_b_top[i] = ft_memalloc(sizeof(t_stack));
 	new_stacks->stack_b_top = ft_memalloc(sizeof(t_stack) * argc);

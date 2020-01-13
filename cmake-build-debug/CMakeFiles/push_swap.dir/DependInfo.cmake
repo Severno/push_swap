@@ -6,8 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/sapril/Desktop/push_swap/libft/src/ft_searching/ft_quick_select.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/libft/src/ft_searching/ft_quick_select.c.o"
   "/Users/sapril/Desktop/push_swap/src/a_stack_handle.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/a_stack_handle.c.o"
-  "/Users/sapril/Desktop/push_swap/src/algo_handle.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/algo_handle.c.o"
-  "/Users/sapril/Desktop/push_swap/src/algo_handle_addition.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/algo_handle_addition.c.o"
   "/Users/sapril/Desktop/push_swap/src/b_stack_handle.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/b_stack_handle.c.o"
   "/Users/sapril/Desktop/push_swap/src/checker_handle.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/checker_handle.c.o"
   "/Users/sapril/Desktop/push_swap/src/commands.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/commands.c.o"
@@ -17,7 +15,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/sapril/Desktop/push_swap/src/median.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/median.c.o"
   "/Users/sapril/Desktop/push_swap/src/ps_algorithm.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/ps_algorithm.c.o"
   "/Users/sapril/Desktop/push_swap/src/push_swap.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/push_swap.c.o"
-  "/Users/sapril/Desktop/push_swap/src/quick_sort.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/quick_sort.c.o"
   "/Users/sapril/Desktop/push_swap/src/stack_pop.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/stack_pop.c.o"
   "/Users/sapril/Desktop/push_swap/src/stack_push.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/stack_push.c.o"
   "/Users/sapril/Desktop/push_swap/src/stack_set.c" "/Users/sapril/Desktop/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir/src/stack_set.c.o"

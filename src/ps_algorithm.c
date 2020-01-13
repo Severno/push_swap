@@ -1,18 +1,6 @@
 #include "../includes/push_swap.h"
 
-int				is_sorted(t_stack *stack_a)
-{
-	while (stack_a)
-	{
-		if (stack_a->next)
-		{
-			if (stack_a->value > stack_a->next->value)
-				return (0);
-		}
-		stack_a = stack_a->next;
-	}
-	return (1);
-}
+
 //
 ////static void swap_b_values(t_stack *less_val, t_stacks *stacks)
 //////{

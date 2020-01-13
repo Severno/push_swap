@@ -46,156 +46,191 @@ int get_min_of_partition(t_stack *start, t_stack *end)
 	return (min);
 }
 
-void sort_tree_elems_b(t_stack **b, t_stacks *stacks)
+void free_partition(t_stacks *stacks, int partition_cap)
+{
+	if (stacks->partitions[partition_cap]->end)
+		stacks->partitions[partition_cap]->end = NULL;
+	if (stacks->partitions[partition_cap]->start)
+		stacks->partitions[partition_cap]->start = NULL;
+}
+
+void sort_tree_elems_b(t_stacks *stacks)
 {
 	int skip;
 	int max;
 	int count_elements_in_part;
 
 	skip = 0;
-	count_elements_in_part = get_elems_count_b(*b, stacks);
+	count_elements_in_part = get_elems_count_b(stacks);
+	if (!stacks->stack_b)
+		return;
 	if (count_elements_in_part < 3)
 	{
-		while (!((*b)->next->value > (*b)->next->next->value && (*b)->value > (*b)->next->next->value))
+		while (!((stacks->stack_b)->next->value > (stacks->stack_b)->next->next->value && (stacks->stack_b)->value > (stacks->stack_b)->next->next->value))
 		{
-			if ((*b)->next->value < (*b)->next->next->value && (*b)->next->value < (*b)->value)
+			if ((stacks->stack_b)->next->value < (stacks->stack_b)->next->next->value && (stacks->stack_b)->next->value < (stacks->stack_b)->value)
 			{
-				ft_apply_rr(b);
-				print_stacks(stacks->stack_a, *b);
+				ft_apply_rr(&stacks->stack_b);
+				print_stacks(stacks->stack_a, stacks->stack_b);
 				ft_putstr("rrb\n");
 			}
 			else {
-				ft_apply_r(b);
-				print_stacks(stacks->stack_a, *b);
+				ft_apply_r(&stacks->stack_b);
+				print_stacks(stacks->stack_a, stacks->stack_b);
 				ft_putstr("rb\n");
 			}
 		}
-		ft_apply_s(b);
-		print_stacks(stacks->stack_a, *b);
+		ft_apply_s(&stacks->stack_b);
+		print_stacks(stacks->stack_a, stacks->stack_b);
 		ft_putstr("sb\n");
 	}
-	else
+	else /* TODO Ошибка в сортинге, он не учитывает, что в partition могут быть элементы больше или меньше текущих
+		 	TODO трех, соответсвенно кидает в А не то что нужно. *СДЕЛАТЬ ПРОВЕРКУ НА ТО, ЧТО МОЖНО КИДАТЬ В А* */
 	{
 		max = get_max_of_partition(stacks->partitions[stacks->partition_cap]->start,
 				stacks->partitions[stacks->partition_cap]->end);
-		while ((*b)->value < max)
+		while ((stacks->stack_b)->value < max)
 		{
-			ft_apply_r(b);
+			ft_apply_r(&stacks->stack_b);
+			ft_putstr("rb\n");
 			skip++;
 		}
-		ft_apply_p(b, &stacks->stack_a);
+		ft_apply_p(&stacks->stack_b, &stacks->stack_a);
 		while (skip)
 		{
-			ft_apply_rr(b);
+			ft_apply_rr(&stacks->stack_b);
+			ft_putstr("rrb\n");
 			skip--;
 		}
-		if ((*b)->value > (*b)->next->value)
+		if ((stacks->stack_b)->value > (stacks->stack_b)->next->value)
 		{
-			ft_apply_p(b, &stacks->stack_a);
-			ft_apply_p(b, &stacks->stack_a);
+			ft_apply_p(&stacks->stack_b, &stacks->stack_a);
+			ft_apply_p(&stacks->stack_b, &stacks->stack_a);
 		} else {
-			ft_apply_s(b);
-			ft_apply_p(b, &stacks->stack_a);
-			ft_apply_p(b, &stacks->stack_a);
+			ft_apply_s(&stacks->stack_b);
+			ft_apply_p(&stacks->stack_b, &stacks->stack_a);
+			ft_apply_p(&stacks->stack_b, &stacks->stack_a);
 			stacks->stack_a_top = stacks->stack_a;
 		}
 	}
-	stacks->partition_cap--;
-//	stacks->stack_b_top[++stacks->partition_cap] = *b;
+	print_stacks(stacks->stack_a, stacks->stack_b);
+	update_partition(stacks);
+//	stacks->stack_b_top[++stacks->partition_cap] = stacks->stack_b;
 }
 
-void sort_b(t_stack **b, t_stacks *stacks,  int capacity)
+void sort_b(t_stacks *stacks,  int capacity)
 {
-	if (capacity == 0)
+	if (capacity == 1)
 		return ;
-	if (capacity == 1) {
-		if ((*b)->next->value < (*b)->value) {
-			ft_apply_s(b);
+	if (capacity == 2) {
+		if (stacks->stack_b->next->value > stacks->stack_b->value) {
+			ft_apply_s(&stacks->stack_b);
 			ft_putstr("sb");
-			print_stacks(stacks->stack_a, *b);
-			stacks->stack_a_top = *b;
+			print_stacks(stacks->stack_a, stacks->stack_b);
+			stacks->stack_a_top = stacks->stack_b;
 		}
 		return;
 	}
-	sort_tree_elems_b(b, stacks);
+	sort_tree_elems_b(stacks);
 }
 
-//void push_sorted_b_to_a(t_stack **stack_b, t_stacks *stacks)
-//{
-//	int i;
-//
-//	i = 0;
-//	while (i < 3)
-//	{
-//		ft_apply_p(stack_b, &stacks->stack_a);
-//		print_stacks(stacks->stack_a, *stack_b);
-//		ft_putstr("pa\n");
-//		i++;
-//	}
-//}
-//void push_less_than_median_to_a(t_stack *stack_b, t_stacks *stacks, int median)
-//{
-//	int top_value;
-//
-//	top_value = stack_b->value;
-//	while (stack_b != stacks->stack_b_top)
-//	{
-//		if (stack_b->value <= median)
-//		{
-//			ft_apply_p(&stack_b, &stacks->stack_a);
-//			ft_putstr("pb\n");
-//		}
-//		else {
-//			ft_apply_r(&stack_b);
-//			print_stacks(stacks->stack_a, stack_b);
-//			ft_putstr("ra\n");
-//			if (stack_b->value == top_value)
-//				break;
-//		}
-//	}
-//}
-
-void push_more_than_median_to_a(t_stack *stack_b, t_stacks *stacks, int median)
+void update_partition(t_stacks *stacks)
 {
-	int top_value;
+	t_stack *tmp;
 
-	top_value = stack_b->value;
-	stacks->partition_cap++;
-	while (stack_b != stacks->stack_a_top)
+	tmp = stacks->stack_b;
+	if (tmp == NULL)
+		return;
+	if (stacks->partition_cap > 0)
 	{
-		if (stack_b->value >= median)
-		{
-			ft_apply_p(&stack_b, &stacks->stack_a);
-			print_stacks(stacks->stack_a, stack_b);
-			ft_putstr("pb\n");
-		}
-		else {
-			ft_apply_r(&stack_b);
-			print_stacks(stacks->stack_a, stack_b);
-			ft_putstr("rb\n");
-			if (stack_b->value == top_value)
-				break;
-		}
+		stacks->partitions[stacks->partition_cap]->start = tmp;
+		while (tmp->next != stacks->partitions[stacks->partition_cap - 1]->start && tmp->next)
+			tmp = tmp->next;
+		stacks->partitions[stacks->partition_cap]->end = tmp;
+	}
+	else if (stacks->partition_cap == 0)
+	{
+		stacks->partitions[stacks->partition_cap]->start = tmp;
+		while (tmp->next != stacks->partitions[stacks->partition_cap]->end && tmp->next)
+			tmp = tmp->next;
+		stacks->partitions[stacks->partition_cap]->end = tmp;
 	}
 }
 
-int get_elems_count_b(t_stack *stack, t_stacks *stacks)
+void push_more_than_median_to_a(t_stacks *stacks, int median)
+{
+	int skip;
+
+	skip = 0;
+//	stacks->partition_cap++;
+	while (stacks->stack_b)
+	{
+		if (stacks->stack_b->value >= median)
+		{
+			ft_apply_p(&stacks->stack_b, &stacks->stack_a);
+			print_stacks(stacks->stack_a, stacks->stack_b);
+			ft_putstr("pb\n");
+			if (stacks->stack_b == stacks->partitions[stacks->partition_cap]->end && stacks->stack_b->value >= median)
+			{
+				ft_apply_p(&stacks->stack_b, &stacks->stack_a);
+				ft_putstr("pb\n");
+				print_stacks(stacks->stack_a, stacks->stack_b);
+				break;
+			}
+		}
+		else {
+			ft_apply_r(&stacks->stack_b);
+			print_stacks(stacks->stack_a, stacks->stack_b);
+			ft_putstr("rb\n");
+			skip++;
+			if (stacks->stack_b == stacks->partitions[stacks->partition_cap]->end)
+				break;
+		}
+	}
+	while (skip >= 0)
+	{
+		ft_apply_rr(&stacks->stack_b);
+		print_stacks(stacks->stack_a, stacks->stack_b);
+		ft_putstr("rrb\n");
+		skip--;
+	}
+	update_partition(stacks);
+}
+
+int get_elems_count_b(t_stacks *stacks)
 {
 	t_stack *tmp;
 	int count;
 
-	tmp = stack;
 	count = 1;
-	if (tmp == NULL)
-		return (-1);
-	while (tmp != stacks->partitions[stacks->partition_cap]->end && count < 12)
+	if (stacks->stack_b)
 	{
-		tmp = tmp->next;
-		count++;
+		tmp = stacks->stack_b;
+//		count++;
+		while (tmp != stacks->partitions[stacks->partition_cap]->end && count < 12)
+		{
+			tmp = tmp->next;
+			count++;
+		}
+		return (count);
 	}
-	return (count);
+	return (-1);
 }
 
+
+static void push_b(t_stacks *stacks, t_stack **stack_b, int capacity)
+{
+	int i;
+
+	i = 0;
+	capacity = (capacity == -1) ? 3 : capacity;
+	while (i++ < capacity)
+	{
+		ft_apply_p(stack_b, &stacks->stack_a);
+		ft_putstr("pa\n");
+	}
+	update_partition(stacks);
+}
 
 int b_to_a(t_stacks *stacks)
 {
@@ -203,20 +238,36 @@ int b_to_a(t_stacks *stacks)
 	int elems_count;
 
 	median = MAX_INTEGER;
-	elems_count = get_elems_count_b(stacks->stack_b, stacks);
-	if (elems_count <= 3)
+//	update_partition(stacks);
+	elems_count = get_elems_count_b(stacks);
+	if (elems_count <= 6 && elems_count > 3)
 	{
-		sort_b(&stacks->stack_b, stacks, elems_count);
-		print_stacks(stacks->stack_a, stacks->stack_b);
-//		push_sorted_b_to_a(&stacks->stack_b, stacks);
-		print_stacks(stacks->stack_a, stacks->stack_b);
-		return (0);
+		median = special_median_b(stacks);
+		printf("SPECIAL median B = %d\n", median);
 	}
-	else if (elems_count >= 4)
+	else if (elems_count > 6)
 	{
-		median = true_median(stacks, stacks->stack_b);
-		push_more_than_median_to_a(stacks->stack_b, stacks, median);
-		printf("True median A = %d\n", median);
+		median = special_median_b(stacks);
+		printf("TRUE median B = %d\n", median);
+	}
+	if (median != MAX_INTEGER)
+	{
+		push_more_than_median_to_a(stacks, median);
+		print_stacks(stacks->stack_a, stacks->stack_b);
+		printf("split round median B = %d\n", median);
+	}
+	else
+	{
+		sort_b(stacks, elems_count);
+		print_stacks(stacks->stack_a, stacks->stack_b);
+	}
+	if (median == MAX_INTEGER)
+	{
+		if (elems_count != 3)
+			push_b(stacks, &stacks->stack_b, elems_count);
+//		free_partition(stacks, stacks->partition_cap);
+//		stacks->partition_cap--;
+		print_stacks(stacks->stack_a, stacks->stack_b);
 	}
 	return (median == MAX_INTEGER ? 0 : 1);
 }

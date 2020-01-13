@@ -14,15 +14,6 @@ CMakeFiles/push_swap.dir/src/a_stack_handle.c.o
  /Users/sapril/Desktop/push_swap/libft/includes/libft.h
  /Users/sapril/Desktop/push_swap/libft/includes/sort_algs.h
  /Users/sapril/Desktop/push_swap/src/a_stack_handle.c
-CMakeFiles/push_swap.dir/src/algo_handle.c.o
- /Users/sapril/Desktop/push_swap/includes/push_swap.h
- /Users/sapril/Desktop/push_swap/libft/includes/ft_printf.h
- /Users/sapril/Desktop/push_swap/libft/includes/get_next_line.h
- /Users/sapril/Desktop/push_swap/libft/includes/libft.h
- /Users/sapril/Desktop/push_swap/libft/includes/sort_algs.h
- /Users/sapril/Desktop/push_swap/src/algo_handle.c
-CMakeFiles/push_swap.dir/src/algo_handle_addition.c.o
- /Users/sapril/Desktop/push_swap/src/algo_handle_addition.c
 CMakeFiles/push_swap.dir/src/b_stack_handle.c.o
  /Users/sapril/Desktop/push_swap/includes/push_swap.h
  /Users/sapril/Desktop/push_swap/libft/includes/ft_printf.h
@@ -86,8 +77,6 @@ CMakeFiles/push_swap.dir/src/push_swap.c.o
  /Users/sapril/Desktop/push_swap/libft/includes/libft.h
  /Users/sapril/Desktop/push_swap/libft/includes/sort_algs.h
  /Users/sapril/Desktop/push_swap/src/push_swap.c
-CMakeFiles/push_swap.dir/src/quick_sort.c.o
- /Users/sapril/Desktop/push_swap/src/quick_sort.c
 CMakeFiles/push_swap.dir/src/stack_pop.c.o
  /Users/sapril/Desktop/push_swap/includes/push_swap.h
  /Users/sapril/Desktop/push_swap/libft/includes/ft_printf.h

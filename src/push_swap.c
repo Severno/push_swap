@@ -6,33 +6,20 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 15:00:34 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/11 19:25:44 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/13 20:14:33 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-// check_arguments_type(t_stacks *stacks)
 
-//static void		check_and_init_stacks(t_stacks **stacks, int argc, char *argv[])
-//{
-//
-//	int		*unsorted_arr;
-//	int		array_size;
-//
-//	array_size = 0;
-//	if (argc > 1)
-//	{
-//		unsorted_arr = convert_str_to_int_array(argc, argv, &array_size);
-//		if (has_duplicates(unsorted_arr, array_size))
-//		{
-//			free(unsorted_arr);
-//			print_error();
-//		}
-//		stacks_init(stacks, unsorted_arr, array_size);
-//	}
-//	else
-//		exit(1);
-//}
+/*
+ * ЧТО ПРОИСХОДИТ В А
+ * 1. Освобождаем пока не останется 3 или меньше элемента
+ * 2. Сортируем их
+ * 3. Назначаем верхний элемент "Топовым"
+ * 4. Если в А осталось больше чем 3 элемента - продолжаем перекидывать в В
+ * Что происходит в B
+ * */
 
 static int solver(t_stacks *stacks)
 {
@@ -69,7 +56,7 @@ int			main(int argc, char *argv[])
 //	print_stacks(stacks->stack_a, stacks->stack_b);
 //	sort_a(&stacks->stack_a, 3);
 	print_stacks(stacks->stack_a, stacks->stack_b);
-	visualize_input_process(stacks);
+//	visualize_input_process(stacks);
 //	set_stack_info(stacks);
 //	ft_print_int_arr(stacks->unsorted_arr, 1, stacks->len_a);
 //	ft_printf("\n");
@@ -77,6 +64,6 @@ int			main(int argc, char *argv[])
 
 //	print_stacks(stacks->stack_a, stacks->stack_b);
 //	ft_printf(RED"Sum of operations: %d\n"RESET, stacks->sum_of_commands);
-	free_data(stacks);
+//	free_data(stacks);
 	return (0);
 }
