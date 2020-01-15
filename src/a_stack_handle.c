@@ -98,23 +98,23 @@ void sort_a(t_stack **a, t_stacks *stacks,  int capacity)
 	sort_three_elems(a, stacks);
 }
 
-//static int get_less_then_num_count(t_stack *stack, int median)
-//{
-//	int count;
-//	t_stack *tmp;
-//
-//	count = 0;
-//	tmp = stack;
-//	if (!stack)
-//		return (0);
-//	while (tmp)
-//	{
-//		if (tmp->value <= median)
-//			count++;
-//		tmp = tmp->next;
-//	}
-//	return (count);
-//}
+static int get_less_then_num_count(t_stack *stack, int median)
+{
+	int count;
+	t_stack *tmp;
+
+	count = 0;
+	tmp = stack;
+	if (!stack)
+		return (0);
+	while (tmp)
+	{
+		if (tmp->value <= median)
+			count++;
+		tmp = tmp->next;
+	}
+	return (count);
+}
 
 //static void true_split_a_to_b(t_stacks *stacks, int median)
 //{
@@ -150,16 +150,16 @@ void sort_a(t_stack **a, t_stacks *stacks,  int capacity)
 
 void push_less_than_median_to_b(t_stacks *stacks, int median, int elems_count)
 {
-	int top_value;
 	int flag;
 	int skip;
+	int less_count;
 
 	skip = 0;
-	top_value = stacks->stack_a->value;
 	flag = 0;
+	less_count = get_less_then_num_count(stacks->stack_a, median);
 //	if (stacks->partition_cap_final_flag == 0)
 		stacks->partition_cap++;
-	while (stacks->stack_a != stacks->stack_a_top)
+	while (stacks->stack_a != stacks->stack_a_top && less_count > 0)
 	{
 		if (stacks->stack_a->value <= median)
 		{
@@ -174,14 +174,14 @@ void push_less_than_median_to_b(t_stacks *stacks, int median, int elems_count)
 				else
 					stacks->partitions[stacks->partition_cap]->start = stacks->stack_a;
 			}
-
 			ft_apply_p(&stacks->stack_a, &stacks->stack_b);
 			ft_putstr("pb\n");
+			less_count--;
 			--elems_count;
 			//print_stacks(stacks->stack_a, stacks->stack_b);
 		}
 		else {
-			if (--elems_count <= 0)
+			if (less_count <= 0)
 				break;
 			ft_apply_r(&stacks->stack_a);
 //			print_stacks(stacks->stack_a, stacks->stack_b);
@@ -190,7 +190,7 @@ void push_less_than_median_to_b(t_stacks *stacks, int median, int elems_count)
 		}
 	}
 	//print_stacks(stacks->stack_a, stacks->stack_b);
-	if (stacks->stack_a_top != NULL)
+	if (stacks->stack_a_top != NULL && stacks->partition_cap_final_flag == 1)
 	{
 		while (skip > 0)
 		{
