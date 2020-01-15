@@ -28,7 +28,6 @@ static int solver(t_stacks *stacks)
 
 	while (!(sorted = is_sorted(stacks->stack_a)) || stacks->stack_b != NULL)
 	{
-		//print_stacks(stacks->stack_a, stacks->stack_b);
 		if (!sorted)
 		{
 			while (a_to_b(stacks))
@@ -53,8 +52,8 @@ int			main(int argc, char *argv[])
 		exit(free_data(stacks));
 	solver(stacks);
 //	printf("medium index value is %d\n", true_median(stacks, stacks->stack_a, ele));
-	print_stacks(stacks->stack_a, stacks->stack_b);
-//	sort_a(&stacks->stack_a, 3);
+//	print_stacks(stacks->stack_a, stacks->stack_b);
+//	sort_a(&stacks->stack_ar, 3);
 //	int arr[10] = {123, 32, 10 ,9, 8, 11, 0, 4, 5, 6}; // 0 4 5 6 8 9 10 11 32 123
 //	int arr2[9] = {1,2,3,4,5,6,7,8,9};
 //	int arr3[8] = {1,2,3,4,5,6,7,8};

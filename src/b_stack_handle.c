@@ -58,60 +58,36 @@ void sort_tree_elems_b(t_stacks *stacks, int count)
 {
 	int skip;
 	int max;
-	int count_elements_in_part;
 
 	skip = 0;
-	count_elements_in_part = get_elems_count_b(stacks) == count ? get_elems_count_b(stacks) : count;
 	if (!stacks->stack_b)
 		return;
-	if (count_elements_in_part < 3)
+	max = get_max_of_partition(stacks->partitions[stacks->partition_cap]->start,
+							   stacks->partitions[stacks->partition_cap]->end);
+	while ((stacks->stack_b)->value < max) {
+		ft_apply_r(&stacks->stack_b);
+		ft_putstr("rb\n");
+		skip++;
+	}
+	ft_apply_p(&stacks->stack_b, &stacks->stack_a);
+	while (skip) {
+		ft_apply_rr(&stacks->stack_b);
+		ft_putstr("rrb\n");
+		skip--;
+	}
+	if ((stacks->stack_b)->value < (stacks->stack_b)->next->value)
 	{
-		while (!((stacks->stack_b)->next->value > (stacks->stack_b)->next->next->value && (stacks->stack_b)->value > (stacks->stack_b)->next->next->value))
-		{
-			if ((stacks->stack_b)->next->value < (stacks->stack_b)->next->next->value && (stacks->stack_b)->next->value < (stacks->stack_b)->value)
-			{
-				ft_apply_rr(&stacks->stack_b);
-				//print_stacks(stacks->stack_a, stacks->stack_b);
-				ft_putstr("rrb\n");
-			}
-			else {
-				ft_apply_r(&stacks->stack_b);
-				//print_stacks(stacks->stack_a, stacks->stack_b);
-				ft_putstr("rb\n");
-			}
-		}
 		ft_apply_s(&stacks->stack_b);
-		//print_stacks(stacks->stack_a, stacks->stack_b);
 		ft_putstr("sb\n");
 	}
-	else /* TODO Ошибка в сортинге, он не учитывает, что в partition могут быть элементы больше или меньше текущих
-		 	TODO трех, соответсвенно кидает в А не то что нужно. *СДЕЛАТЬ ПРОВЕРКУ НА ТО, ЧТО МОЖНО КИДАТЬ В А* */
+	if (stacks->partition_cap_final_flag == 1 && stacks->stack_b)
 	{
-//		update_partition(stacks);
-		max = get_max_of_partition(stacks->partitions[stacks->partition_cap]->start,
-								   stacks->partitions[stacks->partition_cap]->end);
-		while ((stacks->stack_b)->value < max) {
-			ft_apply_r(&stacks->stack_b);
-			ft_putstr("rb\n");
-			skip++;
-		}
-		ft_apply_p(&stacks->stack_b, &stacks->stack_a);
-		while (skip) {
-			ft_apply_rr(&stacks->stack_b);
-			ft_putstr("rrb\n");
-			skip--;
-		}
-		if ((stacks->stack_b)->value < (stacks->stack_b)->next->value)
-		{
-			ft_apply_s(&stacks->stack_b);
-			ft_putstr("sb\n");
-
-		}
+		stacks->partitions[stacks->partition_cap]->start = stacks->stack_b;
+		if (stacks->partition_cap > 0)
+			stacks->partitions[stacks->partition_cap]->end = stacks->partitions[stacks->partition_cap - 1]->start->prev;
+		else
+			stacks->partitions[stacks->partition_cap]->end = get_last_stack_elem(stacks->stack_b);
 	}
-	stacks->partitions[stacks->partition_cap]->start = stacks->stack_b;
-	if (stacks->partition_cap > 0)
-		stacks->partitions[stacks->partition_cap]->end = stacks->partitions[stacks->partition_cap - 1]->start->prev;
-
 //	stacks->stack_a_top = stacks->stack_a;
 	//print_stacks(stacks->stack_a, stacks->stack_b);
 //	stacks->stack_b_top[++stacks->partition_cap] = stacks->stack_b;
@@ -121,10 +97,8 @@ void sort_tree_elems_b(t_stacks *stacks, int count)
 
 void sort_b(t_stacks *stacks,  int capacity)
 {
-	int count;
 	t_stack *tmp;
 
-	count = 0;
 	tmp = stacks->stack_b;
 	if (tmp == NULL)
 		return;
@@ -139,9 +113,9 @@ void sort_b(t_stacks *stacks,  int capacity)
 			update_partition(stacks);
 //			stacks->partition_cap--;
 		}
+		return;
 	}
-	else
-		sort_tree_elems_b(stacks, capacity);
+	sort_tree_elems_b(stacks, capacity);
 }
 
 void update_partition(t_stacks *stacks)
@@ -218,20 +192,15 @@ int get_elems_count_b(t_stacks *stacks)
 
 	count = 1;
 
-	if (stacks->stack_b)
-	{
-		tmp = stacks->stack_b;
-//		count++;
-//		if (stacks->partition_cap > 0 && stacks->partitions[stacks->partition_cap]->start == NULL)
-//			stacks->partition_cap--;
-		while (tmp != stacks->partitions[stacks->partition_cap]->end && count < 12)
+	tmp = stacks->stack_b;
+	while (tmp != stacks->partitions[stacks->partition_cap]->end && tmp)
 		{
-			tmp = tmp->next;
 			count++;
+			tmp = tmp->next;
 		}
-		return (count);
-	}
-	return (-1);
+	if (!stacks->partitions[stacks->partition_cap]->end && count == 3)
+		return (-1);
+	return (count);
 }
 
 
@@ -250,7 +219,14 @@ static void push_b(t_stacks *stacks, t_stack **stack_b, int capacity)
 		i++;
 	}
 	print_stacks(stacks->stack_a, stacks->stack_b);
-	update_partition(stacks);
+	if (stacks->partition_cap_final_flag == 1 && stacks->stack_b)
+	{
+		stacks->partitions[stacks->partition_cap]->start = stacks->stack_b;
+		if (stacks->partition_cap > 0)
+			stacks->partitions[stacks->partition_cap]->end = stacks->partitions[stacks->partition_cap - 1]->start->prev;
+		else
+			stacks->partitions[stacks->partition_cap]->end = get_last_stack_elem(stacks->stack_b);
+	}
 //	stacks->partition_cap--;
 }
 

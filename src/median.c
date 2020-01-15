@@ -24,12 +24,16 @@ int true_median(t_stacks *stacks, t_stack *stack, int elems_count) {
 			tmp_stack = tmp_stack->next;
 			i++;
 		}
-		if (elems_count % 2 == 1)
-			return quick_select(arr, 0,  i - 1, (i + 2) / 2);
+		ft_merge_sort(arr, 0, i - 1);
+//		if (i % 2 == 1)
+//			return quick_select(arr, 0,  i - 1, (i + 2) / 2);
+//		else
+//			return quick_select(arr, 0, i - 1, (i) / 2) + quick_select(arr, 0, i - 1, (i + 1) / 2) / 2.0;
+		if (i % 2 == 1)
+			return  (arr[(i - 1) / 2]);
 		else
-			return quick_select(arr, 0, i - 1, (i + 1) / 2);
+			return (arr[i / 2]);
 	}
-	return (0);
 }
 
 int special_median_a(t_stacks *stacks, int elems_count)
@@ -42,7 +46,7 @@ int special_median_a(t_stacks *stacks, int elems_count)
 	if (stacks->stack_a != NULL)
 	{
 		tmp_stack = stacks->stack_a;
-		while (tmp_stack  && i < 12)
+		while (tmp_stack)
 		{
 			if (tmp_stack == stacks->stack_a_top)
 			{
@@ -53,12 +57,12 @@ int special_median_a(t_stacks *stacks, int elems_count)
 			tmp_stack = tmp_stack->next;
 			i++;
 		}
-		if (elems_count % 2 == 1)
-			return quick_select(arr, 0,  i - 1, (i + 2) / 2);
+		ft_merge_sort(arr, 0, i - 1);
+		if (i % 2 == 1)
+			return  (arr[(i - 1) / 2]);
 		else
-			return quick_select(arr, 0, i - 1, (i + 1) / 2);
+			return (arr[i / 2]);
 	}
-	return (0);
 }
 
 int special_median_b(t_stacks *stacks, int elems_count)
@@ -67,25 +71,24 @@ int special_median_b(t_stacks *stacks, int elems_count)
 	int		arr[stacks->ac + 1];
 	int		i;
 
-	i = 0;
+	i = 1;
 	if (stacks->stack_b != NULL)
 	{
 		tmp_stack = stacks->stack_b;
-		while (tmp_stack && i < 12)
+		while ((tmp_stack != stacks->partitions[stacks->partition_cap]->end))
 		{
-			if (tmp_stack == stacks->partitions[stacks->partition_cap]->end)
-			{
-				i++;
-				break;
-			}
 			arr[i] = tmp_stack->value;
 			tmp_stack = tmp_stack->next;
 			i++;
 		}
-		if (elems_count % 2 == 1)
-			return quick_select(arr, 0,  i - 1, (i + 2) / 2);
-		else
-			return quick_select(arr, 0, i - 1, (i + 1) / 2);
+		ft_merge_sort(arr, 0, i - 1);
+//		if (i % 2 == 1)
+//			return quick_select(arr, 0,  i - 1, (i + 2) / 2);
+//		else
+//			return quick_select(arr, 0, i - 1, (i) / 2) + quick_select(arr, 0, i - 1, (i + 1) / 2) / 2.0;
+	if (i % 2 == 1)
+		return  (arr[(i - 1) / 2]);
+	else
+		return (arr[i / 2]);
 	}
-	return (0);
 }

@@ -132,7 +132,7 @@ void print_stacks(t_stack* stack_a, t_stack* stack_b);
 // stacks set
 int free_data(t_stacks *stacks);
 void free_stack(t_stack **head);
-void *create_stack_a(t_stacks *stacks);
+void create_stack_a(t_stacks *stacks);
 t_stacks *create_stacks(int argc, char *argv[]);
 
 // ps_algorithm
