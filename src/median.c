@@ -9,7 +9,7 @@
 //
 //}
 
-int true_median(t_stacks *stacks, t_stack *stack, int elems_count) {
+int true_median(t_stacks *stacks, t_stack *stack) {
 	t_stack	*tmp_stack;
 	int		arr[stacks->ac + 1];
 	int		i;
@@ -18,7 +18,7 @@ int true_median(t_stacks *stacks, t_stack *stack, int elems_count) {
 	if (stack != NULL)
 	{
 		tmp_stack = stack;
-		while (tmp_stack)
+		while (tmp_stack != stacks->stack_a_top && tmp_stack)
 		{
 			arr[i] = tmp_stack->value;
 			tmp_stack = tmp_stack->next;
@@ -34,9 +34,10 @@ int true_median(t_stacks *stacks, t_stack *stack, int elems_count) {
 		else
 			return (arr[i / 2]);
 	}
+	return (0);
 }
 
-int special_median_a(t_stacks *stacks, int elems_count)
+int special_median_a(t_stacks *stacks)
 {
 	t_stack	*tmp_stack;
 	int		arr[stacks->ac + 1];
@@ -63,9 +64,10 @@ int special_median_a(t_stacks *stacks, int elems_count)
 		else
 			return (arr[i / 2]);
 	}
+	return (0);
 }
 
-int special_median_b(t_stacks *stacks, int elems_count)
+int special_median_b(t_stacks *stacks)
 {
 	t_stack	*tmp_stack;
 	int		arr[stacks->ac + 1];
@@ -91,4 +93,5 @@ int special_median_b(t_stacks *stacks, int elems_count)
 	else
 		return (arr[i / 2]);
 	}
+	return (0);
 }

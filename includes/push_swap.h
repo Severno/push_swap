@@ -163,7 +163,7 @@ int get_elems_count_a(t_stack *stack, t_stacks *stacks);
 int a_to_b(t_stacks *stacks);
 
 // b_stack_handle
-void sort_tree_elems_b(t_stacks *stacks, int count);
+void sort_three_elems_b(t_stacks *stacks);
 void sort_b(t_stacks *stacks,  int capacity);
 void push_sorted_b_to_a(t_stack **stack_b, t_stacks *stacks);
 void push_less_than_median_to_a(t_stacks *stacks, int median);
@@ -176,9 +176,9 @@ void update_partition(t_stacks *stacks);
 void free_partition(t_stacks *stacks, int partition_cap);
 
 // true median
-int true_median(t_stacks *stacks, t_stack *stack, int elems_count);
-int special_median_a(t_stacks *stacks, int elems_count);
-int special_median_b(t_stacks *stacks, int elems_count);
+int true_median(t_stacks *stacks, t_stack *stack);
+int special_median_a(t_stacks *stacks);
+int special_median_b(t_stacks *stacks);
 
 
 #endif

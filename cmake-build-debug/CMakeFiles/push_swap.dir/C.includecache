@@ -44,7 +44,7 @@ ft_printf.h
 libft.h
 /Users/artembykov/push_swap/libft/includes/libft.h
 
-/Users/artembykov/push_swap/src/a_stack_handle.c
+/Users/artembykov/push_swap/src/push_swap.c
 ../includes/push_swap.h
 /Users/artembykov/push_swap/includes/push_swap.h
 
