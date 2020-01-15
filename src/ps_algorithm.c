@@ -6,11 +6,11 @@
 //////{
 //////	while (less_val != stacks->stack_b)
 //////	{
-//////		print_stacks(stacks->stack_a, stacks->stack_b);
+//////		//print_stacks(stacks->stack_a, stacks->stack_b);
 //////		ft_apply_r(&stacks->stack_b);
 //////	}
 //////	ft_apply_s(&stacks->stack_b);
-//////	print_stacks(stacks->stack_a, stacks->stack_b);
+//////	//print_stacks(stacks->stack_a, stacks->stack_b);
 //////}
 //
 //
@@ -66,7 +66,7 @@
 ////	ft_print_int_arr(stacks->sorted_arr, 1, stacks->len_a);
 ////	ft_printf("\n");
 ////	print_positions_and_values_all_chanks(stacks);
-////	print_stacks(stacks->stack_a, stacks->stack_b);
+////	//print_stacks(stacks->stack_a, stacks->stack_b);
 //
 ////	ft_printf(RED"Да, это примерно так выглядит\n"RESET);
 //

@@ -137,9 +137,11 @@
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/a_stack_handle.c">
+			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/b_stack_handle.c">
+			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/checker.c">
@@ -150,12 +152,15 @@
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/commands.c">
+			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/commands_rotate.c">
+			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/get_stack_info.c">
+			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/input_handle.c">
@@ -163,6 +168,7 @@
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/median.c">
+			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/ps_algorithm.c">
@@ -172,18 +178,22 @@
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/stack_pop.c">
+			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/stack_push.c">
+			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/stack_set.c">
+			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/stacks_init.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/src/visualize_input_process.c">
+			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/sapril/Desktop/push_swap/CMakeLists.txt">

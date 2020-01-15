@@ -14,20 +14,14 @@
 
 int     main(int argc, char *argv[])
 {
-	int		*num_arr;
-	int	array_size;
+	t_stacks	*stacks;
 
-	num_arr = NULL;
-	array_size = 0;
-	if (argc > 1)
-	{
-		num_arr = convert_str_to_int_array(argc, argv, &array_size);
-		if (has_duplicates(num_arr, array_size))
-			print_error();
-		else
-			ft_merge_sort(num_arr, 0, array_size - 1);
-	}
-	ft_print_int_arr(num_arr, 1, array_size);
-	free(num_arr);
+	if (argc < 2)
+		exit(1);
+	stacks = create_stacks(argc, argv);
+	if (stacks->stack_a == NULL || is_sorted(stacks->stack_a) == 1
+		|| has_duplicates(stacks->unsorted_arr, stacks->len_a))
+		exit(free_data(stacks));
+	visualize_input_process(stacks);
 	return (0);
 }

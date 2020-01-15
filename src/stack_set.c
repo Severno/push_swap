@@ -6,22 +6,20 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 08:45:57 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/13 20:19:11 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/15 15:32:51 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-t_stack *create_stack_a(t_stacks *stacks)
+void *create_stack_a(t_stacks *stacks)
 {
-	t_stack		*stack_a;
 	int			i;
 
-	i = 1;
-	stack_a = ft_create_new_stack_elem(stacks->unsorted_arr[0]);
+	i = 0;
+	stacks->stack_a = ft_create_new_stack_elem(stacks->unsorted_arr[i++]);
 	while (i < stacks->len_a)
-		ft_stack_push_back(&stack_a, ft_create_new_stack_elem(stacks->unsorted_arr[i++]));
-	return (stack_a);
+		ft_stack_push_back(&stacks->stack_a, ft_create_new_stack_elem(stacks->unsorted_arr[i++]));
 }
 
 static int log2n(unsigned int n)
@@ -41,17 +39,14 @@ t_stacks *create_stacks(int argc, char *argv[])
 		return (NULL);
 	new_stacks->len_a = 0;
 	new_stacks->partition_cap = -1;
-	new_stacks->partitions = ft_memalloc(sizeof(t_part *) * (log2n(argc) + 1000));
-	while (++i < (logn + 1000))
+	new_stacks->partition_cap_final_flag = 0;
+	new_stacks->partitions = ft_memalloc(sizeof(t_part *) * 100);
+	while (++i < (100))
 		new_stacks->partitions[i] = ft_memalloc(sizeof(t_part));
-	i = -1;
-	new_stacks->stack_b_top = ft_memalloc(sizeof(t_stack) * (argc + 1000));
-	while (++i < argc)
-		new_stacks->stack_b_top[i] = ft_memalloc(sizeof(t_stack));
-	new_stacks->stack_b_top = ft_memalloc(sizeof(t_stack) * argc);
 	new_stacks->unsorted_arr = convert_str_to_int_array(argc, argv, &new_stacks->len_a);
 	new_stacks->sorted_arr = ft_copy_int_arr(new_stacks->unsorted_arr, new_stacks->len_a);
-	new_stacks->stack_a = create_stack_a(new_stacks);
+//	new_stacks->stack_a = ft_memalloc(sizeof(t_stack));
+	create_stack_a(new_stacks);
 	new_stacks->stack_b = NULL;
 	new_stacks->ac = argc;
 	ft_merge_sort(new_stacks->sorted_arr, 0, new_stacks->len_a - 1);
@@ -86,16 +81,35 @@ void free_stack(t_stack **head)
 
 int free_data(t_stacks *stacks)
 {
+	int i;
+	t_stack *tmp;
+
+	i = 0;
+	if (stacks->partitions)
+	{
+		while (i < 100)
+		{
+			free(stacks->partitions[i]);
+			i++;
+		}
+		free(stacks->partitions);
+	}
+	i = 0;
 	if (stacks->stack_a)
-		free_stack(&stacks->stack_a);
+	{
+		while (stacks->stack_a)
+		{
+			tmp = stacks->stack_a;
+			stacks->stack_a = stacks->stack_a->next;
+			free(tmp);
+		}
+	}
 	if (stacks->stack_b)
-		free_stack(&stacks->stack_b);
+		free(stacks->stack_a);
 	if (stacks->sorted_arr)
 		free(stacks->sorted_arr);
 	if (stacks->unsorted_arr)
 		free(stacks->unsorted_arr);
-//	if (stacks->poss_cur_range)
-//		free(stacks->poss_cur_range);
 	free(stacks);
 	return (1);
 }

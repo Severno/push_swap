@@ -44,23 +44,7 @@ ft_printf.h
 libft.h
 /Users/sapril/Desktop/push_swap/libft/includes/libft.h
 
-/Users/sapril/Desktop/push_swap/libft/src/ft_array/ft_print_ll_arr.c
-../../includes/libft.h
-/Users/sapril/Desktop/push_swap/libft/includes/libft.h
-
-/Users/sapril/Desktop/push_swap/libft/src/ft_array/ft_print_sizet_arr.c
-../../includes/libft.h
-/Users/sapril/Desktop/push_swap/libft/includes/libft.h
-
-/Users/sapril/Desktop/push_swap/src/checker.c
-../includes/push_swap.h
-/Users/sapril/Desktop/push_swap/includes/push_swap.h
-
-/Users/sapril/Desktop/push_swap/src/checker_handle.c
-../includes/push_swap.h
-/Users/sapril/Desktop/push_swap/includes/push_swap.h
-
-/Users/sapril/Desktop/push_swap/src/input_handle.c
+/Users/sapril/Desktop/push_swap/src/visualize_input_process.c
 ../includes/push_swap.h
 /Users/sapril/Desktop/push_swap/includes/push_swap.h
 

@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/05 14:04:28 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/13 20:09:34 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/15 16:15:48 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ void sort_three_elems(t_stack **a, t_stacks *stacks)
 			}
 			else {
 				ft_apply_s(a);
-				print_stacks(*a, stacks->stack_b);
+				//print_stacks(*a, stacks->stack_b);
 				ft_putstr("sa\n");
 				ft_apply_rr(a);
-				print_stacks(*a, stacks->stack_b);
+				//print_stacks(*a, stacks->stack_b);
 				ft_putstr("ra\n");
 			}
 		}
@@ -64,6 +64,7 @@ void sort_three_elems(t_stack **a, t_stacks *stacks)
 			skip++;
 		}
 		ft_apply_p(a, &stacks->stack_b);
+			ft_putstr("pb\n");
 		while (skip)
 		{
 			ft_apply_rr(a);
@@ -104,7 +105,8 @@ void push_less_than_median_to_b(t_stacks *stacks, int median, int elems_count)
 
 	skip = 0;
 	top_value = stacks->stack_a->value;
-	stacks->partition_cap++;
+	if (stacks->partition_cap_final_flag == 0)
+		stacks->partition_cap++;
 	while (stacks->stack_a != stacks->stack_a_top)
 	{
 		if (stacks->stack_a->value <= median)
@@ -120,23 +122,24 @@ void push_less_than_median_to_b(t_stacks *stacks, int median, int elems_count)
 			ft_apply_p(&stacks->stack_a, &stacks->stack_b);
 			ft_putstr("pb\n");
 			--elems_count;
+			//print_stacks(stacks->stack_a, stacks->stack_b);
 		}
 		else {
 			if (--elems_count <= 0)
 				break;
 			ft_apply_r(&stacks->stack_a);
-			print_stacks(stacks->stack_a, stacks->stack_b);
+			//print_stacks(stacks->stack_a, stacks->stack_b);
 			ft_putstr("ra\n");
 			skip++;
 		}
 	}
-	print_stacks(stacks->stack_a, stacks->stack_b);
+	//print_stacks(stacks->stack_a, stacks->stack_b);
 	if (stacks->stack_a_top != NULL)
 	{
 		while (skip > 0)
 		{
 			ft_apply_rr(&stacks->stack_a);
-			print_stacks(stacks->stack_a, stacks->stack_b);
+			//print_stacks(stacks->stack_a, stacks->stack_b);
 			ft_putstr("rra\n");
 			skip--;
 		}
@@ -171,18 +174,19 @@ int a_to_b(t_stacks *stacks)
 	elems_count = get_elems_count_a(stacks->stack_a, stacks);
 	if (elems_count <= 11 && elems_count > 3)
 	{
-		median = special_median_a(stacks);
-		printf("Special median A = %d\n", median);
+		median = special_median_a(stacks, elems_count);
+		printf("Special median A = %d\n", median); // 47 54 68 81 96 98
 	}
 	else if (elems_count > 11)
 	{
-		median = true_median(stacks, stacks->stack_a);
+		median = true_median(stacks, stacks->stack_a, elems_count);
+		ft_print_int_arr(stacks->sorted_arr, 1, get_stack_size(stacks->stack_a));
 		printf("TRUE median A = %d\n", median);
 	}
 	if (median != MAX_INTEGER)
 	{
 		push_less_than_median_to_b(stacks, median, elems_count);
-//		print_stacks(a, b, cmnd);
+//		//print_stacks(a, b, cmnd);
 		print_stacks(stacks->stack_a, stacks->stack_b);
 		printf("split_round_median median A = %d\n", median);
 	}

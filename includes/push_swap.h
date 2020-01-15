@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 16:42:56 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/13 19:37:44 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/15 15:32:51 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ typedef struct		s_stacks
 	int				amount_found_pos;
 	int				chank_range_len;
 	int				*poss_cur_range;
+	int				partition_cap_final_flag;
 	int				*sorted_arr;
 	int				*unsorted_arr;
 	int				sum_of_commands;
@@ -113,7 +114,7 @@ void ft_stack_push_front(t_stack **head, t_stack *target);
 t_stack				*ft_get_last_stack_elem(t_stack **head);
 
 // create
-t_stack				*ft_create_new_stack_elem(int value);
+t_stack 				*ft_create_new_stack_elem(int value);
 
 // pop
 t_stack *ft_stack_pop_front(t_stack **stack);
@@ -131,7 +132,7 @@ void print_stacks(t_stack* stack_a, t_stack* stack_b);
 // stacks set
 int free_data(t_stacks *stacks);
 void free_stack(t_stack **head);
-t_stack *create_stack_a(t_stacks *stacks);
+void *create_stack_a(t_stacks *stacks);
 t_stacks *create_stacks(int argc, char *argv[]);
 
 // ps_algorithm
@@ -162,7 +163,7 @@ int get_elems_count_a(t_stack *stack, t_stacks *stacks);
 int a_to_b(t_stacks *stacks);
 
 // b_stack_handle
-void sort_tree_elems_b(t_stacks *stacks);
+void sort_tree_elems_b(t_stacks *stacks, int count);
 void sort_b(t_stacks *stacks,  int capacity);
 void push_sorted_b_to_a(t_stack **stack_b, t_stacks *stacks);
 void push_less_than_median_to_a(t_stacks *stacks, int median);
@@ -175,9 +176,9 @@ void update_partition(t_stacks *stacks);
 void free_partition(t_stacks *stacks, int partition_cap);
 
 // true median
-int true_median(t_stacks *stacks, t_stack *stack);
-int special_median_a(t_stacks *stacks);
-int special_median_b(t_stacks *stacks);
+int true_median(t_stacks *stacks, t_stack *stack, int elems_count);
+int special_median_a(t_stacks *stacks, int elems_count);
+int special_median_b(t_stacks *stacks, int elems_count);
 
 
 #endif
