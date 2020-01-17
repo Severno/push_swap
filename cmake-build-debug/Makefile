@@ -250,6 +250,36 @@ src/a_stack_handle.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/a_stack_handle.c.s
 .PHONY : src/a_stack_handle.c.s
 
+src/a_stack_handle_support.o: src/a_stack_handle_support.c.o
+
+.PHONY : src/a_stack_handle_support.o
+
+# target to build an object file
+src/a_stack_handle_support.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/a_stack_handle_support.c.o
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/a_stack_handle_support.c.o
+.PHONY : src/a_stack_handle_support.c.o
+
+src/a_stack_handle_support.i: src/a_stack_handle_support.c.i
+
+.PHONY : src/a_stack_handle_support.i
+
+# target to preprocess a source file
+src/a_stack_handle_support.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/a_stack_handle_support.c.i
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/a_stack_handle_support.c.i
+.PHONY : src/a_stack_handle_support.c.i
+
+src/a_stack_handle_support.s: src/a_stack_handle_support.c.s
+
+.PHONY : src/a_stack_handle_support.s
+
+# target to generate assembly for a file
+src/a_stack_handle_support.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/a_stack_handle_support.c.s
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/a_stack_handle_support.c.s
+.PHONY : src/a_stack_handle_support.c.s
+
 src/b_stack_handle.o: src/b_stack_handle.c.o
 
 .PHONY : src/b_stack_handle.o
@@ -279,6 +309,36 @@ src/b_stack_handle.c.s:
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/b_stack_handle.c.s
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/b_stack_handle.c.s
 .PHONY : src/b_stack_handle.c.s
+
+src/b_stack_handle_support.o: src/b_stack_handle_support.c.o
+
+.PHONY : src/b_stack_handle_support.o
+
+# target to build an object file
+src/b_stack_handle_support.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/b_stack_handle_support.c.o
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/b_stack_handle_support.c.o
+.PHONY : src/b_stack_handle_support.c.o
+
+src/b_stack_handle_support.i: src/b_stack_handle_support.c.i
+
+.PHONY : src/b_stack_handle_support.i
+
+# target to preprocess a source file
+src/b_stack_handle_support.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/b_stack_handle_support.c.i
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/b_stack_handle_support.c.i
+.PHONY : src/b_stack_handle_support.c.i
+
+src/b_stack_handle_support.s: src/b_stack_handle_support.c.s
+
+.PHONY : src/b_stack_handle_support.s
+
+# target to generate assembly for a file
+src/b_stack_handle_support.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/b_stack_handle_support.c.s
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/b_stack_handle_support.c.s
+.PHONY : src/b_stack_handle_support.c.s
 
 src/checker.o: src/checker.c.o
 
@@ -487,33 +547,6 @@ src/median.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/median.c.s
 .PHONY : src/median.c.s
 
-src/ps_algorithm.o: src/ps_algorithm.c.o
-
-.PHONY : src/ps_algorithm.o
-
-# target to build an object file
-src/ps_algorithm.c.o:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/ps_algorithm.c.o
-.PHONY : src/ps_algorithm.c.o
-
-src/ps_algorithm.i: src/ps_algorithm.c.i
-
-.PHONY : src/ps_algorithm.i
-
-# target to preprocess a source file
-src/ps_algorithm.c.i:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/ps_algorithm.c.i
-.PHONY : src/ps_algorithm.c.i
-
-src/ps_algorithm.s: src/ps_algorithm.c.s
-
-.PHONY : src/ps_algorithm.s
-
-# target to generate assembly for a file
-src/ps_algorithm.c.s:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/ps_algorithm.c.s
-.PHONY : src/ps_algorithm.c.s
-
 src/push_swap.o: src/push_swap.c.o
 
 .PHONY : src/push_swap.o
@@ -540,6 +573,36 @@ src/push_swap.s: src/push_swap.c.s
 src/push_swap.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/push_swap.c.s
 .PHONY : src/push_swap.c.s
+
+src/stack_manipulations.o: src/stack_manipulations.c.o
+
+.PHONY : src/stack_manipulations.o
+
+# target to build an object file
+src/stack_manipulations.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/stack_manipulations.c.o
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/stack_manipulations.c.o
+.PHONY : src/stack_manipulations.c.o
+
+src/stack_manipulations.i: src/stack_manipulations.c.i
+
+.PHONY : src/stack_manipulations.i
+
+# target to preprocess a source file
+src/stack_manipulations.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/stack_manipulations.c.i
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/stack_manipulations.c.i
+.PHONY : src/stack_manipulations.c.i
+
+src/stack_manipulations.s: src/stack_manipulations.c.s
+
+.PHONY : src/stack_manipulations.s
+
+# target to generate assembly for a file
+src/stack_manipulations.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/stack_manipulations.c.s
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/stack_manipulations.c.s
+.PHONY : src/stack_manipulations.c.s
 
 src/stack_pop.o: src/stack_pop.c.o
 
@@ -631,33 +694,6 @@ src/stack_set.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/stack_set.c.s
 .PHONY : src/stack_set.c.s
 
-src/stacks_init.o: src/stacks_init.c.o
-
-.PHONY : src/stacks_init.o
-
-# target to build an object file
-src/stacks_init.c.o:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/stacks_init.c.o
-.PHONY : src/stacks_init.c.o
-
-src/stacks_init.i: src/stacks_init.c.i
-
-.PHONY : src/stacks_init.i
-
-# target to preprocess a source file
-src/stacks_init.c.i:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/stacks_init.c.i
-.PHONY : src/stacks_init.c.i
-
-src/stacks_init.s: src/stacks_init.c.s
-
-.PHONY : src/stacks_init.s
-
-# target to generate assembly for a file
-src/stacks_init.c.s:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/stacks_init.c.s
-.PHONY : src/stacks_init.c.s
-
 src/visualize_input_process.o: src/visualize_input_process.c.o
 
 .PHONY : src/visualize_input_process.o
@@ -710,9 +746,15 @@ help:
 	@echo "... src/a_stack_handle.o"
 	@echo "... src/a_stack_handle.i"
 	@echo "... src/a_stack_handle.s"
+	@echo "... src/a_stack_handle_support.o"
+	@echo "... src/a_stack_handle_support.i"
+	@echo "... src/a_stack_handle_support.s"
 	@echo "... src/b_stack_handle.o"
 	@echo "... src/b_stack_handle.i"
 	@echo "... src/b_stack_handle.s"
+	@echo "... src/b_stack_handle_support.o"
+	@echo "... src/b_stack_handle_support.i"
+	@echo "... src/b_stack_handle_support.s"
 	@echo "... src/checker.o"
 	@echo "... src/checker.i"
 	@echo "... src/checker.s"
@@ -734,12 +776,12 @@ help:
 	@echo "... src/median.o"
 	@echo "... src/median.i"
 	@echo "... src/median.s"
-	@echo "... src/ps_algorithm.o"
-	@echo "... src/ps_algorithm.i"
-	@echo "... src/ps_algorithm.s"
 	@echo "... src/push_swap.o"
 	@echo "... src/push_swap.i"
 	@echo "... src/push_swap.s"
+	@echo "... src/stack_manipulations.o"
+	@echo "... src/stack_manipulations.i"
+	@echo "... src/stack_manipulations.s"
 	@echo "... src/stack_pop.o"
 	@echo "... src/stack_pop.i"
 	@echo "... src/stack_pop.s"
@@ -749,9 +791,6 @@ help:
 	@echo "... src/stack_set.o"
 	@echo "... src/stack_set.i"
 	@echo "... src/stack_set.s"
-	@echo "... src/stacks_init.o"
-	@echo "... src/stacks_init.i"
-	@echo "... src/stacks_init.s"
 	@echo "... src/visualize_input_process.o"
 	@echo "... src/visualize_input_process.i"
 	@echo "... src/visualize_input_process.s"

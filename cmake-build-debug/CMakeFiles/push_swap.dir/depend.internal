@@ -14,6 +14,8 @@ CMakeFiles/push_swap.dir/src/a_stack_handle.c.o
  /Users/artembykov/push_swap/libft/includes/libft.h
  /Users/artembykov/push_swap/libft/includes/sort_algs.h
  /Users/artembykov/push_swap/src/a_stack_handle.c
+CMakeFiles/push_swap.dir/src/a_stack_handle_support.c.o
+ /Users/artembykov/push_swap/src/a_stack_handle_support.c
 CMakeFiles/push_swap.dir/src/b_stack_handle.c.o
  /Users/artembykov/push_swap/includes/push_swap.h
  /Users/artembykov/push_swap/libft/includes/ft_printf.h
@@ -21,6 +23,13 @@ CMakeFiles/push_swap.dir/src/b_stack_handle.c.o
  /Users/artembykov/push_swap/libft/includes/libft.h
  /Users/artembykov/push_swap/libft/includes/sort_algs.h
  /Users/artembykov/push_swap/src/b_stack_handle.c
+CMakeFiles/push_swap.dir/src/b_stack_handle_support.c.o
+ /Users/artembykov/push_swap/includes/push_swap.h
+ /Users/artembykov/push_swap/libft/includes/ft_printf.h
+ /Users/artembykov/push_swap/libft/includes/get_next_line.h
+ /Users/artembykov/push_swap/libft/includes/libft.h
+ /Users/artembykov/push_swap/libft/includes/sort_algs.h
+ /Users/artembykov/push_swap/src/b_stack_handle_support.c
 CMakeFiles/push_swap.dir/src/checker_handle.c.o
  /Users/artembykov/push_swap/includes/push_swap.h
  /Users/artembykov/push_swap/libft/includes/ft_printf.h
@@ -63,13 +72,6 @@ CMakeFiles/push_swap.dir/src/median.c.o
  /Users/artembykov/push_swap/libft/includes/libft.h
  /Users/artembykov/push_swap/libft/includes/sort_algs.h
  /Users/artembykov/push_swap/src/median.c
-CMakeFiles/push_swap.dir/src/ps_algorithm.c.o
- /Users/artembykov/push_swap/includes/push_swap.h
- /Users/artembykov/push_swap/libft/includes/ft_printf.h
- /Users/artembykov/push_swap/libft/includes/get_next_line.h
- /Users/artembykov/push_swap/libft/includes/libft.h
- /Users/artembykov/push_swap/libft/includes/sort_algs.h
- /Users/artembykov/push_swap/src/ps_algorithm.c
 CMakeFiles/push_swap.dir/src/push_swap.c.o
  /Users/artembykov/push_swap/includes/push_swap.h
  /Users/artembykov/push_swap/libft/includes/ft_printf.h
@@ -77,6 +79,13 @@ CMakeFiles/push_swap.dir/src/push_swap.c.o
  /Users/artembykov/push_swap/libft/includes/libft.h
  /Users/artembykov/push_swap/libft/includes/sort_algs.h
  /Users/artembykov/push_swap/src/push_swap.c
+CMakeFiles/push_swap.dir/src/stack_manipulations.c.o
+ /Users/artembykov/push_swap/includes/push_swap.h
+ /Users/artembykov/push_swap/libft/includes/ft_printf.h
+ /Users/artembykov/push_swap/libft/includes/get_next_line.h
+ /Users/artembykov/push_swap/libft/includes/libft.h
+ /Users/artembykov/push_swap/libft/includes/sort_algs.h
+ /Users/artembykov/push_swap/src/stack_manipulations.c
 CMakeFiles/push_swap.dir/src/stack_pop.c.o
  /Users/artembykov/push_swap/includes/push_swap.h
  /Users/artembykov/push_swap/libft/includes/ft_printf.h
@@ -98,13 +107,6 @@ CMakeFiles/push_swap.dir/src/stack_set.c.o
  /Users/artembykov/push_swap/libft/includes/libft.h
  /Users/artembykov/push_swap/libft/includes/sort_algs.h
  /Users/artembykov/push_swap/src/stack_set.c
-CMakeFiles/push_swap.dir/src/stacks_init.c.o
- /Users/artembykov/push_swap/includes/push_swap.h
- /Users/artembykov/push_swap/libft/includes/ft_printf.h
- /Users/artembykov/push_swap/libft/includes/get_next_line.h
- /Users/artembykov/push_swap/libft/includes/libft.h
- /Users/artembykov/push_swap/libft/includes/sort_algs.h
- /Users/artembykov/push_swap/src/stacks_init.c
 CMakeFiles/push_swap.dir/src/visualize_input_process.c.o
  /Users/artembykov/push_swap/includes/push_swap.h
  /Users/artembykov/push_swap/libft/includes/ft_printf.h

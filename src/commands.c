@@ -10,36 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//sa : swap a - swap the first 2 elements at the top of stack a. Do nothing if there
-//		is only one or no elements).
-//sb : swap b - swap the first 2 elements at the top of stack b. Do nothing if there
-//		is only one or no elements).
-//ss : sa and sb at the same time.
-//pa : push a - take the first element at the top of b and put it at the top of a. Do
-//		nothing if b is empty.
-//pb : push b - take the first element at the top of a and put it at the top of b. Do
-//		nothing if a is empty.
-//ra : rotate a - shift up all elements of stack a by 1. The first element becomes
-//the last one.
-//rb : rotate b - shift up all elements of stack b by 1. The first element becomes
-//the last one.
-//rr : ra and rb at the same time.
-//rra : reverse rotate a - shift down all elements of stack a by 1. The last element
-//		becomes the first one.
-//8
-//Push_swap Because Swap_push isn’t as natural
-//		rrb : reverse rotate b - shift down all elements of stack b by 1. The last element
-//		becomes the first one.
-//rrr : rra and rrb at the same time.
-
 #include "../includes/push_swap.h"
 
-int					ft_apply_s(t_stack **stack)
+int					ft_apply_s(t_stack **stack, t_stacks *stacks)
 {
 	t_stack *tmp;
 
 	if (*stack && (*stack)->next)
 	{
+		if ((*stack) == stacks->stack_b)
+			ft_putstr("sb\n");
+		else
+			ft_putstr("sa\n");
+		stacks->operations++;
 		tmp = (*stack);
 		(*stack) = (*stack)->next;
 		tmp->next = (*stack)->next;
@@ -51,19 +34,25 @@ int					ft_apply_s(t_stack **stack)
 	return (0);
 }
 
-int					ft_apply_ss(t_stack **stack_a, t_stack **stack_b)
+int					ft_apply_ss(t_stack **stack_a, t_stack **stack_b, t_stacks *stacks)
 {
-	if (ft_apply_s(stack_a) && ft_apply_s(stack_b))
+	if (ft_apply_s(stack_a, stacks) && ft_apply_s(stack_b, stacks))
 		return (1);
 	return (0);
 }
 
-int					ft_apply_p(t_stack **from, t_stack **to)
+int					ft_apply_p(t_stack **from, t_stack **to, t_stacks *stacks)
 {
 	t_stack *transfer_elem;
+
 	if ((*from))
 	{
 		transfer_elem = ft_stack_pop_front(from);
+		if ((*from) == stacks->stack_b)
+			ft_putstr("pa\n");
+		else
+			ft_putstr("pb\n");
+		stacks->operations++;
 		if ((*to) == NULL)
 		{
 			(*to) = transfer_elem;

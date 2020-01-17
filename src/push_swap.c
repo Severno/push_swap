@@ -34,7 +34,7 @@ static int solver(t_stacks *stacks)
 				;
 		} else
 			stacks->stack_a_top = stacks->stack_a;
-		//print_stacks(stacks->stack_a, stacks->stack_b);
+		////print_stacks(stacks->stack_a, stacks->stack_b);
 		b_to_a(stacks);
 	}
 	return (1);
@@ -47,17 +47,27 @@ int			main(int argc, char *argv[])
 	if (argc < 2)
 		exit(1);
 	stacks = create_stacks(argc, argv);
+	printf("argv = %s\n", argv[1]);
 	if (stacks->stack_a == NULL || is_sorted(stacks->stack_a) == 1
 	|| has_duplicates(stacks->unsorted_arr, stacks->len_a))
 		exit(free_data(stacks));
-	for (int i = 500; i >= 0; --i) {
-		printf("%d ", i);
-	}
+//	for (int i = 500; i >= 0; --i) {
+//		printf("%d ", i);
+//	}
+//	int length;
+//	int arr[] = {0, 0, 4, 2, 5, 1};
+//
+//	length = sizeof(arr) / sizeof(arr[0]);
+//	ft_print_int_arr(arr, 1, length);
+//	ft_merge_sort(arr, 0, length - 1);
+//	ft_printf("\n");
+//	ft_print_int_arr(arr, 1, length);
 	solver(stacks);
-//	print_stacks(stacks->stack_a, stacks->stack_b);
+
+	print_stacks(stacks->stack_a, stacks->stack_b);
+	printf(RED"Operations %d\n"RESET, stacks->operations);
 //	visualize_input_process(stacks);
-	if (is_sorted(stacks->stack_a))
-		printf("YES!");
+//	if (is_sorted(stacks->stack_a))
 	free_data(stacks);
 	return (0);
 }

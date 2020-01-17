@@ -136,7 +136,15 @@
 			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
+		<Unit filename="/Users/artembykov/push_swap/src/a_stack_handle_support.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/artembykov/push_swap/src/b_stack_handle.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/artembykov/push_swap/src/b_stack_handle_support.c">
 			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
@@ -167,10 +175,11 @@
 			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/artembykov/push_swap/src/ps_algorithm.c">
+		<Unit filename="/Users/artembykov/push_swap/src/push_swap.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/artembykov/push_swap/src/push_swap.c">
+		<Unit filename="/Users/artembykov/push_swap/src/stack_manipulations.c">
+			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/artembykov/push_swap/src/stack_pop.c">
@@ -183,9 +192,6 @@
 		</Unit>
 		<Unit filename="/Users/artembykov/push_swap/src/stack_set.c">
 			<Option target="checker"/>
-			<Option target="push_swap"/>
-		</Unit>
-		<Unit filename="/Users/artembykov/push_swap/src/stacks_init.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/artembykov/push_swap/src/visualize_input_process.c">

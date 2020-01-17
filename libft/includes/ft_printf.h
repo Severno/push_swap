@@ -152,6 +152,5 @@ char						*inf_nan_handle(long double float_num);
 char						*ft_ftoa(long double f, char *buf,
 		int precision, int sign);
 long double					round_float(int precision);
-int							*ft_merge_sort(int *arr, int low, int high);
 
 #endif

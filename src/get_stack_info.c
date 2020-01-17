@@ -12,29 +12,6 @@
 
 #include "../includes/push_swap.h"
 
-int get_number_of_elements(t_stack *stack)
-{
-	t_stack *stack_tmp;
-	int i;
-
-	i = 0;
-	stack_tmp = stack;
-	while (stack_tmp)
-	{
-		i++;
-		stack_tmp = stack_tmp->next;
-	}
-	return (i);
-}
-
-int get_middle_pos(int arr_size) // TODO переписать на size_t
-{
-	if (arr_size > 0)
-		return ((arr_size - 1) / 2);
-	else
-		return (0);
-}
-
 t_stack *get_last_stack_elem(t_stack *stack)
 {
 	t_stack *tmp_stack;
@@ -75,42 +52,34 @@ int get_min_b_value(t_stack *stack_b)
 	return (min);
 }
 
-size_t get_chank_range_len(t_stacks *stacks)
+int get_max_of_partition(t_stack *start, t_stack *end)
 {
-	return (stacks->len_a / stacks->chanks_amount);
-}
+	t_stack *tmp;
+	int max;
 
-int get_stack_size(t_stack *head)
-{
-	int size; // TODO перписать на size_t
-	t_stack *current;
-
-	size = 0;
-	current = head;
-	while (current)
+	tmp = start;
+	max = start->value;
+	while (tmp != end && tmp)
 	{
-		current = current->next;
-		size++;
+		tmp = tmp->next;
+		if (tmp != NULL && tmp->value > max)
+			max = tmp->value;
 	}
-	return (size);
+	return (max);
 }
 
-size_t get_chanks_num(size_t arr_size)
+int get_min_of_partition(t_stack *start, t_stack *end)
 {
-	if (arr_size >= 5 && arr_size <= 15)
-		return (1);
-	else if (arr_size >= 16 && arr_size <= 10000)
-		return (2);
-	else if (arr_size >= 31 && arr_size <= 50)
-		return (8);
-	else if (arr_size >= 51 && arr_size <= 100)
-		return (10);
-	else if ((arr_size >= 101 && arr_size <= 200))
-		return (14);
-	else if ((arr_size >= 201 && arr_size <= 500))
-		return (18);
-	else if ((arr_size >= 501 && arr_size <= 1000))
-		return (20);
-	else
-		return (25);
+	t_stack *tmp;
+	int min;
+
+	tmp = start;
+	min = start->value;
+	while (tmp != end)
+	{
+		tmp = tmp->next;
+		if (tmp != NULL && tmp->value < min)
+			min = tmp->value;
+	}
+	return (min);
 }

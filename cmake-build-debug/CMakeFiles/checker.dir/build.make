@@ -265,6 +265,45 @@ CMakeFiles/checker.dir/libft/src/ft_searching/ft_quick_select.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/checker.dir/libft/src/ft_searching/ft_quick_select.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/artembykov/push_swap/libft/src/ft_searching/ft_quick_select.c -o CMakeFiles/checker.dir/libft/src/ft_searching/ft_quick_select.c.s
 
+CMakeFiles/checker.dir/src/b_stack_handle_support.c.o: CMakeFiles/checker.dir/flags.make
+CMakeFiles/checker.dir/src/b_stack_handle_support.c.o: ../src/b_stack_handle_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/artembykov/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/checker.dir/src/b_stack_handle_support.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/checker.dir/src/b_stack_handle_support.c.o   -c /Users/artembykov/push_swap/src/b_stack_handle_support.c
+
+CMakeFiles/checker.dir/src/b_stack_handle_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/checker.dir/src/b_stack_handle_support.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/artembykov/push_swap/src/b_stack_handle_support.c > CMakeFiles/checker.dir/src/b_stack_handle_support.c.i
+
+CMakeFiles/checker.dir/src/b_stack_handle_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/checker.dir/src/b_stack_handle_support.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/artembykov/push_swap/src/b_stack_handle_support.c -o CMakeFiles/checker.dir/src/b_stack_handle_support.c.s
+
+CMakeFiles/checker.dir/src/stack_manipulations.c.o: CMakeFiles/checker.dir/flags.make
+CMakeFiles/checker.dir/src/stack_manipulations.c.o: ../src/stack_manipulations.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/artembykov/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/checker.dir/src/stack_manipulations.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/checker.dir/src/stack_manipulations.c.o   -c /Users/artembykov/push_swap/src/stack_manipulations.c
+
+CMakeFiles/checker.dir/src/stack_manipulations.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/checker.dir/src/stack_manipulations.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/artembykov/push_swap/src/stack_manipulations.c > CMakeFiles/checker.dir/src/stack_manipulations.c.i
+
+CMakeFiles/checker.dir/src/stack_manipulations.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/checker.dir/src/stack_manipulations.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/artembykov/push_swap/src/stack_manipulations.c -o CMakeFiles/checker.dir/src/stack_manipulations.c.s
+
+CMakeFiles/checker.dir/src/a_stack_handle_support.c.o: CMakeFiles/checker.dir/flags.make
+CMakeFiles/checker.dir/src/a_stack_handle_support.c.o: ../src/a_stack_handle_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/artembykov/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/checker.dir/src/a_stack_handle_support.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/checker.dir/src/a_stack_handle_support.c.o   -c /Users/artembykov/push_swap/src/a_stack_handle_support.c
+
+CMakeFiles/checker.dir/src/a_stack_handle_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/checker.dir/src/a_stack_handle_support.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/artembykov/push_swap/src/a_stack_handle_support.c > CMakeFiles/checker.dir/src/a_stack_handle_support.c.i
+
+CMakeFiles/checker.dir/src/a_stack_handle_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/checker.dir/src/a_stack_handle_support.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/artembykov/push_swap/src/a_stack_handle_support.c -o CMakeFiles/checker.dir/src/a_stack_handle_support.c.s
+
 # Object files for target checker
 checker_OBJECTS = \
 "CMakeFiles/checker.dir/src/a_stack_handle.c.o" \
@@ -282,7 +321,10 @@ checker_OBJECTS = \
 "CMakeFiles/checker.dir/src/visualize_input_process.c.o" \
 "CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.o" \
 "CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.o" \
-"CMakeFiles/checker.dir/libft/src/ft_searching/ft_quick_select.c.o"
+"CMakeFiles/checker.dir/libft/src/ft_searching/ft_quick_select.c.o" \
+"CMakeFiles/checker.dir/src/b_stack_handle_support.c.o" \
+"CMakeFiles/checker.dir/src/stack_manipulations.c.o" \
+"CMakeFiles/checker.dir/src/a_stack_handle_support.c.o"
 
 # External object files for target checker
 checker_EXTERNAL_OBJECTS =
@@ -303,10 +345,13 @@ checker: CMakeFiles/checker.dir/src/visualize_input_process.c.o
 checker: CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.o
 checker: CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.o
 checker: CMakeFiles/checker.dir/libft/src/ft_searching/ft_quick_select.c.o
+checker: CMakeFiles/checker.dir/src/b_stack_handle_support.c.o
+checker: CMakeFiles/checker.dir/src/stack_manipulations.c.o
+checker: CMakeFiles/checker.dir/src/a_stack_handle_support.c.o
 checker: CMakeFiles/checker.dir/build.make
 checker: ../libft.a
 checker: CMakeFiles/checker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/artembykov/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking C executable checker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/artembykov/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking C executable checker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/checker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

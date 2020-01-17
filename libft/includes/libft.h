@@ -128,6 +128,7 @@ void				ft_print_ll_arr(long long *num_arr, int in_line, size_t size);
 void				ft_print_sizet_arr(size_t *num_arr, int in_line, size_t size);
 int					quick_select(int *arr, int left, int right, int k);
 int					ft_max_of_three(int a, int b, int c);
+int					*ft_merge_sort(int *arr, int low, int high);
 
 
 

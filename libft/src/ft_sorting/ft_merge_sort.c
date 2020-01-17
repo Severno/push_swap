@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/sort_algs.h"
+#include "../../includes/libft.h"
 
 static void		copy_left_arr_to_tmp(int low, int middle,
 		int left_arr[], int arr[])

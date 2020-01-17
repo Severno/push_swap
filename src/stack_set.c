@@ -31,25 +31,19 @@ t_stacks *create_stacks(int argc, char *argv[])
 {
 	t_stacks	*new_stacks;
 	int i;
-	int logn;
 
-	logn = log2n(argc);
 	i = -1;
 	if (!(new_stacks = ft_memalloc(sizeof(t_stacks))))
 		return (NULL);
 	new_stacks->len_a = 0;
 	new_stacks->partition_cap = -1;
-	new_stacks->partition_cap_final_flag = 0;
-	new_stacks->partitions = ft_memalloc(sizeof(t_part *) * 100);
-	while (++i < (100))
-		new_stacks->partitions[i] = ft_memalloc(sizeof(t_part));
 	new_stacks->unsorted_arr = convert_str_to_int_array(argc, argv, &new_stacks->len_a);
-	new_stacks->sorted_arr = ft_copy_int_arr(new_stacks->unsorted_arr, new_stacks->len_a);
-//	new_stacks->stack_a = ft_memalloc(sizeof(t_stack));
+	new_stacks->partitions = ft_memalloc(sizeof(t_part *) * (log2n(new_stacks->len_a)));
+	while (++i < (log2n(new_stacks->len_a)))
+		new_stacks->partitions[i] = ft_memalloc(sizeof(t_part));
 	create_stack_a(new_stacks);
 	new_stacks->stack_b = NULL;
 	new_stacks->ac = argc;
-	ft_merge_sort(new_stacks->sorted_arr, 0, new_stacks->len_a - 1);
 	return (new_stacks);
 }
 
@@ -87,14 +81,13 @@ int free_data(t_stacks *stacks)
 	i = 0;
 	if (stacks->partitions)
 	{
-		while (i < 100)
+		while (i < log2n(stacks->len_a))
 		{
 			free(stacks->partitions[i]);
 			i++;
 		}
 		free(stacks->partitions);
 	}
-	i = 0;
 	if (stacks->stack_a)
 	{
 		while (stacks->stack_a)
@@ -106,8 +99,6 @@ int free_data(t_stacks *stacks)
 	}
 	if (stacks->stack_b)
 		free(stacks->stack_a);
-	if (stacks->sorted_arr)
-		free(stacks->sorted_arr);
 	if (stacks->unsorted_arr)
 		free(stacks->unsorted_arr);
 	free(stacks);
