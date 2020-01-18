@@ -42,7 +42,7 @@ void push_b(t_stacks *stacks, t_stack **stack_b, int capacity)
 
 	i = 0;
 	capacity = (capacity == -1) ? 3 : capacity;
-	while (i < capacity)
+	while (i < capacity && stacks->stack_b)
 	{
 //		count_current_elems = get_elems_count_b(stacks);
 //		if (count_current_elems == 3)

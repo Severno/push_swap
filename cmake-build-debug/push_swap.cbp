@@ -206,6 +206,10 @@
 			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
+		<Unit filename="/Users/sapril/push_swap/src/visualize_sorting.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/sapril/push_swap/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

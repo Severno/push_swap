@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 15:00:34 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/18 16:33:40 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/18 23:36:07 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ int			main(int argc, char *argv[])
 	if (argc < 2)
 		exit(1);
 	stacks = create_stacks(argc, argv);
-	printf("argv = %s\n", argv[1]);
 	if (stacks->stack_a == NULL || is_sorted(stacks->stack_a) == 1
 	|| has_duplicates(stacks->unsorted_arr, stacks->len_a))
 		exit(free_data(stacks));
@@ -63,11 +62,15 @@ int			main(int argc, char *argv[])
 //	ft_printf("\n");
 //	ft_print_int_arr(arr, 1, length);
 	solver(stacks);
+	ft_putstr(stacks->commands);
+	run_visualization(stacks);
+	free(stacks->commands);
 
-	print_stacks(stacks->stack_a, stacks->stack_b);
-	printf(RED"Operations %d\n"RESET, stacks->operations);
+//	print_stacks(stacks->stack_a, stacks->stack_b);
+//	printf(RED"Operations %d\n"RESET, stacks->operations);
 //	visualize_input_process(stacks);
-//	if (is_sorted(stacks->stack_a))
+	if (is_sorted(stacks->stack_a))
+		ft_printf("OK");
 	free_data(stacks);
 	return (0);
 }

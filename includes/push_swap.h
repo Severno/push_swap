@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 16:42:56 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/18 16:27:05 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/19 01:08:21 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@
 #define MAGENTA "\x1b[35m"
 #define CYAN    "\x1b[36m"
 #define RESET   "\x1b[0m"
+# define CLR "\e[1;1H\e[?25l"
+# define WHITE   "\x1B[37m"
 
 
 
@@ -33,6 +35,7 @@ typedef struct		s_stack
 	struct s_stack	*next;
 	struct s_stack	*prev;
 	int				value;
+	int				weight;
 }					t_stack;
 
 typedef struct s_part
@@ -45,17 +48,25 @@ typedef struct		s_stacks
 {
 	t_stack			*stack_a;
 	t_stack			*stack_b;
+	t_stack			*visual_stack;
 	t_stack			*stack_a_top;
 	t_part			**partitions;
 	int				partition_cap;
 	int				len_a;
 	int				*unsorted_arr;
-	int				ac;
 	int				operations;
+	char			*commands;
 }					t_stacks;
 
 int solver(t_stacks *stacks);
+//visualization
+void create_stack_visual(t_stacks *stacks);
+void visual_commands(t_stacks *stacks);
+void run_visualization(t_stacks *stacks);
+void clear_screen(t_stacks *stacks);
+
 // checker
+void check_commands(t_stacks *stacks);
 int				*argv_to_int_arr(int argc, char *argv[], int *array_size);
 int				checker(int argc, char *argv[]);
 int			print_error();
@@ -73,6 +84,7 @@ int				has_duplicates(int *num_arr, int size);
 int get_min_b_value(t_stack *stack_b);
 int get_max_b_value(t_stack *stack_b);
 t_stack *get_last_stack_elem(t_stack *stack);
+int get_stack_size(t_stack *stack);
 // commands
 int					ft_apply_s(t_stack **stack, t_stacks *stacks);
 int					ft_apply_ss(t_stack **stack_a, t_stack **stack_b, t_stacks *stacks);
@@ -116,6 +128,10 @@ int a_to_b(t_stacks *stacks);
 void find_shortest_way_to_element_a(t_stacks *stacks);
 void handle_five_elems_a(t_stacks *stacks);
 void handle_four_elems_a(t_stacks *stacks);
+void fast_handle_only_three_elems(t_stack **stack, t_stacks *stacks);
+int check_is_equal_num(int stack_value, int *arr, int len);
+void handle_special_range(t_stacks *stacks);
+int is_rev_sorted(t_stack *stack);
 
 // b_stack_handle
 void sort_three_elems_b(t_stacks *stacks);
@@ -137,4 +153,8 @@ void		stack_step_back(t_stack **stack, t_stacks *stacks, int skip);
 void		update_current_partition(t_stacks *stacks);
 int		push_more_than_median_b_rutine(t_stack **stack_b, t_stacks *stacks, int median, int *skip);
 void		reverse_stack_step_back(t_stack **stack, t_stacks *stacks, int skip);
+
+// visualize sort
+void set_weight_to_each_value(t_stacks *stacks);
+
 #endif

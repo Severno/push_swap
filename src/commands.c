@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 15:07:18 by sapril            #+#    #+#             */
-/*   Updated: 2019/12/11 13:37:28 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/18 21:47:20 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,23 @@
 int					ft_apply_s(t_stack **stack, t_stacks *stacks)
 {
 	t_stack *tmp;
+	char *tmp_str;
 
 	if (*stack && (*stack)->next)
 	{
 		if ((*stack) == stacks->stack_b)
-			ft_putstr("sb\n");
+		{
+			tmp_str = stacks->commands;
+			stacks->commands = ft_strjoin(tmp_str, "sb\n");
+			free(tmp_str);
+		}
 		else
-			ft_putstr("sa\n");
+		{
+			tmp_str = stacks->commands;
+			stacks->commands = ft_strjoin(tmp_str, "sa\n");
+			free(tmp_str);
+
+		}
 		stacks->operations++;
 		tmp = (*stack);
 		(*stack) = (*stack)->next;
@@ -44,14 +54,23 @@ int					ft_apply_ss(t_stack **stack_a, t_stack **stack_b, t_stacks *stacks)
 int					ft_apply_p(t_stack **from, t_stack **to, t_stacks *stacks)
 {
 	t_stack *transfer_elem;
+	char *tmp;
 
 	if ((*from))
 	{
-		transfer_elem = ft_stack_pop_front(from);
 		if ((*from) == stacks->stack_b)
-			ft_putstr("pa\n");
+		{
+			tmp = stacks->commands;
+			stacks->commands = ft_strjoin(tmp, "pa\n");
+			free(tmp);
+		}
 		else
-			ft_putstr("pb\n");
+		{
+			tmp = stacks->commands;
+			stacks->commands = ft_strjoin(tmp, "pb\n");
+			free(tmp);
+		}
+		transfer_elem = ft_stack_pop_front(from);
 		stacks->operations++;
 		if ((*to) == NULL)
 		{

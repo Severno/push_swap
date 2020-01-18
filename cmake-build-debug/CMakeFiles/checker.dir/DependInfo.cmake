@@ -24,6 +24,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/sapril/push_swap/src/stack_push.c" "/Users/sapril/push_swap/cmake-build-debug/CMakeFiles/checker.dir/src/stack_push.c.o"
   "/Users/sapril/push_swap/src/stack_set.c" "/Users/sapril/push_swap/cmake-build-debug/CMakeFiles/checker.dir/src/stack_set.c.o"
   "/Users/sapril/push_swap/src/visualize_input_process.c" "/Users/sapril/push_swap/cmake-build-debug/CMakeFiles/checker.dir/src/visualize_input_process.c.o"
+  "/Users/sapril/push_swap/src/visualize_sorting.c" "/Users/sapril/push_swap/cmake-build-debug/CMakeFiles/checker.dir/src/visualize_sorting.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

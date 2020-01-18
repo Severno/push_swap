@@ -120,3 +120,10 @@ CMakeFiles/push_swap.dir/src/visualize_input_process.c.o: ../libft/includes/libf
 CMakeFiles/push_swap.dir/src/visualize_input_process.c.o: ../libft/includes/sort_algs.h
 CMakeFiles/push_swap.dir/src/visualize_input_process.c.o: ../src/visualize_input_process.c
 
+CMakeFiles/push_swap.dir/src/visualize_sorting.c.o: ../includes/push_swap.h
+CMakeFiles/push_swap.dir/src/visualize_sorting.c.o: ../libft/includes/ft_printf.h
+CMakeFiles/push_swap.dir/src/visualize_sorting.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/push_swap.dir/src/visualize_sorting.c.o: ../libft/includes/libft.h
+CMakeFiles/push_swap.dir/src/visualize_sorting.c.o: ../libft/includes/sort_algs.h
+CMakeFiles/push_swap.dir/src/visualize_sorting.c.o: ../src/visualize_sorting.c
+

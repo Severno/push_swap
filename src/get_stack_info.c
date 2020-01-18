@@ -22,36 +22,6 @@ t_stack *get_last_stack_elem(t_stack *stack)
 	return (tmp_stack);
 }
 
-int get_max_b_value(t_stack *stack_b)
-{
-	int max;
-	t_stack *tmp_b;
-	tmp_b = stack_b;
-	max = tmp_b->value;
-	while (tmp_b->next)
-	{
-		if (max < tmp_b->next->value)
-			max = tmp_b->next->value;
-		tmp_b = tmp_b->next;
-	}
-	return (max);
-}
-
-int get_min_b_value(t_stack *stack_b)
-{
-	int min;
-	t_stack *tmp_b;
-	tmp_b = stack_b;
-	min = tmp_b->value;
-	while (tmp_b->next)
-	{
-		if (min > tmp_b->next->value)
-			min = tmp_b->next->value;
-		tmp_b = tmp_b->next;
-	}
-	return (min);
-}
-
 int get_max_of_partition(t_stack *start, t_stack *end)
 {
 	t_stack *tmp;
@@ -82,4 +52,19 @@ int get_min_of_partition(t_stack *start, t_stack *end)
 			min = tmp->value;
 	}
 	return (min);
+}
+
+int get_stack_size(t_stack *stack)
+{
+	t_stack *tmp;
+	int count;
+
+	tmp = stack;
+	count = 0;
+	while (tmp)
+	{
+		tmp = tmp->next;
+		count++;
+	}
+	return (count);
 }

@@ -6,11 +6,21 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 08:45:57 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/15 15:32:51 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/18 22:46:18 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+void create_stack_visual(t_stacks *stacks)
+{
+	int			i;
+
+	i = 0;
+	stacks->visual_stack = ft_create_new_stack_elem(stacks->unsorted_arr[i++]);
+	while (i < stacks->len_a)
+		ft_stack_push_back(&stacks->visual_stack, ft_create_new_stack_elem(stacks->unsorted_arr[i++]));
+}
 
 void create_stack_a(t_stacks *stacks)
 {
@@ -39,11 +49,12 @@ t_stacks *create_stacks(int argc, char *argv[])
 	new_stacks->partition_cap = -1;
 	new_stacks->unsorted_arr = convert_str_to_int_array(argc, argv, &new_stacks->len_a);
 	new_stacks->partitions = ft_memalloc(sizeof(t_part *) * (log2n(new_stacks->len_a)));
+	new_stacks->commands = ft_strnew(3);
 	while (++i < (log2n(new_stacks->len_a)))
 		new_stacks->partitions[i] = ft_memalloc(sizeof(t_part));
 	create_stack_a(new_stacks);
+	create_stack_visual(new_stacks);
 	new_stacks->stack_b = NULL;
-	new_stacks->ac = argc;
 	return (new_stacks);
 }
 
@@ -57,20 +68,6 @@ t_stack *ft_create_new_stack_elem(int value)
 	new_elem->prev = NULL;
 	new_elem->value = value;
 	return (new_elem);
-}
-
-void free_stack(t_stack **head)
-{
-	t_stack *tmp_begin_stack;
-
-	while (*head)
-	{
-		tmp_begin_stack = *head;
-		*head = (*head)->next;
-		free(tmp_begin_stack);
-	}
-	*head = NULL;
-	head = NULL;
 }
 
 int free_data(t_stacks *stacks)

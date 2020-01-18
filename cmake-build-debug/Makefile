@@ -754,6 +754,36 @@ src/visualize_input_process.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/visualize_input_process.c.s
 .PHONY : src/visualize_input_process.c.s
 
+src/visualize_sorting.o: src/visualize_sorting.c.o
+
+.PHONY : src/visualize_sorting.o
+
+# target to build an object file
+src/visualize_sorting.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/visualize_sorting.c.o
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/visualize_sorting.c.o
+.PHONY : src/visualize_sorting.c.o
+
+src/visualize_sorting.i: src/visualize_sorting.c.i
+
+.PHONY : src/visualize_sorting.i
+
+# target to preprocess a source file
+src/visualize_sorting.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/visualize_sorting.c.i
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/visualize_sorting.c.i
+.PHONY : src/visualize_sorting.c.i
+
+src/visualize_sorting.s: src/visualize_sorting.c.s
+
+.PHONY : src/visualize_sorting.s
+
+# target to generate assembly for a file
+src/visualize_sorting.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/visualize_sorting.c.s
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/visualize_sorting.c.s
+.PHONY : src/visualize_sorting.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -827,6 +857,9 @@ help:
 	@echo "... src/visualize_input_process.o"
 	@echo "... src/visualize_input_process.i"
 	@echo "... src/visualize_input_process.s"
+	@echo "... src/visualize_sorting.o"
+	@echo "... src/visualize_sorting.i"
+	@echo "... src/visualize_sorting.s"
 .PHONY : help
 
 

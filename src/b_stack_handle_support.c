@@ -70,11 +70,16 @@ void sort_three_elems_b(t_stacks *stacks)
 		return;
 	max = get_max_of_partition(stacks->partitions[stacks->partition_cap]->start,
 									stacks->partitions[stacks->partition_cap]->end);
-	if (stacks->stack_a_top == NULL && stacks->len_a == 5)
+	if (get_stack_size(stacks->stack_b) == 3)
 	{
-		find_shortest_way_to_element(stacks, max);
+		fast_handle_only_three_elems(&stacks->stack_b, stacks);
 		return;
 	}
+//	if (stacks->stack_a_top == NULL && stacks->len_a == 5)
+//	{
+//		find_shortest_way_to_element(stacks, max);
+//		return;
+//	}
 	while ((stacks->stack_b)->value < max) {
 		ft_apply_r(&stacks->stack_b, stacks);
 		skip++;

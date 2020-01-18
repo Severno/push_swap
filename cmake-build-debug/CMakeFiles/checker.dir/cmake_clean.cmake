@@ -19,6 +19,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/checker.dir/src/stack_push.c.o"
   "CMakeFiles/checker.dir/src/stack_set.c.o"
   "CMakeFiles/checker.dir/src/visualize_input_process.c.o"
+  "CMakeFiles/checker.dir/src/visualize_sorting.c.o"
   "checker"
   "checker.pdb"
 )

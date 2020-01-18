@@ -6,22 +6,76 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/05 14:04:28 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/18 19:26:43 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/18 21:19:47 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int				is_sorted(t_stack *stack_a)
+int				is_sorted(t_stack *stack)
 {
-	while (stack_a)
+	t_stack *tmp;
+
+	tmp = stack;
+	while (tmp)
 	{
-		if (stack_a->next)
-			if (stack_a->value > stack_a->next->value)
+		if (tmp->next)
+			if (tmp->value > tmp->next->value)
 				return (0);
-		stack_a = stack_a->next;
+		tmp = tmp->next;
 	}
 	return (1);
+}
+
+int is_rev_sorted(t_stack *stack)
+{
+	t_stack *tmp;
+
+	tmp = stack;
+	while (tmp->next)
+	{
+		if (tmp->value < tmp->next->value)
+			return (0);
+		tmp = tmp->next;
+	}
+	return (1);
+}
+
+void fast_handle_only_three_elems(t_stack **stack, t_stacks *stacks)
+{
+	if (*stack == stacks->stack_a)
+	{
+		while (!is_sorted(*stack))
+		{
+//			print_stacks(stacks->stack_a, stacks->stack_b);
+			if ((*stack)->next->value > (*stack)->value)
+				ft_apply_rr(stack, stacks);
+//			print_stacks(stacks->stack_a, stacks->stack_b);
+			if ((*stack)->value > (*stack)->next->value && (*stack)->value > (*stack)->next->next->value)
+				ft_apply_r(stack, stacks);
+//			print_stacks(stacks->stack_a, stacks->stack_b);
+			if ((*stack)->next->value < (*stack)->value)
+				ft_apply_s(stack, stacks);
+//			print_stacks(stacks->stack_a, stacks->stack_b);
+		}
+	}
+	else
+	{
+		while (!is_rev_sorted(*stack))
+		{
+//			print_stacks(stacks->stack_a, stacks->stack_b);
+			if ((*stack)->value > (*stack)->next->value)
+				ft_apply_rr(stack, stacks);
+//			print_stacks(stacks->stack_a, stacks->stack_b);
+			if ((*stack)->value < (*stack)->next->value && (*stack)->value < (*stack)->next->next->value)
+				ft_apply_r(stack, stacks);
+//			print_stacks(stacks->stack_a, stacks->stack_b);
+			if ((*stack)->value < (*stack)->next->value)
+				ft_apply_s(stack, stacks);
+//			print_stacks(stacks->stack_a, stacks->stack_b);
+		}
+	}
+
 }
 
 void sort_three_elems_a(t_stack **a, t_stacks *stacks)
@@ -59,21 +113,9 @@ void sort_three_elems_a(t_stack **a, t_stacks *stacks)
 	skip = 0;
 	min = get_min_of_partition(stacks->stack_a,
 							   stacks->stack_a_top);
-	if (get_elems_count_a(stacks->stack_a, stacks) == 3 && stacks->stack_b == NULL)
+	if (get_stack_size(*a) == 3 && get_stack_size(stacks->stack_b) < 4)
 	{
-		while (!is_sorted(stacks->stack_a))
-		{
-			print_stacks(stacks->stack_a, stacks->stack_b);
-			if ((*a)->next->value > (*a)->value)
-				ft_apply_rr(a, stacks);
-			print_stacks(stacks->stack_a, stacks->stack_b);
-			if ((*a)->value > (*a)->next->value && (*a)->value > (*a)->next->next->value)
-				ft_apply_r(a, stacks);
-			print_stacks(stacks->stack_a, stacks->stack_b);
-			if ((*a)->next->value < (*a)->value)
-				ft_apply_s(a, stacks);
-			print_stacks(stacks->stack_a, stacks->stack_b);
-		}
+		fast_handle_only_three_elems(a, stacks);
 		return;
 	}
 	while ((*a)->value > min && (*a) != stacks->stack_a_top)
@@ -351,18 +393,32 @@ int get_elems_count_a(t_stack *stack, t_stacks *stacks)
 //	stacks->stack_a_top = stacks->stack_a;
 //}
 
+int check_is_equal_num(int stack_value, int *arr, int len)
+{
+	int i;
+	int border;
+
+	i = 0;
+	border = len - 3;
+	while (i < border) {
+		if (arr[i] == stack_value)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 
 void find_shortest_way_to_element_a(t_stacks *stacks)
 {
 	t_stack *tmp;
 	int counter;
-	int arr[5];
-	int i;
+	int arr[6];
+	int stack_size;
 	int flag;
 
 	tmp = stacks->stack_a;
 	counter = 0;
-	i = 0;
 	flag = 0;
 	while (tmp)
 	{
@@ -372,39 +428,41 @@ void find_shortest_way_to_element_a(t_stacks *stacks)
 	}
 	ft_bubble_sort(arr, counter);
 	counter = 0;
+	stack_size = get_stack_size(stacks->stack_a);
 	tmp = stacks->stack_a;
 	stacks->partition_cap++;
-	while (get_elems_count_a(stacks->stack_a, stacks) >= 3)
+	while (get_elems_count_a(stacks->stack_a, stacks) > 3)
 	{
-		while (tmp->value > arr[i])
-		{
-			tmp = tmp->next;
-			counter++;
-		}
-		if (counter == 4 || (counter == 3 && get_elems_count_a(stacks->stack_a, stacks) == 4))
-			ft_apply_rr(&stacks->stack_a, stacks);
-		else if (counter == 3)
-		{
-			ft_apply_rr(&stacks->stack_a, stacks);
-			ft_apply_rr(&stacks->stack_a, stacks);
-			print_stacks(stacks->stack_a, stacks->stack_b);
-		}
+		if (check_is_equal_num(stacks->stack_a->value, arr, stack_size))
+			ft_apply_p(&stacks->stack_a, &stacks->stack_b, stacks);
 		else
-			while (--counter >= 0)
-				ft_apply_r(&stacks->stack_a, stacks);
-		if (is_sorted(stacks->stack_a))
-			break;
-		print_stacks(stacks->stack_a, stacks->stack_b);
-		counter = 0;
-		i++;
-		ft_apply_p(&stacks->stack_a, &stacks->stack_b, stacks);
+			ft_apply_rr(&stacks->stack_a, stacks);
 		if (flag == 0)
 			stacks->partitions[stacks->partition_cap]->end = stacks->stack_b;
+		if (is_sorted(stacks->stack_a) && stacks->stack_b == NULL)
+			break;
+//		print_stacks(stacks->stack_a, stacks->stack_b);
 		flag = 1;
-		print_stacks(stacks->stack_a, stacks->stack_b);
-		tmp = stacks->stack_a;
 	}
 	stacks->partitions[stacks->partition_cap]->start = stacks->stack_b;
+}
+
+void handle_special_range(t_stacks *stacks)
+{
+	int b_elems;
+	int a_elems;
+	if (is_sorted(stacks->stack_a))
+		return;
+	find_shortest_way_to_element_a(stacks);
+	a_elems = get_stack_size(stacks->stack_a);
+//	print_stacks(stacks->stack_a, stacks->stack_b);
+	sort_a(&stacks->stack_a, stacks, a_elems);
+//	print_stacks(stacks->stack_a, stacks->stack_b);
+	b_elems = get_stack_size(stacks->stack_b);
+	sort_b(stacks, b_elems);
+//	print_stacks(stacks->stack_a, stacks->stack_b);
+	push_b(stacks, &stacks->stack_b, b_elems);
+	stacks->stack_a_top = stacks->stack_a;
 }
 
 void handle_five_elems_a(t_stacks *stacks)
@@ -413,12 +471,12 @@ void handle_five_elems_a(t_stacks *stacks)
 	if (is_sorted(stacks->stack_a))
 		return;
 	find_shortest_way_to_element_a(stacks);
-	print_stacks(stacks->stack_a, stacks->stack_b);
+//	print_stacks(stacks->stack_a, stacks->stack_b);
 	sort_a(&stacks->stack_a, stacks, 2);
-	print_stacks(stacks->stack_a, stacks->stack_b);
+//	print_stacks(stacks->stack_a, stacks->stack_b);
 	b_elems = get_elems_count_b(stacks);
 	sort_b(stacks, b_elems);
-	print_stacks(stacks->stack_a, stacks->stack_b);
+//	print_stacks(stacks->stack_a, stacks->stack_b);
 	push_b(stacks, &stacks->stack_b, b_elems);
 	stacks->stack_a_top = stacks->stack_a;
 }
@@ -428,11 +486,11 @@ void handle_four_elems_a(t_stacks *stacks)
 	if (is_sorted(stacks->stack_a))
 		return;
 	find_shortest_way_to_element_a(stacks);
-	print_stacks(stacks->stack_a, stacks->stack_b);
+//	print_stacks(stacks->stack_a, stacks->stack_b);
 	sort_a(&stacks->stack_a, stacks, 2);
-	print_stacks(stacks->stack_a, stacks->stack_b);
+//	print_stacks(stacks->stack_a, stacks->stack_b);
 	push_b(stacks, &stacks->stack_b, 1);
-	print_stacks(stacks->stack_a, stacks->stack_b);
+//	print_stacks(stacks->stack_a, stacks->stack_b);
 	stacks->stack_a_top = stacks->stack_a;
 }
 
@@ -480,10 +538,8 @@ int a_to_b(t_stacks *stacks)
 
 	median = MAX_INTEGER;
 	elems_count = get_elems_count_a(stacks->stack_a, stacks);
-	if (elems_count == 4  && stacks->partition_cap == -1)
-		handle_four_elems_a(stacks);
-	else if (elems_count == 5 && stacks->partition_cap == -1)
-		handle_five_elems_a(stacks);
+	if (elems_count >= 3 && elems_count <= 6 && stacks->partition_cap == -1)
+		handle_special_range(stacks);
 	else if (elems_count <= 11 && elems_count > 3)
 	{
 		median = special_median_a(stacks);
@@ -505,10 +561,10 @@ int a_to_b(t_stacks *stacks)
 	if (median == MAX_INTEGER)
 	{
 		sort_a(&stacks->stack_a, stacks, elems_count);
-		print_stacks(stacks->stack_a, stacks->stack_b);
+//		print_stacks(stacks->stack_a, stacks->stack_b);
 	}
 	if (median == MAX_INTEGER)
 		stacks->stack_a_top = stacks->stack_a;
-	print_stacks(stacks->stack_a, stacks->stack_b);
+//	print_stacks(stacks->stack_a, stacks->stack_b);
 	return (median == MAX_INTEGER ? 0 : 1);
 }
