@@ -6,23 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/Users/artembykov/push_swap/includes/push_swap.h
+/Users/sapril/push_swap/includes/push_swap.h
 ../libft/includes/libft.h
-/Users/artembykov/push_swap/libft/includes/libft.h
+/Users/sapril/push_swap/libft/includes/libft.h
 
-/Users/artembykov/push_swap/libft/includes/ft_printf.h
+/Users/sapril/push_swap/libft/includes/ft_printf.h
 libft.h
-/Users/artembykov/push_swap/libft/includes/libft.h
+/Users/sapril/push_swap/libft/includes/libft.h
 float.h
 -
 stdarg.h
 -
 
-/Users/artembykov/push_swap/libft/includes/get_next_line.h
+/Users/sapril/push_swap/libft/includes/get_next_line.h
 libft.h
-/Users/artembykov/push_swap/libft/includes/libft.h
+/Users/sapril/push_swap/libft/includes/libft.h
 
-/Users/artembykov/push_swap/libft/includes/libft.h
+/Users/sapril/push_swap/libft/includes/libft.h
 unistd.h
 -
 string.h
@@ -34,17 +34,17 @@ stdio.h
 fcntl.h
 -
 sort_algs.h
-/Users/artembykov/push_swap/libft/includes/sort_algs.h
+/Users/sapril/push_swap/libft/includes/sort_algs.h
 get_next_line.h
-/Users/artembykov/push_swap/libft/includes/get_next_line.h
+/Users/sapril/push_swap/libft/includes/get_next_line.h
 ft_printf.h
-/Users/artembykov/push_swap/libft/includes/ft_printf.h
+/Users/sapril/push_swap/libft/includes/ft_printf.h
 
-/Users/artembykov/push_swap/libft/includes/sort_algs.h
+/Users/sapril/push_swap/libft/includes/sort_algs.h
 libft.h
-/Users/artembykov/push_swap/libft/includes/libft.h
+/Users/sapril/push_swap/libft/includes/libft.h
 
-/Users/artembykov/push_swap/src/median.c
+/Users/sapril/push_swap/src/a_stack_handle.c
 ../includes/push_swap.h
-/Users/artembykov/push_swap/includes/push_swap.h
+/Users/sapril/push_swap/includes/push_swap.h
 

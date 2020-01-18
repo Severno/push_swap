@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 16:42:56 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/15 15:32:51 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/18 16:27:05 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ typedef struct		s_stacks
 	int				ac;
 	int				operations;
 }					t_stacks;
+
+int solver(t_stacks *stacks);
 // checker
 int				*argv_to_int_arr(int argc, char *argv[], int *array_size);
 int				checker(int argc, char *argv[]);
@@ -62,6 +64,7 @@ int				*handle_multiple_input_params(int argc, char *argv[], int *array_size);
 int				*handle_one_input_params(char *argv[], int *array_size);
 
 // input handle
+
 int				check_input_condition(int argc, char *argv[]);
 int				*convert_str_to_int_array(int argc, char *argv[], int *array_size);
 int				has_duplicates(int *num_arr, int size);
@@ -110,6 +113,9 @@ void sort_a(t_stack **a, t_stacks *stacks,  int capacity);
 void push_less_than_median_to_b(t_stacks *stacks, int median);
 int get_elems_count_a(t_stack *stack, t_stacks *stacks);
 int a_to_b(t_stacks *stacks);
+void find_shortest_way_to_element_a(t_stacks *stacks);
+void handle_five_elems_a(t_stacks *stacks);
+void handle_four_elems_a(t_stacks *stacks);
 
 // b_stack_handle
 void sort_three_elems_b(t_stacks *stacks);
@@ -119,6 +125,7 @@ int b_to_a(t_stacks *stacks);
 void push_more_than_median_to_a(t_stacks *stacks, int median);
 int get_max_of_partition(t_stack *start, t_stack *end);
 int get_min_of_partition(t_stack *start, t_stack *end);
+void push_b(t_stacks *stacks, t_stack **stack_b, int capacity);
 
 // true median
 int true_median(t_stacks *stacks, t_stack *stack);

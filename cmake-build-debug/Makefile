@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/artembykov/push_swap
+CMAKE_SOURCE_DIR = /Users/sapril/push_swap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/artembykov/push_swap/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/sapril/push_swap/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/artembykov/push_swap/cmake-build-debug/CMakeFiles /Users/artembykov/push_swap/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sapril/push_swap/cmake-build-debug/CMakeFiles /Users/sapril/push_swap/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/artembykov/push_swap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sapril/push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -219,6 +219,36 @@ libft/src/ft_searching/ft_quick_select.c.s:
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_searching/ft_quick_select.c.s
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/src/ft_searching/ft_quick_select.c.s
 .PHONY : libft/src/ft_searching/ft_quick_select.c.s
+
+libft/src/ft_sorting/ft_bubble_sort.o: libft/src/ft_sorting/ft_bubble_sort.c.o
+
+.PHONY : libft/src/ft_sorting/ft_bubble_sort.o
+
+# target to build an object file
+libft/src/ft_sorting/ft_bubble_sort.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_sorting/ft_bubble_sort.c.o
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/src/ft_sorting/ft_bubble_sort.c.o
+.PHONY : libft/src/ft_sorting/ft_bubble_sort.c.o
+
+libft/src/ft_sorting/ft_bubble_sort.i: libft/src/ft_sorting/ft_bubble_sort.c.i
+
+.PHONY : libft/src/ft_sorting/ft_bubble_sort.i
+
+# target to preprocess a source file
+libft/src/ft_sorting/ft_bubble_sort.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_sorting/ft_bubble_sort.c.i
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/src/ft_sorting/ft_bubble_sort.c.i
+.PHONY : libft/src/ft_sorting/ft_bubble_sort.c.i
+
+libft/src/ft_sorting/ft_bubble_sort.s: libft/src/ft_sorting/ft_bubble_sort.c.s
+
+.PHONY : libft/src/ft_sorting/ft_bubble_sort.s
+
+# target to generate assembly for a file
+libft/src/ft_sorting/ft_bubble_sort.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_sorting/ft_bubble_sort.c.s
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/src/ft_sorting/ft_bubble_sort.c.s
+.PHONY : libft/src/ft_sorting/ft_bubble_sort.c.s
 
 src/a_stack_handle.o: src/a_stack_handle.c.o
 
@@ -743,6 +773,9 @@ help:
 	@echo "... libft/src/ft_searching/ft_quick_select.o"
 	@echo "... libft/src/ft_searching/ft_quick_select.i"
 	@echo "... libft/src/ft_searching/ft_quick_select.s"
+	@echo "... libft/src/ft_sorting/ft_bubble_sort.o"
+	@echo "... libft/src/ft_sorting/ft_bubble_sort.i"
+	@echo "... libft/src/ft_sorting/ft_bubble_sort.s"
 	@echo "... src/a_stack_handle.o"
 	@echo "... src/a_stack_handle.i"
 	@echo "... src/a_stack_handle.s"

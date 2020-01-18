@@ -43,7 +43,7 @@ file(GLOB LIBFT_SRC
         "libft/src/*/*.c"
         )
 
-add_executable(push_swap ${SRC_PUSH_SWAP} src/visualize_input_process.c src/median.c src/a_stack_handle.c src/b_stack_handle.c libft/src/ft_searching/ft_quick_select.c src/b_stack_handle_support.c src/stack_manipulations.c src/a_stack_handle_support.c)
-add_executable(checker ${SRC_CHECKER} libft/src/ft_array/ft_print_ll_arr.c libft/src/ft_array/ft_print_sizet_arr.c libft/src/ft_searching/ft_quick_select.c src/b_stack_handle_support.c src/stack_manipulations.c src/a_stack_handle_support.c)
+add_executable(push_swap ${SRC_PUSH_SWAP} src/visualize_input_process.c src/median.c src/a_stack_handle.c src/b_stack_handle.c libft/src/ft_searching/ft_quick_select.c src/b_stack_handle_support.c src/stack_manipulations.c src/a_stack_handle_support.c libft/src/ft_sorting/ft_bubble_sort.c)
+add_executable(checker ${SRC_CHECKER} libft/src/ft_array/ft_print_ll_arr.c libft/src/ft_array/ft_print_sizet_arr.c libft/src/ft_searching/ft_quick_select.c src/b_stack_handle_support.c src/stack_manipulations.c src/a_stack_handle_support.c libft/src/ft_sorting/ft_bubble_sort.c)
 target_link_libraries(push_swap ${CMAKE_SOURCE_DIR}/libft.a)
 target_link_libraries(checker ${CMAKE_SOURCE_DIR}/libft.a)

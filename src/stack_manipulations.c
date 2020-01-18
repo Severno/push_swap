@@ -20,7 +20,7 @@ void		stack_step_back(t_stack **stack, t_stacks *stacks, int skip)
 
 void		update_current_partition(t_stacks *stacks)
 {
-	if (stacks->stack_b)
+	if (stacks->stack_b && stacks->partition_cap != -1)
 	{
 		stacks->partitions[stacks->partition_cap]->start = stacks->stack_b;
 		if (stacks->partition_cap > 0)
@@ -40,7 +40,7 @@ int		push_more_than_median_b_rutine(t_stack **stack_b, t_stacks *stacks, int med
 	else
 	{
 		ft_apply_r(stack_b, stacks);
-		print_stacks(stacks->stack_a, stacks->stack_b);
+//		print_stacks(stacks->stack_a, stacks->stack_b);
 		(*skip)++;
 	}
 	if ((*stack_b) == stacks->partitions[stacks->partition_cap]->end)

@@ -26,10 +26,38 @@ void		push_more_than_median_to_a(t_stacks *stacks, int median)
 	skip = 0;
 	while (stacks->stack_b && push_more_than_median_b_rutine(&stacks->stack_b, stacks, median, &skip))
 		;
-	print_stacks(stacks->stack_a, stacks->stack_b);
+//	print_stacks(stacks->stack_a, stacks->stack_b);
 	stack_step_back(&stacks->stack_b, stacks, skip);
-	print_stacks(stacks->stack_a, stacks->stack_b);
+//	print_stacks(stacks->stack_a, stacks->stack_b);
 	update_current_partition(stacks);
+}
+
+void find_shortest_way_to_element(t_stacks *stacks, int max)
+{
+	t_stack *tmp;
+	int counter;
+
+	tmp = stacks->stack_b;
+	counter = 0;
+	while (tmp->value < max)
+	{
+		tmp = tmp->next;
+		counter++;
+	}
+	if (counter == 2)
+	{
+		ft_apply_rr(&stacks->stack_b, stacks);
+		ft_apply_p(&stacks->stack_b, &stacks->stack_a, stacks);
+	}
+	else
+	{
+		while (counter > 0)
+		{
+			ft_apply_r(&stacks->stack_b, stacks);
+			counter--;
+		}
+		ft_apply_p(&stacks->stack_b, &stacks->stack_a, stacks);
+	}
 }
 
 void sort_three_elems_b(t_stacks *stacks)
@@ -41,7 +69,12 @@ void sort_three_elems_b(t_stacks *stacks)
 	if (!stacks->stack_b)
 		return;
 	max = get_max_of_partition(stacks->partitions[stacks->partition_cap]->start,
-	                           stacks->partitions[stacks->partition_cap]->end);
+									stacks->partitions[stacks->partition_cap]->end);
+	if (stacks->stack_a_top == NULL && stacks->len_a == 5)
+	{
+		find_shortest_way_to_element(stacks, max);
+		return;
+	}
 	while ((stacks->stack_b)->value < max) {
 		ft_apply_r(&stacks->stack_b, stacks);
 		skip++;

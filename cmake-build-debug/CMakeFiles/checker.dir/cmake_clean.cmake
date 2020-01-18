@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/checker.dir/libft/src/ft_array/ft_print_ll_arr.c.o"
   "CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.o"
   "CMakeFiles/checker.dir/libft/src/ft_searching/ft_quick_select.c.o"
+  "CMakeFiles/checker.dir/libft/src/ft_sorting/ft_bubble_sort.c.o"
   "CMakeFiles/checker.dir/src/a_stack_handle.c.o"
   "CMakeFiles/checker.dir/src/a_stack_handle_support.c.o"
   "CMakeFiles/checker.dir/src/b_stack_handle.c.o"

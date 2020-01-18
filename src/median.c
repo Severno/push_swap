@@ -24,13 +24,9 @@ int true_median(t_stacks *stacks, t_stack *stack) {
 			tmp_stack = tmp_stack->next;
 			i++;
 		}
-		ft_merge_sort(arr, 0, i);
+		ft_bubble_sort(arr, i);
 //		if (i % 2 == 1)
-//			return quick_select(arr, 0,  i - 1, (i + 2) / 2);
-//		else
-//			return quick_select(arr, 0, i - 1, (i) / 2) + quick_select(arr, 0, i - 1, (i + 1) / 2) / 2.0;
-//		if (i % 2 == 1)
-		return  (arr[(i + 1) / 2]);
+		return  (arr[((i - 1) / 2)]);
 //		else
 //			return (arr[i / 2]);
 	}
@@ -53,9 +49,9 @@ int special_median_a(t_stacks *stacks)
 			tmp_stack = tmp_stack->next;
 			i++;
 		}
-		ft_merge_sort(arr, 0, i);
+		ft_bubble_sort(arr, i);
 //		if (i % 2 == 1)
-		return  (arr[(i + 1) / 2]);
+		return  (arr[((i - 1) / 2)]);
 //		else
 		return (arr[i / 2]);
 	}
@@ -78,13 +74,9 @@ int special_median_b(t_stacks *stacks)
 			tmp_stack = tmp_stack->next;
 			i++;
 		}
-		ft_merge_sort(arr, 0, i); // TODO пофиксить сортировку
+		ft_bubble_sort(arr, i);
 //		if (i % 2 == 1)
-//			return quick_select(arr, 0,  i - 1, (i + 2) / 2);
-//		else
-//			return quick_select(arr, 0, i - 1, (i) / 2) + quick_select(arr, 0, i - 1, (i + 1) / 2) / 2.0;
-//	if (i % 2 == 1)
-		return  (arr[(i + 1) / 2]);
+		return  (arr[((i - 1) / 2)]);
 //	else
 //		return (arr[i / 2]);
 	}

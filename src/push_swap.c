@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 15:00:34 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/15 12:21:11 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/18 16:33:40 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  * Что происходит в B
  * */
 
-static int solver(t_stacks *stacks)
+int solver(t_stacks *stacks)
 {
 	int	sorted;
 //	int	is_median;
@@ -51,7 +51,7 @@ int			main(int argc, char *argv[])
 	if (stacks->stack_a == NULL || is_sorted(stacks->stack_a) == 1
 	|| has_duplicates(stacks->unsorted_arr, stacks->len_a))
 		exit(free_data(stacks));
-//	for (int i = 500; i >= 0; --i) {
+//	for (int i = 100; i >= 0; --i) {
 //		printf("%d ", i);
 //	}
 //	int length;

@@ -7,6 +7,12 @@ CMakeFiles/push_swap.dir/libft/src/ft_searching/ft_quick_select.c.o: ../libft/in
 CMakeFiles/push_swap.dir/libft/src/ft_searching/ft_quick_select.c.o: ../libft/includes/sort_algs.h
 CMakeFiles/push_swap.dir/libft/src/ft_searching/ft_quick_select.c.o: ../libft/src/ft_searching/ft_quick_select.c
 
+CMakeFiles/push_swap.dir/libft/src/ft_sorting/ft_bubble_sort.c.o: ../libft/includes/ft_printf.h
+CMakeFiles/push_swap.dir/libft/src/ft_sorting/ft_bubble_sort.c.o: ../libft/includes/get_next_line.h
+CMakeFiles/push_swap.dir/libft/src/ft_sorting/ft_bubble_sort.c.o: ../libft/includes/libft.h
+CMakeFiles/push_swap.dir/libft/src/ft_sorting/ft_bubble_sort.c.o: ../libft/includes/sort_algs.h
+CMakeFiles/push_swap.dir/libft/src/ft_sorting/ft_bubble_sort.c.o: ../libft/src/ft_sorting/ft_bubble_sort.c
+
 CMakeFiles/push_swap.dir/src/a_stack_handle.c.o: ../includes/push_swap.h
 CMakeFiles/push_swap.dir/src/a_stack_handle.c.o: ../libft/includes/ft_printf.h
 CMakeFiles/push_swap.dir/src/a_stack_handle.c.o: ../libft/includes/get_next_line.h

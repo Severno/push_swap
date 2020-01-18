@@ -111,7 +111,7 @@ LIBFT_STR_SRC:= ft_check_end_spaces \
 				ft_str_is_numeric_no_spaces
 
 FT_SORTING_PATH:=	ft_sorting/
-FT_SORTING_SRC:=	ft_merge_sort ft_merge_sort_sizet
+FT_SORTING_SRC:=	ft_merge_sort ft_merge_sort_sizet ft_bubble_sort
 
 FT_SEARCHING_PATH:=	ft_searching/
 FT_SEARCHING_SRC:=	ft_quick_select
