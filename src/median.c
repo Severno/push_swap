@@ -24,7 +24,7 @@ int true_median(t_stacks *stacks, t_stack *stack) {
 			tmp_stack = tmp_stack->next;
 			i++;
 		}
-		ft_bubble_sort(arr, i);
+		ft_quick_sort(arr, 0, i);
 //		if (i % 2 == 1)
 		return  (arr[((i - 1) / 2)]);
 //		else
@@ -49,7 +49,7 @@ int special_median_a(t_stacks *stacks)
 			tmp_stack = tmp_stack->next;
 			i++;
 		}
-		ft_bubble_sort(arr, i);
+		ft_quick_sort(arr, 0, i);
 //		if (i % 2 == 1)
 		return  (arr[((i - 1) / 2)]);
 //		else
@@ -74,7 +74,7 @@ int special_median_b(t_stacks *stacks)
 			tmp_stack = tmp_stack->next;
 			i++;
 		}
-		ft_bubble_sort(arr, i);
+		ft_quick_sort(arr, 0, i);
 //		if (i % 2 == 1)
 		return  (arr[((i - 1) / 2)]);
 //	else

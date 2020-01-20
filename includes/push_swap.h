@@ -25,7 +25,7 @@
 #define MAGENTA "\x1b[35m"
 #define CYAN    "\x1b[36m"
 #define RESET   "\x1b[0m"
-# define CLR "\e[1;1H\e[?25l"
+# define CLR "\e[0;0H\e[2J"
 # define WHITE   "\x1B[37m"
 
 

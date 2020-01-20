@@ -40,7 +40,7 @@ int solver(t_stacks *stacks)
 	return (1);
 }
 
-int			main(int argc, char *argv[])
+int			main(int argc, char *argv[]) // TODO добавить -v для визуелизации аргумент
 {
 	t_stacks	*stacks;
 
@@ -62,15 +62,17 @@ int			main(int argc, char *argv[])
 //	ft_printf("\n");
 //	ft_print_int_arr(arr, 1, length);
 	solver(stacks);
-	ft_putstr(stacks->commands);
-	run_visualization(stacks);
+//	ft_putstr(stacks->commands);
+//	run_visualization(stacks);
 	free(stacks->commands);
 
 //	print_stacks(stacks->stack_a, stacks->stack_b);
 //	printf(RED"Operations %d\n"RESET, stacks->operations);
 //	visualize_input_process(stacks);
-	if (is_sorted(stacks->stack_a))
-		ft_printf("OK");
+//	if (is_sorted(stacks->stack_a))
+//		ft_printf("OK");
 	free_data(stacks);
 	return (0);
 }
+
+//ARG=`ruby -e "puts (0..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG;

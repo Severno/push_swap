@@ -44,10 +44,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/sapril/push_swap
+CMAKE_SOURCE_DIR = /Users/artembykov/push_swap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/sapril/push_swap/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/artembykov/push_swap/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -76,14 +76,14 @@ preinstall:
 CMakeFiles/checker.dir/all:
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/depend
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sapril/push_swap/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22 "Built target checker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/artembykov/push_swap/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 "Built target checker"
 .PHONY : CMakeFiles/checker.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/checker.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sapril/push_swap/cmake-build-debug/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/artembykov/push_swap/cmake-build-debug/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/checker.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sapril/push_swap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/artembykov/push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/checker.dir/rule
 
 # Convenience name for target.
@@ -103,14 +103,14 @@ CMakeFiles/checker.dir/clean:
 CMakeFiles/push_swap.dir/all:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/depend
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sapril/push_swap/cmake-build-debug/CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42 "Built target push_swap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/artembykov/push_swap/cmake-build-debug/CMakeFiles --progress-num=24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44 "Built target push_swap"
 .PHONY : CMakeFiles/push_swap.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/push_swap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sapril/push_swap/cmake-build-debug/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/artembykov/push_swap/cmake-build-debug/CMakeFiles 21
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/push_swap.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sapril/push_swap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/artembykov/push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/push_swap.dir/rule
 
 # Convenience name for target.

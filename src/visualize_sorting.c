@@ -30,7 +30,7 @@ static void print_line_b(int weight)
 	i = 0;
 	while (i <= weight)
 	{
-		ft_putstr(MAGENTA"█"RESET);
+		ft_putstr(CYAN"█"RESET);
 		i++;
 	}
 }
@@ -64,19 +64,19 @@ static void update_current_visual_state(t_stacks *stacks)
 
 	i = stacks->len_a;
 	tmp = stacks->stack_a;
-		printf("\\e[1;1H\\e[2J");
-//		ft_putstr(CLR);
+//		printf("\\e[1;1H\\e[2J");
+		ft_putstr(CLR);
 		ft_putstr(WHITE "\n\n\n\n\n\n\n\n\n");
 		ft_putstr("        ___  _  _ ____ _  _    ____ _ _ _ ____ ___        ");
-		ft_putendl(CYAN "             STACK A is CYAN              ");
+		ft_putendl(RED "             STACK A is RED              ");
 		ft_putstr("        |__] |  | [__  |__| __ [__  | | | |__| |__]       ");
-		ft_putendl(MAGENTA "             STACK B is MAGENTA" RESET);
+		ft_putendl(CYAN "             STACK B is CYAN" RESET);
 		ft_putendl("        |    |__| ___] |  |    ___] |_|_| |  | |         ");
 		ft_putstr(RESET);
-		ft_putstr(WHITE "\n\n\n\n\n");
-		print_current_visual_state(stacks);
+		ft_putstr(WHITE "\n\n\n\n\n\n\n\n\n");
 		ft_putstr(RESET);
-//		usleep(100000);
+		print_current_visual_state(stacks);
+		usleep(25000);
 //		printf("\033[10A\33[2K\r\n");
 }
 
@@ -98,29 +98,19 @@ void clear_screen(t_stacks *stacks)
 	}
 }
 
-void sleep_ms(int milliseconds) // cross-platform sleep function
-{
-#ifdef WIN32
-	Sleep(milliseconds);
-#elif _POSIX_C_SOURCE >= 199309L
-	struct timespec ts;
-    ts.tv_sec = milliseconds / 1000;
-    ts.tv_nsec = (milliseconds % 1000) * 1000000;
-    nanosleep(&ts, NULL);
-#else
-	usleep(milliseconds * 1000);
-#endif
-}
 
 void visual_commands(t_stacks *stacks)
 {
 	char **split_commands;
 	int i;
+	int operations;
+
 
 	i = 0;
+	operations = stacks->operations;
 	split_commands = ft_strsplit(stacks->commands, '\n');
 	print_current_visual_state(stacks);
-	while (i < stacks->operations) // TODO FIX SEGFAULT
+	while (i < operations) // TODO FIX SEGFAULT
 	{
 
 		if (ft_strequ(split_commands[i], "sa"))
@@ -174,7 +164,7 @@ void visual_commands(t_stacks *stacks)
 			update_current_visual_state(stacks);
 		}
 		i++;
-		sleep_ms(200);
+
 //		clear_screen(stacks);
 //		free(buf);
 	}
@@ -210,7 +200,7 @@ void set_weight_to_each_value(t_stacks *stacks) {
 	}
 	tmp = stacks->visual_stack;
 	i = 0;
-	ft_bubble_sort(arr, stacks->len_a);
+	ft_quick_sort(arr, 0, stacks->len_a);
 	while (i < stacks->len_a) {
 		set_value(tmp, arr[i], &i);
 		i++;

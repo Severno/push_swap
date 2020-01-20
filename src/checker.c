@@ -53,7 +53,7 @@ int     main(int argc, char *argv[])
 	if (stacks->stack_a == NULL || has_duplicates(stacks->unsorted_arr, stacks->len_a))
 		exit(free_data(stacks));
 	check_commands(stacks);
-	print_stacks(stacks->stack_a, stacks->stack_b);
+//	print_stacks(stacks->stack_a, stacks->stack_b);
 	if (is_sorted(stacks->stack_a) && stacks->stack_b == NULL)
 		ft_putstr("OK\n");
 	else

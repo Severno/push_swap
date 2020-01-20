@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/push_swap.dir/libft/src/ft_searching/ft_quick_select.c.o"
   "CMakeFiles/push_swap.dir/libft/src/ft_sorting/ft_bubble_sort.c.o"
+  "CMakeFiles/push_swap.dir/libft/src/ft_sorting/ft_quick_sort.c.o"
   "CMakeFiles/push_swap.dir/src/a_stack_handle.c.o"
   "CMakeFiles/push_swap.dir/src/a_stack_handle_support.c.o"
   "CMakeFiles/push_swap.dir/src/b_stack_handle.c.o"

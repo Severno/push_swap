@@ -427,6 +427,7 @@ void find_shortest_way_to_element_a(t_stacks *stacks)
 		counter++;
 	}
 	ft_bubble_sort(arr, counter);
+//	ft_quick_sort(arr, 0, counter);
 	counter = 0;
 	stack_size = get_stack_size(stacks->stack_a);
 	tmp = stacks->stack_a;

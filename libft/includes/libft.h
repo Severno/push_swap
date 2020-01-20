@@ -130,6 +130,7 @@ int					quick_select(int *arr, int left, int right, int k);
 int					ft_max_of_three(int a, int b, int c);
 int					*ft_merge_sort(int *arr, int low, int high);
 void				ft_bubble_sort(int arr[], int n);
+void				ft_quick_sort(int arr[], int low, int high);
 
 
 #endif
