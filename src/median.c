@@ -1,14 +1,5 @@
 #include "../includes/push_swap.h"
 
-
-//int get_elems_num(t_stack *stack)
-//{
-//	t_stack *tmp;
-//
-//	tmp = stack;
-//
-//}
-
 int true_median(t_stacks *stacks, t_stack *stack) {
 	t_stack	*tmp_stack;
 	int		arr[stacks->len_a + 1];
@@ -25,10 +16,7 @@ int true_median(t_stacks *stacks, t_stack *stack) {
 			i++;
 		}
 		ft_quick_sort(arr, 0, i);
-//		if (i % 2 == 1)
-		return  (arr[((i - 1) / 2)]);
-//		else
-//			return (arr[i / 2]);
+		return (arr[((i - 1) / 2)]);
 	}
 	return (0);
 }
@@ -50,10 +38,7 @@ int special_median_a(t_stacks *stacks)
 			i++;
 		}
 		ft_quick_sort(arr, 0, i);
-//		if (i % 2 == 1)
 		return  (arr[((i - 1) / 2)]);
-//		else
-		return (arr[i / 2]);
 	}
 	return (0);
 }
@@ -75,10 +60,7 @@ int special_median_b(t_stacks *stacks)
 			i++;
 		}
 		ft_quick_sort(arr, 0, i);
-//		if (i % 2 == 1)
 		return  (arr[((i - 1) / 2)]);
-//	else
-//		return (arr[i / 2]);
 	}
 	return (0);
 }

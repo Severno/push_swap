@@ -6,32 +6,83 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/18 22:21:19 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/19 01:17:06 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/21 20:42:25 by artembykov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static void print_line_a(int weight)
+//static void print_line(int weight)
+//{
+//	int i;
+//	int decades;
+//	int hundreds;
+//
+//	i = weight;
+//	decades = i / 10;
+//	hundreds = i / 100;
+//	while (--hundreds >= 0)
+//	{
+////		write(1, "____________________________________________________________________________________________________", 400);
+//		write(1, "████████████████████████████████████████████████████████████████████████████████████████████████████", 300);
+////		ft_putstr("████████████████████████████████████████████████████████████████████████████████████████████████████");
+//		i -= 100;
+//	}
+//	while (--decades >= 0 && i / 10 > 0)
+//	{
+//		write(1, "██████████", 30);
+////		ft_putstr("██████████");
+//		i -= 10;
+//	}
+//	while (i >= 0)
+//	{
+//		if (i % 2 == 1)
+//		{
+//			write(1, "█", 3);
+//			i--;
+//		}
+//		else
+//		{
+//			write(1, "██", 6);
+//			i -= 2;
+//		}
+//	}
+//}
+
+static void print_line(int weight)
 {
 	int i;
+	int decades;
+	int hundreds;
 
-	i = 0;
-	while (i <= weight)
+	i = weight;
+	decades = i / 10;
+	hundreds = i / 100;
+	while (--hundreds >= 0)
 	{
-		ft_putstr(RED"█"RESET);
-		i++;
+//		write(1, "____________________________________________________________________________________________________", 400);
+		write(1, "____________________________________________________________________________________________________", 100);
+//		ft_putstr("████████████████████████████████████████████████████████████████████████████████████████████████████");
+		i -= 100;
 	}
-}
-static void print_line_b(int weight)
-{
-	int i;
-
-	i = 0;
-	while (i <= weight)
+	while (--decades >= 0 && i / 10 > 0)
 	{
-		ft_putstr(CYAN"█"RESET);
-		i++;
+		write(1, "__________", 10);
+//		ft_putstr("██████████");
+		i -= 10;
+	}
+	while (i >= 0)
+	{
+		if (i % 2 == 1 || i == 0)
+		{
+			write(1, "_", 1);
+			i--;
+		}
+		else
+		{
+			write(1, "__", 2);
+			i -= 2;
+		}
 	}
 }
 
@@ -39,65 +90,56 @@ static void print_current_visual_state(t_stacks *stacks)
 {
 	t_stack *tmp_a;
 	t_stack *tmp_b;
-//	ft_printf(GREEN"\nStack A\n"RESET);
+
+	ft_putstr(RED);
 	tmp_a = stacks->visual_stack;
 	tmp_b = stacks->stack_b;
 	while (tmp_a != NULL) {
-		print_line_a(tmp_a->weight);
+		print_line(tmp_a->weight);
 		ft_putchar('\n');
 		tmp_a = tmp_a->next;
 	}
-//	ft_printf(BLUE"\nStack B\n"RESET);
-//	ft_printf("\033[%dA\33[2K\r\n", 3); // clear third line
+	ft_putstr(RESET);
+	ft_putstr(CYAN);
 	while (tmp_b != NULL)
 	{
-		print_line_b(tmp_b->weight);
+		print_line(tmp_b->weight);
 		ft_putchar('\n');
 		tmp_b = tmp_b->next;
 	}
+	ft_putstr(RESET);
 }
 
-static void update_current_visual_state(t_stacks *stacks)
+static void update_current_visual_state(t_stacks *stacks, int i, char *split_commands)
 {
-	int i;
-	t_stack *tmp;
-
-	i = stacks->len_a;
-	tmp = stacks->stack_a;
-//		printf("\\e[1;1H\\e[2J");
-		ft_putstr(CLR);
-		ft_putstr(WHITE "\n\n\n\n\n\n\n\n\n");
-		ft_putstr("        ___  _  _ ____ _  _    ____ _ _ _ ____ ___        ");
-		ft_putendl(RED "             STACK A is RED              ");
-		ft_putstr("        |__] |  | [__  |__| __ [__  | | | |__| |__]       ");
-		ft_putendl(CYAN "             STACK B is CYAN" RESET);
-		ft_putendl("        |    |__| ___] |  |    ___] |_|_| |  | |         ");
-		ft_putstr(RESET);
-		ft_putstr(WHITE "\n\n\n\n\n\n\n\n\n");
-		ft_putstr(RESET);
-		print_current_visual_state(stacks);
-		usleep(25000);
-//		printf("\033[10A\33[2K\r\n");
+//	write(1, WHITE "\n\n\n\n\n\n\n\n\n", 9);
+//	write(1, "        ___  _  _ ____ _  _    ____ _ _ _ ____ ___        \n", 59);
+//	write(1, RED "             STACK A is RED              \n", 43);
+//	write(1, "        |__] |  | [__  |__| __ [__  | | | |__| |__]       ", 58);
+//	write(1, CYAN "             STACK B is CYAN\n", 30);
+//	write(1, "        |    |__| ___] |  |    ___] |_|_| |  | |         \n", 59);
+//	write(1, RESET"", 0);
+//	write(1, WHITE "\n\n\n\n\n\n\n\n\n", 9);
+//	write(1, RESET"", 0);
+	ft_putstr(CLR);
+	ft_putstr(WHITE "\n\n\n\n\n\n\n\n\n");
+	ft_putstr("        ___  _  _ ____ _  _    ____ _ _ _ ____ ___        ");
+	ft_putendl(RED "             STACK A is RED              ");
+	ft_putstr("        |__] |  | [__  |__| __ [__  | | | |__| |__]       ");
+	ft_putendl(CYAN "             STACK B is CYAN" RESET);
+	ft_putendl("        |    |__| ___] |  |    ___] |_|_| |  | |         ");
+	ft_putstr(RESET);
+	ft_putstr(WHITE "\n\n\n\n\n\n\n\n\n");
+	ft_putstr(RESET);
+	print_current_visual_state(stacks);
+	write(1, "Current operation: ",19);
+	ft_putstr(split_commands);
+	ft_putchar('\n');
+	write(1, "Total: ",7);
+	ft_putnbr(i + 1);
+	ft_putchar('\n');
+	usleep(25000);
 }
-
-void clear_screen(t_stacks *stacks)
-{
-	int i;
-
-	i = 0;
-	while (i < stacks->len_a)
-	{
-		printf("\033[%dA\33[2K\r\n", i);
-		i++;
-	}
-	i = 0;
-	while (i < stacks->len_a)
-	{
-		printf("\033[%dB", i);
-		i++;
-	}
-}
-
 
 void visual_commands(t_stacks *stacks)
 {
@@ -105,68 +147,65 @@ void visual_commands(t_stacks *stacks)
 	int i;
 	int operations;
 
-
 	i = 0;
 	operations = stacks->operations;
 	split_commands = ft_strsplit(stacks->commands, '\n');
 	print_current_visual_state(stacks);
-	while (i < operations) // TODO FIX SEGFAULT
+	stacks->operations = 0;
+	while (i < operations)
 	{
 
 		if (ft_strequ(split_commands[i], "sa"))
 		{
 			ft_apply_s(&stacks->visual_stack, stacks);
-			update_current_visual_state(stacks);
+			update_current_visual_state(stacks, i, split_commands[i]);
 		}
 		else if (ft_strequ(split_commands[i], "sb"))
 		{
 			ft_apply_s(&stacks->stack_b, stacks);
-			update_current_visual_state(stacks);
+			update_current_visual_state(stacks, i, split_commands[i]);
 		}
 		else if (ft_strequ(split_commands[i], "pa"))
 		{
 			ft_apply_p(&stacks->stack_b, &stacks->visual_stack, stacks);
-			update_current_visual_state(stacks);
+			update_current_visual_state(stacks, i, split_commands[i]);
 		}
 		else if (ft_strequ(split_commands[i], "pb"))
 		{
 			ft_apply_p(&stacks->visual_stack, &stacks->stack_b, stacks);
-			update_current_visual_state(stacks);
+			update_current_visual_state(stacks, i, split_commands[i]);
 		}
 		else if (ft_strequ(split_commands[i], "ra"))
 		{
 			ft_apply_r(&stacks->visual_stack, stacks);
-			update_current_visual_state(stacks);
+			update_current_visual_state(stacks, i, split_commands[i]);
 		}
 		else if (ft_strequ(split_commands[i], "rb"))
 		{
 			ft_apply_r(&stacks->stack_b, stacks);
-			update_current_visual_state(stacks);
+			update_current_visual_state(stacks, i, split_commands[i]);
 		}
 		else if (ft_strequ(split_commands[i], "rra"))
 		{
 			ft_apply_rr(&stacks->visual_stack, stacks);
-			update_current_visual_state(stacks);
+			update_current_visual_state(stacks, i, split_commands[i]);
 		}
 		else if (ft_strequ(split_commands[i], "rrb"))
 		{
 			ft_apply_rr(&stacks->stack_b, stacks);
-			update_current_visual_state(stacks);
+			update_current_visual_state(stacks, i, split_commands[i]);
 		}
 		else if (ft_strequ(split_commands[i], "rr"))
 		{
 			ft_apply_r_st(&stacks->visual_stack, &stacks->stack_b, stacks);
-			update_current_visual_state(stacks);
+			update_current_visual_state(stacks, i, split_commands[i]);
 		}
 		else if (ft_strequ(split_commands[i], "rrr"))
 		{
 			ft_apply_rr_st(&stacks->visual_stack, &stacks->stack_b, stacks);
-			update_current_visual_state(stacks);
+			update_current_visual_state(stacks, i, split_commands[i]);
 		}
 		i++;
-
-//		clear_screen(stacks);
-//		free(buf);
 	}
 }
 
@@ -200,7 +239,7 @@ void set_weight_to_each_value(t_stacks *stacks) {
 	}
 	tmp = stacks->visual_stack;
 	i = 0;
-	ft_quick_sort(arr, 0, stacks->len_a);
+	ft_quick_sort(arr, 0, stacks->len_a - 1);
 	while (i < stacks->len_a) {
 		set_value(tmp, arr[i], &i);
 		i++;

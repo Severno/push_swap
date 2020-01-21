@@ -6,14 +6,14 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 09:13:05 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/18 22:16:01 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/21 20:52:28 by artembykov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
 
-void check_commands(t_stacks *stacks)
+void	check_commands(t_stacks *stacks)
 {
 	char *buf;
 
@@ -43,17 +43,19 @@ void check_commands(t_stacks *stacks)
 	}
 }
 
-int     main(int argc, char *argv[])
+int		main(int argc, char *argv[]) // TODO добавить считываение -v для визуализации
 {
 	t_stacks	*stacks;
 
 	if (argc < 2)
 		exit(1);
 	stacks = create_stacks(argc, argv);
+	if (ft_strequ(argv[2], "-v"))
+		stacks->visual_please = 1;
 	if (stacks->stack_a == NULL || has_duplicates(stacks->unsorted_arr, stacks->len_a))
 		exit(free_data(stacks));
 	check_commands(stacks);
-//	print_stacks(stacks->stack_a, stacks->stack_b);
+//	stacks->visual_please == 1 ? run_visualization(stacks) : 0;
 	if (is_sorted(stacks->stack_a) && stacks->stack_b == NULL)
 		ft_putstr("OK\n");
 	else

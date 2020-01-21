@@ -128,6 +128,10 @@
 		<Unit filename="/Users/artembykov/push_swap/libft/src/ft_array/ft_print_sizet_arr.c">
 			<Option target="checker"/>
 		</Unit>
+		<Unit filename="/Users/artembykov/push_swap/libft/src/ft_math/ft_log2n.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/artembykov/push_swap/libft/src/ft_searching/ft_quick_select.c">
 			<Option target="checker"/>
 			<Option target="push_swap"/>
@@ -145,6 +149,10 @@
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/artembykov/push_swap/src/a_stack_handle_support.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/artembykov/push_swap/src/a_stack_special_case.c">
 			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
@@ -168,6 +176,10 @@
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/artembykov/push_swap/src/commands_rotate.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/artembykov/push_swap/src/free_data.c">
 			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>
@@ -199,6 +211,10 @@
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/artembykov/push_swap/src/stack_set.c">
+			<Option target="checker"/>
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/artembykov/push_swap/src/utils.c">
 			<Option target="checker"/>
 			<Option target="push_swap"/>
 		</Unit>

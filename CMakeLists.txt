@@ -21,6 +21,9 @@ file(GLOB SRC_CHECKER
         "src/b_stack_handle.c"
         "src/a_stack_handle.c"
         "src/visualize_input_process.c"
+        "src/utils.c"
+        "src/free_data.c"
+        "src/a_stack_special_case.c"
         )
 file(GLOB SRC_PUSH_SWAP
         "includes/*.h"
@@ -37,13 +40,16 @@ file(GLOB SRC_PUSH_SWAP
         "src/median.c"
         "src/b_stack_handle.c"
         "src/a_stack_handle.c"
+        "src/utils.c"
+        "src/free_data.c"
+        "src/a_stack_special_case.c"
         )
 file(GLOB LIBFT_SRC
         "libft/includes/*.h"
         "libft/src/*/*.c"
         )
 
-add_executable(push_swap ${SRC_PUSH_SWAP} src/visualize_input_process.c src/median.c src/a_stack_handle.c src/b_stack_handle.c libft/src/ft_searching/ft_quick_select.c src/b_stack_handle_support.c src/stack_manipulations.c src/a_stack_handle_support.c libft/src/ft_sorting/ft_bubble_sort.c src/visualize_sorting.c libft/src/ft_sorting/ft_quick_sort.c)
-add_executable(checker ${SRC_CHECKER} libft/src/ft_array/ft_print_ll_arr.c libft/src/ft_array/ft_print_sizet_arr.c libft/src/ft_searching/ft_quick_select.c src/b_stack_handle_support.c src/stack_manipulations.c src/a_stack_handle_support.c libft/src/ft_sorting/ft_bubble_sort.c src/visualize_sorting.c libft/src/ft_sorting/ft_quick_sort.c)
+add_executable(push_swap ${SRC_PUSH_SWAP} src/visualize_input_process.c src/median.c src/a_stack_handle.c src/b_stack_handle.c libft/src/ft_searching/ft_quick_select.c src/b_stack_handle_support.c src/stack_manipulations.c src/a_stack_handle_support.c libft/src/ft_sorting/ft_bubble_sort.c src/visualize_sorting.c libft/src/ft_sorting/ft_quick_sort.c libft/src/ft_math/ft_log2n.c src/free_data.c)
+add_executable(checker ${SRC_CHECKER} libft/src/ft_array/ft_print_ll_arr.c libft/src/ft_array/ft_print_sizet_arr.c libft/src/ft_searching/ft_quick_select.c src/b_stack_handle_support.c src/stack_manipulations.c src/a_stack_handle_support.c libft/src/ft_sorting/ft_bubble_sort.c src/visualize_sorting.c libft/src/ft_sorting/ft_quick_sort.c libft/src/ft_math/ft_log2n.c src/free_data.c src/utils.c src/a_stack_special_case.c)
 target_link_libraries(push_swap ${CMAKE_SOURCE_DIR}/libft.a)
 target_link_libraries(checker ${CMAKE_SOURCE_DIR}/libft.a)

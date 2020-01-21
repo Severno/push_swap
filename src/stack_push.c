@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-t_stack *ft_get_last_stack_elem(t_stack **head)
+t_stack		*ft_get_last_stack_elem(t_stack **head)
 {
 	t_stack *tmp_head;
 
@@ -24,7 +24,7 @@ t_stack *ft_get_last_stack_elem(t_stack **head)
 	return (tmp_head);
 }
 
-void ft_stack_push_back(t_stack **head, t_stack *target)
+void		ft_stack_push_back(t_stack **head, t_stack *target)
 {
 	t_stack *tail;
 
@@ -39,7 +39,7 @@ void ft_stack_push_back(t_stack **head, t_stack *target)
 	}
 }
 
-void ft_stack_push_front(t_stack **head, t_stack *target)
+void		ft_stack_push_front(t_stack **head, t_stack *target)
 {
 	t_stack *new_elem;
 

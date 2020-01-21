@@ -30,17 +30,13 @@ void		update_current_partition(t_stacks *stacks)
 	}
 }
 
-int		push_more_than_median_b_rutine(t_stack **stack_b, t_stacks *stacks, int median, int *skip)
+int			push_more_than_median_b_rutine(t_stack **stack_b, t_stacks *stacks, int median, int *skip)
 {
 	if ((*stack_b)->value >= median)
-	{
 		ft_apply_p(stack_b, &stacks->stack_a, stacks);
-		//print_stacks(stacks->stack_a, stacks->stack_b);
-	}
 	else
 	{
 		ft_apply_r(stack_b, stacks);
-//		print_stacks(stacks->stack_a, stacks->stack_b);
 		(*skip)++;
 	}
 	if ((*stack_b) == stacks->partitions[stacks->partition_cap]->end)
@@ -51,4 +47,3 @@ int		push_more_than_median_b_rutine(t_stack **stack_b, t_stacks *stacks, int med
 	}
 	return (1);
 }
-

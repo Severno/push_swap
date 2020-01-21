@@ -190,6 +190,36 @@ libft/src/ft_array/ft_print_sizet_arr.c.s:
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_array/ft_print_sizet_arr.c.s
 .PHONY : libft/src/ft_array/ft_print_sizet_arr.c.s
 
+libft/src/ft_math/ft_log2n.o: libft/src/ft_math/ft_log2n.c.o
+
+.PHONY : libft/src/ft_math/ft_log2n.o
+
+# target to build an object file
+libft/src/ft_math/ft_log2n.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_math/ft_log2n.c.o
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/src/ft_math/ft_log2n.c.o
+.PHONY : libft/src/ft_math/ft_log2n.c.o
+
+libft/src/ft_math/ft_log2n.i: libft/src/ft_math/ft_log2n.c.i
+
+.PHONY : libft/src/ft_math/ft_log2n.i
+
+# target to preprocess a source file
+libft/src/ft_math/ft_log2n.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_math/ft_log2n.c.i
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/src/ft_math/ft_log2n.c.i
+.PHONY : libft/src/ft_math/ft_log2n.c.i
+
+libft/src/ft_math/ft_log2n.s: libft/src/ft_math/ft_log2n.c.s
+
+.PHONY : libft/src/ft_math/ft_log2n.s
+
+# target to generate assembly for a file
+libft/src/ft_math/ft_log2n.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/src/ft_math/ft_log2n.c.s
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/src/ft_math/ft_log2n.c.s
+.PHONY : libft/src/ft_math/ft_log2n.c.s
+
 libft/src/ft_searching/ft_quick_select.o: libft/src/ft_searching/ft_quick_select.c.o
 
 .PHONY : libft/src/ft_searching/ft_quick_select.o
@@ -339,6 +369,36 @@ src/a_stack_handle_support.c.s:
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/a_stack_handle_support.c.s
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/a_stack_handle_support.c.s
 .PHONY : src/a_stack_handle_support.c.s
+
+src/a_stack_special_case.o: src/a_stack_special_case.c.o
+
+.PHONY : src/a_stack_special_case.o
+
+# target to build an object file
+src/a_stack_special_case.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/a_stack_special_case.c.o
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/a_stack_special_case.c.o
+.PHONY : src/a_stack_special_case.c.o
+
+src/a_stack_special_case.i: src/a_stack_special_case.c.i
+
+.PHONY : src/a_stack_special_case.i
+
+# target to preprocess a source file
+src/a_stack_special_case.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/a_stack_special_case.c.i
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/a_stack_special_case.c.i
+.PHONY : src/a_stack_special_case.c.i
+
+src/a_stack_special_case.s: src/a_stack_special_case.c.s
+
+.PHONY : src/a_stack_special_case.s
+
+# target to generate assembly for a file
+src/a_stack_special_case.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/a_stack_special_case.c.s
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/a_stack_special_case.c.s
+.PHONY : src/a_stack_special_case.c.s
 
 src/b_stack_handle.o: src/b_stack_handle.c.o
 
@@ -516,6 +576,36 @@ src/commands_rotate.c.s:
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/commands_rotate.c.s
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/commands_rotate.c.s
 .PHONY : src/commands_rotate.c.s
+
+src/free_data.o: src/free_data.c.o
+
+.PHONY : src/free_data.o
+
+# target to build an object file
+src/free_data.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/free_data.c.o
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/free_data.c.o
+.PHONY : src/free_data.c.o
+
+src/free_data.i: src/free_data.c.i
+
+.PHONY : src/free_data.i
+
+# target to preprocess a source file
+src/free_data.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/free_data.c.i
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/free_data.c.i
+.PHONY : src/free_data.c.i
+
+src/free_data.s: src/free_data.c.s
+
+.PHONY : src/free_data.s
+
+# target to generate assembly for a file
+src/free_data.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/free_data.c.s
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/free_data.c.s
+.PHONY : src/free_data.c.s
 
 src/get_stack_info.o: src/get_stack_info.c.o
 
@@ -754,6 +844,36 @@ src/stack_set.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/stack_set.c.s
 .PHONY : src/stack_set.c.s
 
+src/utils.o: src/utils.c.o
+
+.PHONY : src/utils.o
+
+# target to build an object file
+src/utils.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/utils.c.o
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/utils.c.o
+.PHONY : src/utils.c.o
+
+src/utils.i: src/utils.c.i
+
+.PHONY : src/utils.i
+
+# target to preprocess a source file
+src/utils.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/utils.c.i
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/utils.c.i
+.PHONY : src/utils.c.i
+
+src/utils.s: src/utils.c.s
+
+.PHONY : src/utils.s
+
+# target to generate assembly for a file
+src/utils.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/src/utils.c.s
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/src/utils.c.s
+.PHONY : src/utils.c.s
+
 src/visualize_input_process.o: src/visualize_input_process.c.o
 
 .PHONY : src/visualize_input_process.o
@@ -830,6 +950,9 @@ help:
 	@echo "... libft/src/ft_array/ft_print_sizet_arr.o"
 	@echo "... libft/src/ft_array/ft_print_sizet_arr.i"
 	@echo "... libft/src/ft_array/ft_print_sizet_arr.s"
+	@echo "... libft/src/ft_math/ft_log2n.o"
+	@echo "... libft/src/ft_math/ft_log2n.i"
+	@echo "... libft/src/ft_math/ft_log2n.s"
 	@echo "... libft/src/ft_searching/ft_quick_select.o"
 	@echo "... libft/src/ft_searching/ft_quick_select.i"
 	@echo "... libft/src/ft_searching/ft_quick_select.s"
@@ -845,6 +968,9 @@ help:
 	@echo "... src/a_stack_handle_support.o"
 	@echo "... src/a_stack_handle_support.i"
 	@echo "... src/a_stack_handle_support.s"
+	@echo "... src/a_stack_special_case.o"
+	@echo "... src/a_stack_special_case.i"
+	@echo "... src/a_stack_special_case.s"
 	@echo "... src/b_stack_handle.o"
 	@echo "... src/b_stack_handle.i"
 	@echo "... src/b_stack_handle.s"
@@ -863,6 +989,9 @@ help:
 	@echo "... src/commands_rotate.o"
 	@echo "... src/commands_rotate.i"
 	@echo "... src/commands_rotate.s"
+	@echo "... src/free_data.o"
+	@echo "... src/free_data.i"
+	@echo "... src/free_data.s"
 	@echo "... src/get_stack_info.o"
 	@echo "... src/get_stack_info.i"
 	@echo "... src/get_stack_info.s"
@@ -887,6 +1016,9 @@ help:
 	@echo "... src/stack_set.o"
 	@echo "... src/stack_set.i"
 	@echo "... src/stack_set.s"
+	@echo "... src/utils.o"
+	@echo "... src/utils.i"
+	@echo "... src/utils.s"
 	@echo "... src/visualize_input_process.o"
 	@echo "... src/visualize_input_process.i"
 	@echo "... src/visualize_input_process.s"

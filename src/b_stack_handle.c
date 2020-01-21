@@ -14,8 +14,6 @@
 
 #include "../includes/push_swap.h"
 
-
-
 void sort_b(t_stacks *stacks,  int capacity)
 {
 	t_stack *tmp;
@@ -27,10 +25,7 @@ void sort_b(t_stacks *stacks,  int capacity)
 		return;
 	else if (capacity == 2) {
 		if (stacks->stack_b->next->value > stacks->stack_b->value)
-		{
 			ft_apply_s(&stacks->stack_b, stacks);
-			//print_stacks(stacks->stack_a, stacks->stack_b);
-		}
 		return;
 	}
 	sort_three_elems_b(stacks);
@@ -44,9 +39,6 @@ void push_b(t_stacks *stacks, t_stack **stack_b, int capacity)
 	capacity = (capacity == -1) ? 3 : capacity;
 	while (i < capacity && stacks->stack_b)
 	{
-//		count_current_elems = get_elems_count_b(stacks);
-//		if (count_current_elems == 3)
-//			break;
 		ft_apply_p(stack_b, &stacks->stack_a, stacks);
 		update_current_partition(stacks);
 		if (stacks->partition_cap > 0 && stacks->stack_b == stacks->partitions[stacks->partition_cap - 1]->start)
@@ -57,7 +49,6 @@ void push_b(t_stacks *stacks, t_stack **stack_b, int capacity)
 		}
 		i++;
 	}
-//	print_stacks(stacks->stack_a, stacks->stack_b);
 	update_current_partition(stacks);
 }
 
@@ -67,27 +58,18 @@ int b_to_a(t_stacks *stacks)
 	int elems_count;
 
 	median = MAX_INTEGER;
-//	update_partition(stacks);
 	elems_count = get_elems_count_b(stacks);
 	if (elems_count > 3)
 		median = special_median_b(stacks);
 	if (median != MAX_INTEGER)
-	{
 		push_more_than_median_to_a(stacks, median);
-//		print_stacks(stacks->stack_a, stacks->stack_b);
-//		printf("split round median B = %d\n", median);
-	}
 	else
 	{
 		sort_b(stacks, elems_count);
-//		print_stacks(stacks->stack_a, stacks->stack_b);
 		if (elems_count == 3)
 			elems_count--;
 	}
 	if (median == MAX_INTEGER)
-	{
 		push_b(stacks, &stacks->stack_b, elems_count);
-//		print_stacks(stacks->stack_a, stacks->stack_b);
-	}
 	return (median == MAX_INTEGER ? 0 : 1);
 }

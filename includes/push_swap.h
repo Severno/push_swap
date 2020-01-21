@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 16:42:56 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/19 01:08:21 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/21 20:49:22 by artembykov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # define	MULTIPLE_INPUT_PARAMS 2
 # define 	ONE_INPUT_PARAM 1
 # define	ERROR 0
+# define	NO_MEDIAN 2147483647
+# define	CHECK_UNTIL_TOP 1
 #define RED     "\x1b[31m"
 #define GREEN   "\x1b[32m"
 #define YELLOW  "\x1b[33m"
@@ -25,7 +27,7 @@
 #define MAGENTA "\x1b[35m"
 #define CYAN    "\x1b[36m"
 #define RESET   "\x1b[0m"
-# define CLR "\e[0;0H\e[2J"
+# define CLR "\e[1;1H\e[2J"
 # define WHITE   "\x1B[37m"
 
 
@@ -56,14 +58,18 @@ typedef struct		s_stacks
 	int				*unsorted_arr;
 	int				operations;
 	char			*commands;
+	int				visual_please;
 }					t_stacks;
 
-int solver(t_stacks *stacks);
+int 			solver(t_stacks *stacks);
+void			create_stack(t_stacks *stacks, t_stack **stack);
+void create_arr_from_linked_list(t_stack *stack, int *arr, int *counter);
 //visualization
-void create_stack_visual(t_stacks *stacks);
 void visual_commands(t_stacks *stacks);
 void run_visualization(t_stacks *stacks);
-void clear_screen(t_stacks *stacks);
+
+// utils
+int		get_less_then_num_count(t_stack *stack, int median);
 
 // checker
 void check_commands(t_stacks *stacks);

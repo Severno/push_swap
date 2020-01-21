@@ -18,7 +18,8 @@ LIBFT_MATH_SRC= ft_abs \
 				ft_max_of_three \
 				ft_max_of_two \
 				ft_middle_of_three \
-				ft_min_of_two
+				ft_min_of_two \
+				ft_log2n
 
 LIBFT_MEM_PATH:=	ft_mem/
 LIBFT_MEM_SRC:=	ft_bzero \

@@ -26,9 +26,7 @@ void		push_more_than_median_to_a(t_stacks *stacks, int median)
 	skip = 0;
 	while (stacks->stack_b && push_more_than_median_b_rutine(&stacks->stack_b, stacks, median, &skip))
 		;
-//	print_stacks(stacks->stack_a, stacks->stack_b);
 	stack_step_back(&stacks->stack_b, stacks, skip);
-//	print_stacks(stacks->stack_a, stacks->stack_b);
 	update_current_partition(stacks);
 }
 
@@ -75,11 +73,6 @@ void sort_three_elems_b(t_stacks *stacks)
 		fast_handle_only_three_elems(&stacks->stack_b, stacks);
 		return;
 	}
-//	if (stacks->stack_a_top == NULL && stacks->len_a == 5)
-//	{
-//		find_shortest_way_to_element(stacks, max);
-//		return;
-//	}
 	while ((stacks->stack_b)->value < max) {
 		ft_apply_r(&stacks->stack_b, stacks);
 		skip++;
