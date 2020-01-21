@@ -74,3 +74,5 @@ I represented the stacks in two-way linked lists, and I had to develop a strong 
 I learnt about complexity and (O)n notation.
 
 I studied all major sorting algorithms in order to pick the one I felt best fit the task. It was very interesting to get my head around how they working recursively, and particularly enjoyable to then try and figure out how one could dissect the algorithm to perform it iteratively.
+
+Check random numbers ```ARG=`ruby -e "puts (0..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG;```
