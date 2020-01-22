@@ -6,7 +6,7 @@
 /*   By: artembykov <artembykov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 16:10:30 by artembykov        #+#    #+#             */
-/*   Updated: 2020/01/21 17:54:38 by artembykov       ###   ########.fr       */
+/*   Updated: 2020/01/22 09:51:25 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ static int		push_and_rotate(t_stacks *stacks, int *arr,
 	else
 		ft_apply_rr(&stacks->stack_a, stacks);
 	if (*flag == 0)
-		stacks->partitions[stacks->partition_cap]->end
-		= stacks->stack_b;
+		stacks->partitions[stacks->partition_cap]->end =
+				stacks->stack_b;
 	if (is_sorted(stacks->stack_a) && stacks->stack_b == NULL)
 		return (0);
 	*flag = 1;
@@ -64,7 +64,7 @@ void			fast_handle_only_three_elems(t_stack **stack,
 			three_elems_command_checker(stacks, stack);
 }
 
-void		find_shortest_way_to_element_a(t_stacks *stacks)
+void			find_shortest_way_to_element_a(t_stacks *stacks)
 {
 	int counter;
 	int arr[6];
@@ -79,7 +79,7 @@ void		find_shortest_way_to_element_a(t_stacks *stacks)
 	stacks->partition_cap++;
 	while (get_elems_count_a(stacks->stack_a, stacks) > 3)
 		if (push_and_rotate(stacks, arr, stack_size, &flag) == 0)
-			break;
+			break ;
 	stacks->partitions[stacks->partition_cap]->start = stacks->stack_b;
 }
 
@@ -89,7 +89,7 @@ void			handle_special_range(t_stacks *stacks)
 	int a_elems;
 
 	if (is_sorted(stacks->stack_a))
-		return;
+		return ;
 	find_shortest_way_to_element_a(stacks);
 	a_elems = get_stack_size(stacks->stack_a);
 	sort_a(&stacks->stack_a, stacks, a_elems);

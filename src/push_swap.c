@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 15:00:34 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/21 18:08:48 by artembykov       ###   ########.fr       */
+/*   Updated: 2020/01/22 17:11:25 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,15 @@ int			main(int argc, char *argv[])
 	if (argc < 2)
 		exit(1);
 	stacks = create_stacks(argc, argv);
-	if (stacks->stack_a == NULL || is_sorted(stacks->stack_a) == 1
+	if (is_sorted(stacks->stack_a) == 1)
+		return (0);
+	if (stacks->stack_a == NULL
 	|| has_duplicates(stacks->unsorted_arr, stacks->len_a))
-		exit(free_data(stacks));
+		exit(print_error(stacks));
 	solver(stacks);
 	ft_putstr(stacks->commands);
-//	run_visualization(stacks);
-//	ft_printf(RED"Operations %d\n"RESET, stacks->operations);
+	stacks->input_process_please == 1 ? visualize_input_process(stacks) : 0;
+	stacks->visual_please == 1 ? run_visualization(stacks) : 0;
 	free_data(stacks);
 	return (0);
 }

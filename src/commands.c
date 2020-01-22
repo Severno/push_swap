@@ -34,7 +34,8 @@ int					ft_apply_s(t_stack **stack, t_stacks *stacks)
 	return (0);
 }
 
-int					ft_apply_ss(t_stack **stack_a, t_stack **stack_b, t_stacks *stacks)
+int					ft_apply_ss(t_stack **stack_a,
+		t_stack **stack_b, t_stacks *stacks)
 {
 	if (ft_apply_s(stack_a, stacks) && ft_apply_s(stack_b, stacks))
 		return (1);

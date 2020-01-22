@@ -12,7 +12,7 @@
 
 #include "../../includes/libft.h"
 
-int *ft_copy_int_arr(int *arr, size_t size)
+int		*ft_copy_int_arr(int *arr, size_t size)
 {
 	size_t	i;
 	int		*arr_cpy;

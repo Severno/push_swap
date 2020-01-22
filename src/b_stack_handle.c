@@ -1,5 +1,3 @@
-#include "../includes/push_swap.h"
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -8,30 +6,32 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/05 14:04:28 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/10 18:29:25 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/22 09:53:01 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void sort_b(t_stacks *stacks,  int capacity)
+void		sort_b(t_stacks *stacks, int capacity)
 {
 	t_stack *tmp;
 
 	tmp = stacks->stack_b;
 	if (tmp == NULL)
-		return;
+		return ;
 	if (capacity == 1)
-		return;
-	else if (capacity == 2) {
+		return ;
+	else if (capacity == 2)
+	{
 		if (stacks->stack_b->next->value > stacks->stack_b->value)
 			ft_apply_s(&stacks->stack_b, stacks);
-		return;
+		return ;
 	}
 	sort_three_elems_b(stacks);
 }
 
-void push_b(t_stacks *stacks, t_stack **stack_b, int capacity)
+void		push_b(t_stacks *stacks,
+		t_stack **stack_b, int capacity)
 {
 	int i;
 
@@ -41,7 +41,8 @@ void push_b(t_stacks *stacks, t_stack **stack_b, int capacity)
 	{
 		ft_apply_p(stack_b, &stacks->stack_a, stacks);
 		update_current_partition(stacks);
-		if (stacks->partition_cap > 0 && stacks->stack_b == stacks->partitions[stacks->partition_cap - 1]->start)
+		if (stacks->partition_cap > 0 && stacks->stack_b
+		== stacks->partitions[stacks->partition_cap - 1]->start)
 		{
 			stacks->partitions[stacks->partition_cap]->end = NULL;
 			stacks->partitions[stacks->partition_cap]->start = NULL;
@@ -52,7 +53,7 @@ void push_b(t_stacks *stacks, t_stack **stack_b, int capacity)
 	update_current_partition(stacks);
 }
 
-int b_to_a(t_stacks *stacks)
+int			b_to_a(t_stacks *stacks)
 {
 	int median;
 	int elems_count;

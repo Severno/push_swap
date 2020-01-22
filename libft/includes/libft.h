@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 17:48:40 by sapril            #+#    #+#             */
-/*   Updated: 2019/12/11 12:26:05 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/22 16:34:55 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@
 
 # define MAX_LONG		9223372036854775807
 # define MAX_INTEGER	2147483647
-# define MAX_PRECISION	(2000)
+# define MIN_INTEGER	-2147483648
+# define MAX_PRECISION	2000
 
 typedef struct		s_list
 {
@@ -124,14 +125,11 @@ void				ft_print_pstr_arr(char **str, int in_line);
 int					ft_get_number_of_substrings(char **str);
 int					ft_str_is_numeric_no_spaces(char *str);
 int					*ft_copy_int_arr(int *arr, size_t size);
-void				ft_print_ll_arr(long long *num_arr, int in_line, size_t size);
-void				ft_print_sizet_arr(size_t *num_arr, int in_line, size_t size);
-int					quick_select(int *arr, int left, int right, int k);
+void				ft_print_ll_arr(long long *num_arr,
+					int in_line, size_t size);
+void				ft_print_sizet_arr(size_t *num_arr,
+					int in_line, size_t size);
 int					ft_max_of_three(int a, int b, int c);
-int					*ft_merge_sort(int *arr, int low, int high);
-void				ft_bubble_sort(int arr[], int n);
-void				ft_quick_sort(int arr[], int low, int high);
 int					log2n(unsigned int n);
-
 
 #endif

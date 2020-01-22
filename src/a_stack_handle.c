@@ -6,16 +6,16 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/05 14:04:28 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/21 16:07:36 by artembykov       ###   ########.fr       */
+/*   Updated: 2020/01/22 13:20:26 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int get_elems_count_a(t_stack *stack, t_stacks *stacks)
+int		get_elems_count_a(t_stack *stack, t_stacks *stacks)
 {
-	t_stack *tmp;
-	int count;
+	t_stack		*tmp;
+	int			count;
 
 	count = 0;
 	if (stack)
@@ -31,11 +31,12 @@ int get_elems_count_a(t_stack *stack, t_stacks *stacks)
 	return (-1);
 }
 
-void sort_a(t_stack **a, t_stacks *stacks,  int capacity)
+void	sort_a(t_stack **a, t_stacks *stacks, int capacity)
 {
 	if (capacity == 1)
 		return ;
-	if (capacity == 2) {
+	if (capacity == 2)
+	{
 		if ((*a)->next->value < (*a)->value)
 		{
 			ft_apply_s(a, stacks);
@@ -46,7 +47,7 @@ void sort_a(t_stack **a, t_stacks *stacks,  int capacity)
 	sort_three_elems_a(a, stacks);
 }
 
-int a_to_b(t_stacks *stacks)
+int		a_to_b(t_stacks *stacks)
 {
 	int median;
 	int elems_count;

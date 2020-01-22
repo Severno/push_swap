@@ -6,45 +6,79 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/09 16:16:12 by sapril            #+#    #+#             */
-/*   Updated: 2019/12/11 12:16:57 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/22 18:31:28 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	check_input_condition(int arg_c, char *arg_v[])
+static int		get_full_argument_size(int argc, char *argv[])
 {
-	int arg_count;
+	char	**split_str;
+	int		size;
+	int		i;
 
-	arg_count = 1;
-	if (arg_c == 2 && ft_str_is_numeric_with_spaces(arg_v[arg_count]))
-		return (ONE_INPUT_PARAM);
-	else if (arg_c > 2)
-		return (MULTIPLE_INPUT_PARAMS);
-	else
-		return (ERROR);
+	i = 1;
+	size = 0;
+	while (i < argc)
+	{
+		split_str = ft_strsplit(argv[i], ' ');
+		size += ft_get_number_of_substrings(split_str);
+//		free_split_str(&split_str);
+		i++;
+	}
+	return (size);
 }
 
-int		*convert_str_to_int_array(int arg_c, char *arg_v[], int *array_size)
+void			free_split_str(char ***tab)
 {
-	int input_condition;
+	int		i;
 
-	input_condition = check_input_condition(arg_c, arg_v);
-	if (input_condition == MULTIPLE_INPUT_PARAMS)
-		return (handle_multiple_input_params(arg_c, arg_v, array_size));
-	else if (input_condition == ONE_INPUT_PARAM)
-		return (handle_one_input_params(arg_v, array_size));
-	else
-		exit(print_error());
+	i = 0;
+	while ((*tab)[i])
+	{
+		if ((*tab)[i] != NULL)
+			free((*tab)[i]);
+		i++;
+	}
+	free(*tab);
+	*tab = 0;
 }
 
-int has_duplicates(int *num_arr, int size)
+void			convert_argv_to_int_array(int argc,
+		char *argv[], int *array_size, t_stacks *stacks)
+{
+	size_t			arr_c;
+	int				split_c;
+	int				arg_c;
+	int				full_argv_size;
+
+	arr_c = 0;
+	split_c = 0;
+	arg_c = 1;
+	full_argv_size = get_full_argument_size(argc, argv);
+	stacks->unsorted_arr = (int *)ft_memalloc(sizeof(int) * full_argv_size);
+	while ((int)arr_c < full_argv_size)
+	{
+		stacks->split_argv = ft_strsplit(argv[arg_c++], ' ');
+		while (stacks->split_argv[split_c])
+		{
+			check_bonus_flags(stacks, &split_c, &full_argv_size, arg_c);
+			check_value_condition(stacks, &split_c, &arr_c);
+		}
+		split_c = 0;
+//		free_split_str(&stacks->split_argv);
+	}
+	*array_size = arr_c;
+}
+
+int				has_duplicates(int *num_arr, int size)
 {
 	int i;
 	int j;
 
 	i = 0;
-	while(i < size - 1)
+	while (i < size - 1)
 	{
 		j = i + 1;
 		while (j < size)

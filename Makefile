@@ -21,11 +21,12 @@ CYAN_IN:=\033[1;36m
 WHITE_IN:=\033[1;37m
 # ==================
 
-FILES = checker input_handle stack_set checker_handle \
+FILES = checker input_handle stack_set \
 		commands push_swap get_stack_info stack_pop stack_push commands_rotate \
 		visualize_input_process \
 		median b_stack_handle a_stack_handle stack_manipulations b_stack_handle_support visualize_sorting \
-		free_data a_stack_special_case utils a_stack_handle_support
+		free_data a_stack_special_case utils a_stack_handle_support visualize_print_loops \
+		print_visual_state apply_visual_commands input_handle_check
 
 
 FILES_PUSH_SWAP= $(filter-out checker, $(FILES))

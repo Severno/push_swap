@@ -6,7 +6,7 @@
 /*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/10 15:47:05 by sapril            #+#    #+#             */
-/*   Updated: 2020/01/15 10:52:47 by sapril           ###   ########.fr       */
+/*   Updated: 2020/01/22 16:25:55 by sapril           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ static int		partition(int *arr, int left, int right)
 		j++;
 	}
 	swap(arr, i, j);
-	return i;
+	return (i);
 }
 
-int		quick_select(int *arr, int left, int right, int k)
+int				quick_select(int *arr, int left, int right, int k)
 {
 	int pivot_position;
 
@@ -55,9 +55,10 @@ int		quick_select(int *arr, int left, int right, int k)
 		pivot_position = partition(arr, left, right);
 		if (pivot_position - left == k - 1)
 			return (arr[pivot_position]);
-		if (pivot_position - left >  k - 1)
+		if (pivot_position - left > k - 1)
 			return (quick_select(arr, left, pivot_position - 1, k));
-		return (quick_select(arr, pivot_position + 1, right, k - pivot_position + left - 1));
+		return (quick_select(arr, pivot_position + 1, right,
+				k - pivot_position + left - 1));
 	}
 	return (MAX_INTEGER);
 }

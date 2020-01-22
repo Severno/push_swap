@@ -65,7 +65,7 @@ static void		merge(int arr[], int low, int middle, int high)
 		arr[arr_i++] = right_arr[right_i++];
 }
 
-int			*ft_merge_sort(int *arr, int low, int high)
+int				*ft_merge_sort(int *arr, int low, int high)
 {
 	int middle;
 

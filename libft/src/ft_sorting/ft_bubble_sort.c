@@ -1,14 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bubble_sort.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sapril <sapril@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/22 16:26:24 by sapril            #+#    #+#             */
+/*   Updated: 2020/01/22 16:26:45 by sapril           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/libft.h"
 
-static void swap(int *xp, int *yp)
+static void	swap(int *xp, int *yp)
 {
-	int temp = *xp;
+	int temp;
+
+	temp = *xp;
 	*xp = *yp;
 	*yp = temp;
 }
 
-// A function to implement bubble sort
-void ft_bubble_sort(int arr[], int n)
+void		ft_bubble_sort(int arr[], int n)
 {
 	int i;
 	int j;

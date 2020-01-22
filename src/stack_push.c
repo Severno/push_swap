@@ -28,7 +28,6 @@ void		ft_stack_push_back(t_stack **head, t_stack *target)
 {
 	t_stack *tail;
 
-
 	tail = ft_get_last_stack_elem(head);
 	if (*head == NULL)
 		*head = target;

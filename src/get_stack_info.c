@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-t_stack *get_last_stack_elem(t_stack *stack)
+t_stack		*get_last_stack_elem(t_stack *stack)
 {
 	t_stack *tmp_stack;
 
@@ -22,10 +22,10 @@ t_stack *get_last_stack_elem(t_stack *stack)
 	return (tmp_stack);
 }
 
-int get_max_of_partition(t_stack *start, t_stack *end)
+int			get_max_of_partition(t_stack *start, t_stack *end)
 {
-	t_stack *tmp;
-	int max;
+	t_stack	*tmp;
+	int		max;
 
 	tmp = start;
 	max = start->value;
@@ -38,10 +38,10 @@ int get_max_of_partition(t_stack *start, t_stack *end)
 	return (max);
 }
 
-int get_min_of_partition(t_stack *start, t_stack *end)
+int			get_min_of_partition(t_stack *start, t_stack *end)
 {
-	t_stack *tmp;
-	int min;
+	t_stack	*tmp;
+	int		min;
 
 	tmp = start;
 	min = start->value;
@@ -54,10 +54,10 @@ int get_min_of_partition(t_stack *start, t_stack *end)
 	return (min);
 }
 
-int get_stack_size(t_stack *stack)
+int			get_stack_size(t_stack *stack)
 {
-	t_stack *tmp;
-	int count;
+	t_stack	*tmp;
+	int		count;
 
 	tmp = stack;
 	count = 0;
