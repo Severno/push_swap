@@ -26,7 +26,10 @@ void		add_val_to_arr(t_stacks *stacks,
 		stacks->unsorted_arr[arr_c] = ft_atoi(work_value);
 	}
 	else
+	{
+		free_split_str(&stacks->split_argv);
 		exit(print_error(stacks));
+	}
 }
 
 void		check_bonus_flags(t_stacks *stacks,

@@ -44,7 +44,7 @@ ft_printf.h
 libft.h
 /Users/sapril/push_swap/libft/includes/libft.h
 
-/Users/sapril/push_swap/src/input_handle.c
+/Users/sapril/push_swap/src/input_handle_check.c
 ../includes/push_swap.h
 /Users/sapril/push_swap/includes/push_swap.h
 
