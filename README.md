@@ -1,9 +1,9 @@
-# ft_printf
+# push_swap
 ### Score 112/100
 ##### Mandatory
 100/100
 ##### Bonus
-12/25
+19/25
 ***
 ### Challenge
 This project will make you sort data on a stack, with a limited set of instructions, using
