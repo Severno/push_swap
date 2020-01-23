@@ -36,11 +36,11 @@ int			main(int argc, char *argv[])
 	if (argc < 2)
 		exit(1);
 	stacks = create_stacks(argc, argv, PUSH_SWAP);
+	if (stacks->stack_a == NULL
+		|| has_duplicates(stacks->unsorted_arr, stacks->len_a))
+		exit(print_error(stacks));
 	if (is_sorted(stacks->stack_a) == 1)
 		return (0);
-	if (stacks->stack_a == NULL
-	|| has_duplicates(stacks->unsorted_arr, stacks->len_a))
-		exit(print_error(stacks));
 	solver(stacks);
 	ft_putstr(stacks->commands);
 	stacks->input_process_please == 1 ? visualize_input_process(stacks) : 0;
