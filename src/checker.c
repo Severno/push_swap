@@ -12,35 +12,63 @@
 
 #include "../includes/push_swap.h"
 
-void	check_commands(t_stacks *stacks)
+void		check_commands(t_stacks *stacks)
 {
-	char *buf;
+	char	*buf;
+	int		error;
 
+	error = -1;
 	while (get_next_line(0, &buf) > 0)
 	{
 		if (buf[0] == 'r')
-			check_rotate_commands(stacks, buf, &stacks->stack_a);
-		else
-			check_push_swap_commands(stacks, buf, &stacks->stack_a);
+			error = check_rotate_commands(stacks, buf, &stacks->stack_a);
+		else if (buf[0] == 's' || buf[0] == 'p')
+			error = check_push_swap_commands(stacks, buf, &stacks->stack_a);
+		if (error == -1)
+		{
+			free(buf);
+			exit(print_error(stacks));
+		}
+		error = -1;
 		free(buf);
 	}
 }
 
-int		main(int argc, char *argv[])
+static void	check_ko_ok_before_commands(t_stacks *stacks)
+{
+	if (stacks->len_a == 0)
+		exit(0);
+	if (is_sorted(stacks->stack_a)
+	&& stacks->stack_b == NULL && stacks->stack_a)
+	{
+		ft_putstr("OK\n");
+		exit(0);
+	}
+}
+
+static void	check_ko_ok_after_commands(t_stacks *stacks)
+{
+	if (is_sorted(stacks->stack_a)
+	&& stacks->stack_b == NULL && stacks->stack_a)
+		ft_putstr("OK\n");
+	else
+		ft_putstr("KO\n");
+}
+
+int			main(int argc, char *argv[])
 {
 	t_stacks	*stacks;
 
 	if (argc < 2)
 		exit(1);
-	stacks = create_stacks(argc, argv);
+	stacks = create_stacks(argc, argv, CHECKER);
+	stacks->checker_run = 1;
 	if (stacks->stack_a == NULL
 	|| has_duplicates(stacks->unsorted_arr, stacks->len_a))
-		exit(free_data(stacks));
+		exit(print_error(stacks));
+	check_ko_ok_before_commands(stacks);
 	check_commands(stacks);
-	if (is_sorted(stacks->stack_a) && stacks->stack_b == NULL)
-		ft_putstr("OK\n");
-	else
-		ft_putstr("KO\n");
+	check_ko_ok_after_commands(stacks);
 	free_data(stacks);
 	return (0);
 }

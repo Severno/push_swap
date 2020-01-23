@@ -68,5 +68,6 @@ void	update_current_visual_state(t_stacks *stacks,
 	ft_putstr(WHITE "\n\n\n\n\n\n\n\n\n");
 	ft_putstr(RESET);
 	print_current_visual_state(stacks);
-//	ft_printf("Current operation: %s\n" MAGENTA"Total: %d\n"RESET, split_commands, i + 1);
+	ft_printf("Current operation: %s\n"
+	MAGENTA"Total: %d\n"RESET, split_commands, i + 1);
 }

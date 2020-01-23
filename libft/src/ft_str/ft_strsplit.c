@@ -46,7 +46,7 @@ static char		**ft_word_extractor(const char *str,
 			{
 				strtab[v[1]] = (char*)malloc(sizeof(char) * (v[2] + 1));
 				strtab[v[1]] = ft_strncpy(strtab[v[1]],
-										  str + v[0] - v[2], v[2]);
+						str + v[0] - v[2], v[2]);
 				strtab[v[1]][v[2]] = '\0';
 				v[1]++;
 				v[2] = 0;

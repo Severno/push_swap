@@ -24,7 +24,7 @@ static int		get_full_argument_size(int argc, char *argv[])
 	{
 		split_str = ft_strsplit(argv[i], ' ');
 		size += ft_get_number_of_substrings(split_str);
-//		free_split_str(&split_str);
+		free_split_str(&split_str);
 		i++;
 	}
 	return (size);
@@ -67,7 +67,7 @@ void			convert_argv_to_int_array(int argc,
 			check_value_condition(stacks, &split_c, &arr_c);
 		}
 		split_c = 0;
-//		free_split_str(&stacks->split_argv);
+		free_split_str(&stacks->split_argv);
 	}
 	*array_size = arr_c;
 }

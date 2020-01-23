@@ -28,11 +28,13 @@ void			print_stacks(t_stack *stack_a, t_stack *stack_b)
 		stack_a = stack_a != NULL ? stack_a->next : 0;
 		stack_b = stack_b != NULL ? stack_b->next : 0;
 	}
+	ft_printf(RED"------------------------"
+			"---------------------\nInput command:"RESET);
 }
 
-void			print_commands(t_stacks *stacks)
+void			print_commands(void)
 {
-	ft_printf("------------STARTING POSITION------------\n");
+	ft_printf("\n------------STARTING POSITION------------\n");
 	ft_printf("CHOOSE COMMAND YOU LIKE:\n"
 	RED"1. sa : swap a - swap the first "
 	"2 elements at the top of stack a\n"RESET
@@ -52,12 +54,11 @@ void			print_commands(t_stacks *stacks)
 	"shift down all elements of stack b by 1.\n"RESET
 	RED"11. rrr : rra and rrb at the same time.\n"RESET
 	MAGENTA"IF YOU WANT SHOW COMMANDS AGAIN TYPE \"help\"\n"RESET);
-	print_stacks(stacks->visual_stack, stacks->stack_b);
 	ft_printf(RED"------------------------"
 			"---------------------\nInput command:"RESET);
 }
 
-void			check_rotate_commands(t_stacks *stacks,
+int				check_rotate_commands(t_stacks *stacks,
 		char *buf, t_stack **stack)
 {
 	if (ft_strequ(buf, "ra"))
@@ -72,9 +73,12 @@ void			check_rotate_commands(t_stacks *stacks,
 		ft_apply_rr(&stacks->stack_b, stacks);
 	else if (ft_strequ(buf, "rrr"))
 		ft_apply_rr_st(stack, &stacks->stack_b, stacks);
+	else
+		return (-1);
+	return (1);
 }
 
-void			check_push_swap_commands(t_stacks *stacks,
+int				check_push_swap_commands(t_stacks *stacks,
 		char *buf, t_stack **stack)
 {
 	if (ft_strequ(buf, "sa"))
@@ -86,6 +90,9 @@ void			check_push_swap_commands(t_stacks *stacks,
 				stack, stacks);
 	else if (ft_strequ(buf, "pb"))
 		ft_apply_p(stack, &stacks->stack_b, stacks);
+	else
+		return (-1);
+	return (1);
 }
 
 void			visualize_input_process(t_stacks *stacks)
@@ -93,7 +100,8 @@ void			visualize_input_process(t_stacks *stacks)
 	int		ret;
 	char	buf[20];
 
-	print_commands(stacks);
+	print_commands();
+	print_stacks(stacks->visual_stack, stacks->stack_b);
 	while (1)
 	{
 		ret = read(0, buf, 20);
@@ -103,11 +111,12 @@ void			visualize_input_process(t_stacks *stacks)
 		if (buf[0] == 'r')
 			check_rotate_commands(stacks, buf, &stacks->visual_stack);
 		else if (ft_strequ(buf, "help"))
-			print_commands(stacks);
+		{
+			print_commands();
+			continue;
+		}
 		else
 			check_push_swap_commands(stacks, buf, &stacks->visual_stack);
 		print_stacks(stacks->visual_stack, stacks->stack_b);
-		ft_printf(RED"-------------------------"
-			"--------------------\nInput command:"RESET);
 	}
 }

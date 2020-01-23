@@ -22,17 +22,11 @@ void		add_val_to_arr(t_stacks *stacks,
 	{
 		temp_val = ft_atol(work_value);
 		if (temp_val > MAX_INTEGER || temp_val < MIN_INTEGER)
-		{
-//			free_split_str(&stacks->split_argv);
 			exit(print_error(stacks));
-		}
 		stacks->unsorted_arr[arr_c] = ft_atoi(work_value);
 	}
 	else
-	{
-//		free_split_str(&stacks->split_argv);
 		exit(print_error(stacks));
-	}
 }
 
 void		check_bonus_flags(t_stacks *stacks,
@@ -40,7 +34,10 @@ void		check_bonus_flags(t_stacks *stacks,
 {
 	if ((ft_strequ(stacks->split_argv[*split_c], "-v")
 		|| ft_strequ(stacks->split_argv[*split_c], "-i"))
-		&& arg_c == 2)
+		&& *split_c == 0
+		&& stacks->visual_please == 0
+		&& arg_c == 2
+		&& stacks->checker_run == -1)
 	{
 		ft_strequ(stacks->split_argv[*split_c], "-i")
 		? stacks->input_process_please = 1 : 0;

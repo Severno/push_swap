@@ -35,7 +35,7 @@ int			main(int argc, char *argv[])
 
 	if (argc < 2)
 		exit(1);
-	stacks = create_stacks(argc, argv);
+	stacks = create_stacks(argc, argv, PUSH_SWAP);
 	if (is_sorted(stacks->stack_a) == 1)
 		return (0);
 	if (stacks->stack_a == NULL

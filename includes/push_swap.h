@@ -19,6 +19,8 @@
 # define ERROR 0
 # define NO_MEDIAN 2147483647
 # define CHECK_UNTIL_TOP 1
+# define PUSH_SWAP 1
+# define CHECKER 0
 # define NUM_LEN_WITH_SIGN 11
 # define NUM_LEN_NO_SIGN 10
 # define RED     "\x1b[31m"
@@ -59,6 +61,7 @@ typedef struct		s_stacks
 	char			*commands;
 	int				visual_please;
 	int				input_process_please;
+	int				checker_run;
 	char			**split_argv;
 }					t_stacks;
 
@@ -147,7 +150,7 @@ void				ft_stack_push_back(t_stack **head, t_stack *target);
 void				ft_stack_push_front(t_stack **head, t_stack *target);
 
 void				create_stack(t_stacks *stacks, t_stack **stack);
-t_stacks			*create_stacks(int argc, char *argv[]);
+t_stacks			*create_stacks(int argc, char *argv[], int current_prog);
 t_stack				*ft_create_new_stack_elem(int value);
 
 int					is_sorted(t_stack *stack);
@@ -158,10 +161,10 @@ void				create_arr_from_linked_list(t_stack *stack,
 					int *arr, int *counter);
 
 void				print_stacks(t_stack *stack_a, t_stack *stack_b);
-void				print_commands(t_stacks *stacks);
-void				check_rotate_commands(t_stacks *stacks,
+void				print_commands(void);
+int					check_rotate_commands(t_stacks *stacks,
 					char *buf, t_stack **stack);
-void				check_push_swap_commands(t_stacks *stacks,
+int					check_push_swap_commands(t_stacks *stacks,
 					char *buf, t_stack **stack);
 void				visualize_input_process(t_stacks *stacks);
 
