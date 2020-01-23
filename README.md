@@ -4,6 +4,7 @@
 100/100
 ##### Bonus
 19/25
+![Score](Score.png)
 ***
 ### Challenge
 This project will make you sort data on a stack, with a limited set of instructions, using
