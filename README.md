@@ -1,5 +1,5 @@
 # push_swap
-### Score 112/100
+### Score 119/100
 ##### Mandatory
 100/100
 ##### Bonus
