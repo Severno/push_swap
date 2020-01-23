@@ -1,4 +1,10 @@
 # push_swap
+### Score 119/100
+##### Mandatory
+100/100
+##### Bonus
+19/25
+***
 Implementation of a non-recursive quick-sort algorithm to sort one stack by use of another stack.
 
 The aim of push swap is to sort a stack of numbers using another stack in the least commands possible. The educational aim of the project was to introduce students to advanced sorting algorithms and the concept of complexity. This project earned maximum available marks for the algortihm's efficacy.
