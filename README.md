@@ -47,10 +47,10 @@ cd push_swap
 make
 
 If you want run push_swap:
-Arg=`Ruby -E "Puts (0..100).To_a.Shuffle.Join(' ')"`; ./Push_swap $Arg;
+ARG=`ruby -e "puts (0..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG;
 
 If you want run checker:
-Arg=`Ruby -E "Puts (0..100).To_a.Shuffle.Join(' ')"`; ./Push_swap $Arg | ./checker $ARG
+ARG=`ruby -e "puts (0..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG | ./checker $ARG
 ```
 ### The algortihm
 
